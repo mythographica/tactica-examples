@@ -1,0 +1,27 @@
+{
+	"name": "tactica-example",
+	"version": "1.0.0",
+	"description": "Example project demonstrating tactica usage with mnemonica",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "tsc",
+		"start": "node build/src/index.js",
+		"run:all": "node build/src/index.js && node build/src/config-options.js && node build/src/decorators.js && node build/src/models.js && node build/src/services.js && node build/src/typeomatica-integration.js && node build/src/example-import.js && node build/src/example-global.js && node build/src/example-reference.js && node build/src/example-exclude.js",
+		"generate-types": "npx tactica",
+		"generate-types:global": "npx tactica --module-augmentation",
+		"watch-types": "npx tactica --watch",
+		"watch-types:global": "npx tactica --watch --module-augmentation",
+		"clean": "rm -rf build .tactica",
+		"use:public": "node -e \"const fs=require('fs'),p=JSON.parse(fs.readFileSync('package.json','utf8'));p.dependencies.mnemonica='latest';p.dependencies.typeomatica='latest';p.devDependencies['@mnemonica/tactica']='latest';fs.writeFileSync('package.json',JSON.stringify(p,null,'\\t')+'\\n');console.log('Switched to PUBLIC npm dependencies (latest)');\" && rm -rf node_modules package-lock.json && npm install",
+		"use:local": "node -e \"const fs=require('fs'),p=JSON.parse(fs.readFileSync('package.json','utf8'));p.dependencies.mnemonica='file:../core';p.dependencies.typeomatica='file:../typeomatica';p.devDependencies['@mnemonica/tactica']='file:../tactica';fs.writeFileSync('package.json',JSON.stringify(p,null,'\\t')+'\\n');console.log('Switched to LOCAL file: dependencies');\""
+	},
+	"dependencies": {
+		"mnemonica": "latest",
+		"typeomatica": "latest"
+	},
+	"devDependencies": {
+		"@mnemonica/tactica": "latest",
+		"@types/node": "^20.0.0",
+		"typescript": "^5.3.0"
+	}
+}
