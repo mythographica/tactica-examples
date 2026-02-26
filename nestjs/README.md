@@ -71,6 +71,81 @@ export const AdminEntity = UserEntity.define('AdminEntity', function (this: Admi
 });
 ```
 
+### Complete Example
+
+**DTO with class-validator:**
+```typescript
+// src/dto/user.dto.ts
+import { IsString, IsEmail } from 'class-validator';
+import { ApiProperty } from '@nestjs/swagger';
+
+export class CreateUserDto {
+	@ApiProperty({ example: 'user@example.com' })
+	@IsEmail()
+	email!: string;
+
+	@ApiProperty({ example: 'John Doe' })
+	@IsString()
+	name!: string;
+}
+```
+
+**Entity with nested types:**
+```typescript
+// src/entities/user.entity.ts
+import { define } from 'mnemonica';
+import type { UserEntityInstance, UserResponseInstance } from '../../.tactica/types';
+
+export const UserEntity = define('UserEntity', function (
+	this: UserEntityInstance,
+	data: { id: string; email: string; name: string }
+) {
+	this.id = data.id;
+	this.email = data.email;
+	this.name = data.name;
+});
+
+// Nested response type - accessible as user.UserResponse
+export const UserResponse = UserEntity.define('UserResponse', function (
+	this: UserResponseInstance,
+	data: { id: string; email: string; name: string; type: 'user' }
+) {
+	this.id = data.id;
+	this.email = data.email;
+	this.name = data.name;
+	this.type = data.type;
+});
+```
+
+**Controller:**
+```typescript
+// src/user.controller.ts
+import { Controller, Post, Body } from '@nestjs/common';
+import { UserEntity } from './entities/user.entity';
+import type { UserResponseInstance } from '../.tactica/types';
+
+@Controller('users')
+export class UserController {
+	@Post()
+	createUser (@Body() createUserDto: CreateUserDto): UserResponseInstance {
+		// Create entity
+		const user = new UserEntity({
+			id: crypto.randomUUID(),
+			email: createUserDto.email,
+			name: createUserDto.name,
+		});
+
+		// Create response using nested type
+		return new user.UserResponse({
+			id: user.id,
+			email: user.email,
+			name: user.name,
+			type: 'user',
+		});
+	}
+}
+```
+
 ### Swagger Integration
 
 Swagger UI is available at `http://localhost:3000/api-docs` when the server is running.
