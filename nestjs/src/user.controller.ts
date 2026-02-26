@@ -54,7 +54,8 @@ export class UserController {
 		});
 		this.logger.log(`Created UserEntity: ${user.constructor.name}`);
 
-		return this.userService.createUser(user);
+		const userResult = this.userService.createUser(user);
+		return userResult;
 	}
 
 	@Get(':id')
@@ -64,7 +65,8 @@ export class UserController {
 	@ApiResponse({ status: 404, description: 'User not found' })
 	getUser (@Param('id') id: string): UserResponseInstance {
 		this.logger.log(`=== Getting User by ID: ${id} ===`);
-		return this.userService.findUser(id);
+		const userResult = this.userService.findUser(id);
+		return userResult;
 	}
 }
 
@@ -119,7 +121,8 @@ export class AdminController {
 		this.logger.log(`  - role (from Admin): ${'role' in admin}`);
 		this.logger.log(`  - permissions (from Admin): ${'permissions' in admin}`);
 
-		return this.userService.createAdmin(admin);
+		const adminResult = this.userService.createAdmin(admin);
+		return adminResult;
 	}
 
 	@Get(':id')
@@ -129,7 +132,8 @@ export class AdminController {
 	@ApiResponse({ status: 404, description: 'Admin not found' })
 	getAdmin (@Param('id') id: string): AdminResponseInstance {
 		this.logger.log(`=== Getting Admin by ID: ${id} ===`);
-		return this.userService.findAdmin(id);
+		const adminResult = this.userService.findAdmin(id);
+		return adminResult;
 	}
 }
 
@@ -199,7 +203,8 @@ export class SuperAdminController {
 		this.logger.log(`  - permissions (from Admin): ${'permissions' in superAdmin} = ${JSON.stringify(superAdmin.permissions)}`);
 		this.logger.log(`  - domain (from SuperAdmin): ${'domain' in superAdmin} = ${superAdmin.domain}`);
 
-		return this.userService.createSuperAdmin(superAdmin);
+		const superAdminResult = this.userService.createSuperAdmin(superAdmin);
+		return superAdminResult;
 	}
 
 	@Get(':id')
@@ -209,6 +214,7 @@ export class SuperAdminController {
 	@ApiResponse({ status: 404, description: 'SuperAdmin not found' })
 	getSuperAdmin (@Param('id') id: string): SuperAdminResponseInstance {
 		this.logger.log(`=== Getting SuperAdmin by ID: ${id} ===`);
-		return this.userService.findSuperAdmin(id);
+		const superAdminResult = this.userService.findSuperAdmin(id);
+		return superAdminResult;
 	}
 }

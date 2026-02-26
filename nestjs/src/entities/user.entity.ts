@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import { define } from 'mnemonica';
 import type {
 	UserEntityInstance,

@@ -5,6 +5,7 @@ const core_1 = require("@nestjs/core");
 const common_1 = require("@nestjs/common");
 const swagger_1 = require("@nestjs/swagger");
 const app_module_1 = require("./app.module");
+const mnemonica_1 = require("mnemonica");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.useGlobalPipes(new common_1.ValidationPipe({
@@ -34,6 +35,19 @@ async function bootstrap() {
     console.log('  GET  /admins/:id      - Get admin');
     console.log('  POST /super-admins    - Create superadmin (3-level inheritance)');
     console.log('  GET  /super-admins/:id - Get superadmin');
+    console.log('');
+    console.log('Async/Await + @decorate() Examples:');
+    console.log('  POST /async/root-async              - Async constructor');
+    console.log('  POST /async/root-async/result       - Async chain (RootAsync -> ResultFromDecorate)');
+    console.log('  POST /async/sync-base/sub-async     - @decorate() class with async sub-type');
+    console.log('  POST /async/sync-base/sub-async/sub-decorate - Full async chain with decorate');
 }
 bootstrap();
+mnemonica_1.defaultTypes.registerHook('preCreation', (opts) => {
+    console.log(`[mnemonica hook] preCreation: About to create ${opts.TypeName}`);
+});
+mnemonica_1.defaultTypes.registerHook('postCreation', (opts) => {
+    const instance = opts.inheritedInstance;
+    console.log(`[mnemonica hook] postCreation: Created instance of ${instance.constructor.name}`);
+});
 //# sourceMappingURL=main.js.map

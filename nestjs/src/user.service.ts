@@ -26,12 +26,13 @@ export class UserService {
 	createUser (user: UserEntityInstance): UserResponseInstance {
 		this.users.set(user.id, user);
 		// Create a UserResponse instance using mnemonica's parent.SubType pattern
-		return new user.UserResponse({
+		const userResponse = new user.UserResponse({
 			id: user.id,
 			email: user.email,
 			name: user.name,
 			type: 'user',
 		});
+		return userResponse;
 	}
 
 	/**
@@ -41,7 +42,7 @@ export class UserService {
 	createAdmin (admin: AdminEntityInstance): AdminResponseInstance {
 		this.admins.set(admin.id, admin);
 		// Create an AdminResponse instance using parent.SubType pattern
-		return new admin.AdminResponse({
+		const adminResponse = new admin.AdminResponse({
 			id: admin.id,
 			email: admin.email,
 			name: admin.name,
@@ -49,6 +50,7 @@ export class UserService {
 			role: admin.role,
 			permissions: admin.permissions,
 		});
+		return adminResponse;
 	}
 
 	/**
@@ -58,7 +60,7 @@ export class UserService {
 	createSuperAdmin (superAdmin: SuperAdminEntityInstance): SuperAdminResponseInstance {
 		this.superAdmins.set(superAdmin.id, superAdmin);
 		// Create a SuperAdminResponse instance using parent.SubType pattern
-		return new superAdmin.SuperAdminResponse({
+		const superAdminResponse = new superAdmin.SuperAdminResponse({
 			id: superAdmin.id,
 			email: superAdmin.email,
 			name: superAdmin.name,
@@ -67,6 +69,7 @@ export class UserService {
 			permissions: superAdmin.permissions,
 			domain: superAdmin.domain,
 		});
+		return superAdminResponse;
 	}
 
 	findUser (id: string): UserResponseInstance {
@@ -74,12 +77,13 @@ export class UserService {
 		if (!user) {
 			throw new NotFoundException(`User with id ${id} not found`);
 		}
-		return new user.UserResponse({
+		const userResponse = new user.UserResponse({
 			id: user.id,
 			email: user.email,
 			name: user.name,
 			type: 'user',
 		});
+		return userResponse;
 	}
 
 	findAdmin (id: string): AdminResponseInstance {
@@ -87,7 +91,7 @@ export class UserService {
 		if (!admin) {
 			throw new NotFoundException(`Admin with id ${id} not found`);
 		}
-		return new admin.AdminResponse({
+		const adminResponse = new admin.AdminResponse({
 			id: admin.id,
 			email: admin.email,
 			name: admin.name,
@@ -95,6 +99,7 @@ export class UserService {
 			role: admin.role,
 			permissions: admin.permissions,
 		});
+		return adminResponse;
 	}
 
 	findSuperAdmin (id: string): SuperAdminResponseInstance {
@@ -102,7 +107,7 @@ export class UserService {
 		if (!superAdmin) {
 			throw new NotFoundException(`SuperAdmin with id ${id} not found`);
 		}
-		return new superAdmin.SuperAdminResponse({
+		const superAdminResponse = new superAdmin.SuperAdminResponse({
 			id: superAdmin.id,
 			email: superAdmin.email,
 			name: superAdmin.name,
@@ -111,5 +116,6 @@ export class UserService {
 			permissions: superAdmin.permissions,
 			domain: superAdmin.domain,
 		});
+		return superAdminResponse;
 	}
 }

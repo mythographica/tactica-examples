@@ -39,13 +39,16 @@ This example shows:
 ```
 src/
 ├── dto/
-│   └── user.dto.ts          # Standard NestJS DTOs with class-validator & Swagger
+│   ├── user.dto.ts          # Standard NestJS DTOs with class-validator & Swagger
+│   └── async.dto.ts         # DTOs for async/await examples
 ├── entities/
-│   └── user.entity.ts       # Mnemonica entities with define()
+│   ├── user.entity.ts       # Mnemonica entities with define()
+│   └── async.entity.ts      # Async constructors with @decorate() examples
 ├── user.controller.ts       # NestJS controllers with Swagger decorators
+├── async.controller.ts      # Async/await examples controller
 ├── user.service.ts          # NestJS services
 ├── app.module.ts            # NestJS module
-└── main.ts                  # Bootstrap with Swagger setup
+└── main.ts                  # Bootstrap with Swagger setup & mnemonica hooks
 ```
 
 ## Key Concepts
@@ -189,6 +192,114 @@ The server will start on `http://localhost:3000` with Swagger docs at `http://lo
 - `POST /super-admins` - Create a super admin (3-level inheritance)
 - `GET /super-admins/:id` - Get a super admin
 
+### Async Examples (Async/Await + @decorate())
+- `POST /async/root-async` - Create RootAsync instance (async constructor)
+- `POST /async/root-async/result` - Create RootAsync then ResultFromDecorate (chained)
+- `GET /async/root-async/:value/result/:multiplier` - GET version of chained result
+- `POST /async/sync-base` - Create SyncBase (@decorate() class)
+- `POST /async/sync-base/sub-async` - Create Sync.SubAsync (async on decorated class)
+- `POST /async/sync-base/sub-async/sub-decorate` - Full chain: Sync → SubAsync → SubDecorate
+- `GET /async/sync-base/:baseValue/sub-async/:delay/:extra/sub-decorate/:decorateValue` - GET version
+
+## Async/Await Constructor Examples
+
+This project includes examples of **mnemonica's async constructors** combined with `@decorate()` decorator:
+
+### Pattern 1: Async Constructor with Sub-types
+
+```typescript
+// src/entities/async.entity.ts
+import { define } from 'mnemonica';
+
+const sleep = (ms: number) => new Promise<void>(resolve => setTimeout(resolve, ms));
+
+export const RootAsync = define('RootAsync', async function (this: RootAsyncInstance, data: { value: number }) {
+  await sleep(100);  // Simulate long operation
+  this.value = data.value;
+  this.computed = data.value * 2;
+  return this;
+});
+
+// Define sub-type for adding decorated results
+export const ResultFromDecorate = RootAsync.define('ResultFromDecorate', function (
+  this: ResultFromDecorateInstance,
+  multiplier: number
+) {
+  this.result = this.computed * multiplier;
+  return this;
+});
+```
+
+Usage:
+```typescript
+// await new RootAsync, then access rootAsync.ResultFromDecorate
+const rootAsync = await new RootAsync({ value: 42 }) as RootAsyncInstance;
+const result = await rootAsync.ResultFromDecorate(3) as ResultFromDecorateInstance;
+// result.computed = 84, result.result = 252
+```
+
+### Pattern 2: @decorate() Class with Async Sub-types
+
+```typescript
+// src/entities/async.entity.ts
+import { define, decorate } from 'mnemonica';
+
+@decorate()
+export class SyncBase {
+  baseValue: string = '';
+
+  constructor(data: { baseValue: string }) {
+    this.baseValue = data.baseValue;
+  }
+}
+
+// Define SubAsync on SyncBase
+export const SubAsync = (SyncBase as unknown as {
+  define: (name: string, handler: Function) => typeof SubAsync;
+}).define('SubAsync', async function (this: SubAsyncInstance, asyncData: { delay: number; extra: string }) {
+  await sleep(100);  // Simulate long operation
+  this.delay = asyncData.delay;
+  this.extra = asyncData.extra;
+  this.processed = `${this.baseValue}-${asyncData.extra}`;
+  return this;
+});
+
+// Define SubDecorate on SubAsync
+export const SubDecorate = SubAsync.define('SubDecorate', function (
+  this: SubDecorateInstance,
+  decorateValue: string
+) {
+  this.decorateValue = decorateValue;
+  this.combined = `${this.processed}:${decorateValue}`;
+  return this;
+});
+```
+
+Usage:
+```typescript
+// await new SyncBase, then chain SubAsync, then SubDecorate
+const syncBase = new SyncBase({ baseValue: 'hello' });
+const subAsync = await (syncBase as unknown as SubAsyncInstance).SubAsync({
+  delay: 100,
+  extra: 'world'
+}) as SubAsyncInstance;
+const subDecorate = await subAsync.SubDecorate('decorated') as SubDecorateInstance;
+// subDecorate.combined = "hello-world:decorated"
+```
+
+### Key Concepts for Async Constructors
+
+1. **Async constructors work with `await new Type()`** - Mnemonica handles the Promise
+2. **`return this` is required** - The constructor must return the instance
+3. **Sub-types are accessible after await** - `rootAsync.ResultFromDecorate`
+4. **@decorate() enables sub-types on classes** - Classes can have async sub-types too
+5. **Sleep simulates real async operations** - Database calls, HTTP requests, etc.
+
+See the full implementation in:
+- `src/entities/async.entity.ts` - Entity definitions
+- `src/async.controller.ts` - API endpoints
+- `src/dto/async.dto.ts` - Request/response DTOs
+
 ## Example Requests
 
 Using the Swagger UI at `http://localhost:3000/api-docs`:
@@ -222,6 +333,16 @@ curl -X POST http://localhost:3000/admins \
 curl -X POST http://localhost:3000/super-admins \
   -H "Content-Type: application/json" \
   -d '{"email":"super@example.com","name":"Super","role":"superadmin","permissions":["read","write","delete"],"domain":"global"}'
+
+# Async Pattern 1: RootAsync then ResultFromDecorate
+curl -X POST http://localhost:3000/async/root-async/result \
+  -H "Content-Type: application/json" \
+  -d '{"value":42,"multiplier":3}'
+
+# Async Pattern 2: Sync -> SubAsync -> SubDecorate (full chain)
+curl -X POST http://localhost:3000/async/sync-base/sub-async/sub-decorate \
+  -H "Content-Type: application/json" \
+  -d '{"baseValue":"hello","delay":100,"extra":"world","decorateValue":"decorated"}'
 ```
 
 ## How Tactica Detects This

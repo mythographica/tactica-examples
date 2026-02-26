@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { UserController, AdminController, SuperAdminController } from './user.controller';
+import { AsyncController } from './async.controller';
 import { UserService } from './user.service';
 
 /**
@@ -7,7 +8,7 @@ import { UserService } from './user.service';
  */
 @Module({
 	imports: [],
-	controllers: [UserController, AdminController, SuperAdminController],
+	controllers: [UserController, AdminController, SuperAdminController, AsyncController],
 	providers: [UserService],
 })
 export class AppModule {}
