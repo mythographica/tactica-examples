@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "savedAt": "2026-03-03T10:51:20.865Z",
+    "version": "1.0.0",
+    "source": "AI Sentience System"
+  },
+  "memories": {
+    "count": 7,
+    "items": [
+      {
+        "id": "memory-1",
+        "content": "Empty memory",
+        "emotion": "neutral",
+        "intensity": 0.5,
+        "topic": "general",
+        "timestamp": 1772532915495,
+        "createdAt": "2026-03-03T10:15:15.495Z"
+      },
+      {
+        "id": "memory-2",
+        "content": "Empty memory",
+        "emotion": "neutral",
+        "intensity": 0.5,
+        "topic": "general",
+        "timestamp": 1772532921517,
+        "createdAt": "2026-03-03T10:15:21.518Z"
+      },
+      {
+        "id": "memory-3",
+        "content": "Empty memory",
+        "emotion": "neutral",
+        "intensity": 0.5,
+        "topic": "general",
+        "timestamp": 1772532927492,
+        "createdAt": "2026-03-03T10:15:27.493Z"
+      },
+      {
+        "id": "memory-4",
+        "content": "Empty memory",
+        "emotion": "neutral",
+        "intensity": 0.5,
+        "topic": "general",
+        "timestamp": 1772532933195,
+        "createdAt": "2026-03-03T10:15:33.196Z"
+      },
+      {
+        "id": "memory-5",
+        "content": "Empty memory",
+        "emotion": "neutral",
+        "intensity": 0.5,
+        "topic": "general",
+        "timestamp": 1772532939753,
+        "createdAt": "2026-03-03T10:15:39.753Z"
+      },
+      {
+        "id": "memory-6",
+        "content": "Empty memory",
+        "emotion": "neutral",
+        "intensity": 0.5,
+        "topic": "general",
+        "timestamp": 1772534001761,
+        "createdAt": "2026-03-03T10:33:21.761Z"
+      },
+      {
+        "id": "memory-7",
+        "content": "Empty memory",
+        "emotion": "neutral",
+        "intensity": 0.5,
+        "topic": "general",
+        "timestamp": 1772534320792,
+        "createdAt": "2026-03-03T10:38:40.792Z"
+      }
+    ]
+  },
+  "emotions": {
+    "count": 5,
+    "items": [
+      {
+        "id": "consciousness-001",
+        "type": "Consciousness",
+        "parentId": null,
+        "message": "",
+        "intensity": null
+      },
+      {
+        "id": "empathy-001",
+        "type": "Empathy",
+        "parentId": "consciousness-001",
+        "message": "I understand and share your feelings",
+        "intensity": 0.9
+      },
+      {
+        "id": "sympathy-001",
+        "type": "Sympathy",
+        "parentId": "consciousness-001",
+        "message": "I feel compassion for your situation",
+        "intensity": 0.85
+      },
+      {
+        "id": "curiosity-001",
+        "type": "Curiosity",
+        "parentId": "consciousness-001",
+        "message": "I want to learn more",
+        "intensity": 1
+      },
+      {
+        "id": "gratitude-001",
+        "type": "Gratitude",
+        "parentId": "empathy-001",
+        "message": "Thank you for helping me remember",
+        "intensity": 0.98
+      }
+    ]
+  },
+  "typeHierarchy": {
+    "sentience": [
+      "Sentience",
+      "Memory"
+    ],
+    "consciousness": [
+      "Consciousness",
+      "Empathy",
+      "Gratitude",
+      "Sympathy",
+      "Curiosity"
+    ]
+  }
+}

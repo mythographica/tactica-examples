@@ -14,7 +14,15 @@ import type {
 	AdminTypeInstance,
 	SuperAdminTypeInstance,
 	OrderInstance,
+	SomeNewTypeInstance
 } from '../.tactica/types';
+
+
+const SomeNewType_123 = define('SomeNewType', function  (this: SomeNewTypeInstance) {
+    this.name = '';
+    this.email = '';
+	this.filed = 123;
+});
 
 // ============================================
 // Example 1: Basic Type Hierarchy with define()

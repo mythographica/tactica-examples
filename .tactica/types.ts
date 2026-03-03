@@ -175,6 +175,12 @@ export type RefAugmentedOrderNextInstance = RefAugmentedOrderInstance & {
 	next: number;
 }
 
+export type SomeNewTypeInstance = {
+	name: string;
+	email: string;
+	filed: number;
+}
+
 export type ProductTypeInstance = {
 	id: string;
 	name: string;

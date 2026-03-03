@@ -42,7 +42,7 @@ export const SubAsync = SyncBase.define('SubAsync', async function (this: SubAsy
 	this.delay = asyncData.delay;
 	this.extra = asyncData.extra;
 	this.processed = `${this.baseValue}-${asyncData.extra}`;
-        this.baseValue += '123';
+	this.baseValue += '123';
 	return this;
 });
 
