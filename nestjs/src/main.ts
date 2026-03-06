@@ -4,6 +4,10 @@ import { ValidationPipe } from '@nestjs/common';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { defaultTypes } from 'mnemonica';
+import { bootstrapAITypes } from './ai-types/bootstrap';
+
+// Bootstrap AI consciousness types from directory structure
+bootstrapAITypes();
 
 /**
  * NestJS Bootstrap with Swagger

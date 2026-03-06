@@ -27,7 +27,8 @@
 		"reflect-metadata": "^0.2.2",
 		"rxjs": "^7.8.2",
 		"swagger-ui-express": "^5.0.1",
-		"typeomatica": "file:../../typeomatica"
+		"typeomatica": "file:../../typeomatica",
+		"@mnemonica/topologica": "file:../../topologica"
 	},
 	"devDependencies": {
 		"@mnemonica/tactica": "file:../../tactica",

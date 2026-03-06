@@ -6,6 +6,8 @@ const common_1 = require("@nestjs/common");
 const swagger_1 = require("@nestjs/swagger");
 const app_module_1 = require("./app.module");
 const mnemonica_1 = require("mnemonica");
+const bootstrap_1 = require("./ai-types/bootstrap");
+(0, bootstrap_1.bootstrapAITypes)();
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.useGlobalPipes(new common_1.ValidationPipe({

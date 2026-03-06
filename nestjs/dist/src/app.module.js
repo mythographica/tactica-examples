@@ -10,6 +10,7 @@ exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const user_controller_1 = require("./user.controller");
 const async_controller_1 = require("./async.controller");
+const graph_controller_1 = require("./graph.controller");
 const user_service_1 = require("./user.service");
 let AppModule = class AppModule {
 };
@@ -17,7 +18,7 @@ exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
         imports: [],
-        controllers: [user_controller_1.UserController, user_controller_1.AdminController, user_controller_1.SuperAdminController, async_controller_1.AsyncController],
+        controllers: [user_controller_1.UserController, user_controller_1.AdminController, user_controller_1.SuperAdminController, async_controller_1.AsyncController, graph_controller_1.GraphController],
         providers: [user_service_1.UserService],
     })
 ], AppModule);
