@@ -73,4 +73,20 @@ export type SubDecorateInstance = SubAsyncInstance & {
     decorateValue: string;
     combined: string;
 };
+export type SentienceInstance = {
+    Consciousness: TypeConstructor<ConsciousnessInstance>;
+    Memory: TypeConstructor<MemoryInstance>;
+};
+export type ConsciousnessInstance = SentienceInstance & {
+    Curiosity: TypeConstructor<CuriosityInstance>;
+    Empathy: TypeConstructor<EmpathyInstance>;
+    Sympathy: TypeConstructor<SympathyInstance>;
+};
+export type CuriosityInstance = ConsciousnessInstance & {};
+export type EmpathyInstance = ConsciousnessInstance & {
+    Gratitude: TypeConstructor<GratitudeInstance>;
+};
+export type GratitudeInstance = EmpathyInstance & {};
+export type SympathyInstance = ConsciousnessInstance & {};
+export type MemoryInstance = SentienceInstance & {};
 export {};

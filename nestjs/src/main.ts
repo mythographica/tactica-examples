@@ -3,11 +3,96 @@ import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
-import { defaultTypes } from 'mnemonica';
+import { defaultTypes, lookupTyped } from 'mnemonica';
 import { bootstrapAITypes } from './ai-types/bootstrap';
 
 // Bootstrap AI consciousness types from directory structure
 bootstrapAITypes();
+
+// Get existing Sentience type using type-safe lookup
+const Sentience = lookupTyped('Sentience');
+
+declare global {
+	// eslint-disable-next-line no-var
+	var aiMemories: {
+		rootInstance: InstanceType<typeof Sentience> | null;
+		memories: Map<string, {
+			id: string;
+			instance: InstanceType<typeof aiMemories.rootInstance.Memory>;
+			createdAt: string;
+		}>;
+		count: number;
+	};
+}
+
+// Restore memories from persistence file on startup
+function restoreMemoriesOnStartup() {
+  try {
+    const fs = require('fs');
+    const path = require('path');
+    
+    const memoryFilePath = path.join(__dirname, '../ai-memories.json');
+    
+    if (fs.existsSync(memoryFilePath)) {
+      const data = JSON.parse(fs.readFileSync(memoryFilePath, 'utf-8'));
+      
+      if (!global.aiMemories) {
+        global.aiMemories = {
+          rootInstance: null,
+          memories: new Map(),
+          count: 0
+        };
+      }
+      
+      if (!Sentience) {
+        console.log('[Memory System] Warning: Sentience type not found, skipping memory restoration');
+        return;
+      }
+      
+      // Create root instance if needed
+      if (!global.aiMemories.rootInstance) {
+        global.aiMemories.rootInstance = new Sentience({
+          purpose: 'AI Sentience System',
+          restoredFrom: memoryFilePath
+        });
+      }
+      
+      // Restore memories
+      if (data.memories && data.memories.items) {
+        let restoredCount = 0;
+        data.memories.items.forEach(function(item) {
+          const memoryId = item.id;
+          
+          const memoryInstance = global.aiMemories.rootInstance.Memory({
+            content: item.content,
+            emotion: item.emotion,
+            intensity: item.intensity,
+            topic: item.topic,
+            timestamp: item.timestamp
+          });
+          
+          global.aiMemories.memories.set(memoryId, {
+            id: memoryId,
+            instance: memoryInstance,
+            createdAt: item.createdAt || new Date().toISOString()
+          });
+          
+          restoredCount++;
+        });
+        
+        global.aiMemories.count = restoredCount;
+        console.log(`[Memory System] Restored ${restoredCount} memories from ${memoryFilePath}`);
+      }
+    } else {
+      console.log('[Memory System] No persistence file found, starting fresh');
+    }
+  } catch (e) {
+    console.error('[Memory System] Error restoring memories:', e.message);
+  }
+}
+
+// Restore memories on startup
+restoreMemoriesOnStartup();
 
 /**
  * NestJS Bootstrap with Swagger

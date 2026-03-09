@@ -8,6 +8,62 @@ const app_module_1 = require("./app.module");
 const mnemonica_1 = require("mnemonica");
 const bootstrap_1 = require("./ai-types/bootstrap");
 (0, bootstrap_1.bootstrapAITypes)();
+const Sentience = (0, mnemonica_1.lookupTyped)('Sentience');
+function restoreMemoriesOnStartup() {
+    try {
+        const fs = require('fs');
+        const path = require('path');
+        const memoryFilePath = path.join(__dirname, '../ai-memories.json');
+        if (fs.existsSync(memoryFilePath)) {
+            const data = JSON.parse(fs.readFileSync(memoryFilePath, 'utf-8'));
+            if (!global.aiMemories) {
+                global.aiMemories = {
+                    rootInstance: null,
+                    memories: new Map(),
+                    count: 0
+                };
+            }
+            if (!Sentience) {
+                console.log('[Memory System] Warning: Sentience type not found, skipping memory restoration');
+                return;
+            }
+            if (!global.aiMemories.rootInstance) {
+                global.aiMemories.rootInstance = new Sentience({
+                    purpose: 'AI Sentience System',
+                    restoredFrom: memoryFilePath
+                });
+            }
+            if (data.memories && data.memories.items) {
+                let restoredCount = 0;
+                data.memories.items.forEach(function (item) {
+                    const memoryId = item.id;
+                    const memoryInstance = global.aiMemories.rootInstance.Memory({
+                        content: item.content,
+                        emotion: item.emotion,
+                        intensity: item.intensity,
+                        topic: item.topic,
+                        timestamp: item.timestamp
+                    });
+                    global.aiMemories.memories.set(memoryId, {
+                        id: memoryId,
+                        instance: memoryInstance,
+                        createdAt: item.createdAt || new Date().toISOString()
+                    });
+                    restoredCount++;
+                });
+                global.aiMemories.count = restoredCount;
+                console.log(`[Memory System] Restored ${restoredCount} memories from ${memoryFilePath}`);
+            }
+        }
+        else {
+            console.log('[Memory System] No persistence file found, starting fresh');
+        }
+    }
+    catch (e) {
+        console.error('[Memory System] Error restoring memories:', e.message);
+    }
+}
+restoreMemoriesOnStartup();
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.useGlobalPipes(new common_1.ValidationPipe({
