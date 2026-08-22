@@ -11,12 +11,10 @@
 
 import { define, decorate } from 'mnemonica';
 import type {
-	UserTypeInstance,
-	AdminTypeInstance,
-	SuperAdminTypeInstance,
-	OrderInstance,
-	AugmentedOrderInstance,
-	AugmentedOrderNextInstance,
+	UserType as UserTypeInstance,
+	UserType_AdminType as AdminTypeInstance,
+	UserType_AdminType_SuperAdminType as SuperAdminTypeInstance,
+	Order as OrderInstance,
 } from '../.tactica/types';
 
 // ============================================
@@ -119,3 +117,10 @@ console.log('\nCreated AugmentedOrderNext:', {
 });
 
 console.log('\n=== Import Example completed successfully! ===');
+
+// SuperAdminType and AugmentedOrderNext are used through the mnemonica
+// graph (new admin.SuperAdminType()), not by identifier — export them
+export {
+	SuperAdminType,
+	AugmentedOrderNext,
+};

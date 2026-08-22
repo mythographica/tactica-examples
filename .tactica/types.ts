@@ -4,294 +4,233 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 /* eslint-disable @typescript-eslint/no-empty-interface */
 
-// Helper type for nested type constructors
-type TypeConstructor<T> = {
-	new (...args: unknown[]): T;
-	(...args: unknown[]): T;
+import type { ProtoFlat } from 'mnemonica';
+
+export type StandardType = {
+	data: string;
+	StandardSubtype: new () => StandardType_StandardSubtype;
 };
 
-export type StandardTypeInstance = {
-	data: string;
-	StandardSubtype: TypeConstructor<StandardSubtypeInstance>;
-}
-
-export type StandardSubtypeInstance = StandardTypeInstance & {
+export type StandardType_StandardSubtype = ProtoFlat<StandardType, {
 	subtypeData: string;
-}
+	StandardSubtype: undefined;
+}>;
 
-export type HiddenMethodsTypeInstance = {
+export type StrictType = {
 	data: string;
-	HiddenSubtype: TypeConstructor<HiddenSubtypeInstance>;
-}
+};
 
-export type HiddenSubtypeInstance = HiddenMethodsTypeInstance & {
-	subtypeData: string;
-}
-
-export type HiddenTypeShorthandInstance = {
-	data: string;
-}
-
-export type StrictTypeInstance = {
-	data: string;
-}
-
-export type BaseEntityInstance = {
+export type BaseEntity = {
 	id: string;
 	createdAt: Date;
 	updatedAt: Date;
-	UserEntity: TypeConstructor<UserEntityInstance>;
-	ProductEntity: TypeConstructor<ProductEntityInstance>;
-}
+	UserEntity: new () => BaseEntity_UserEntity;
+	ProductEntity: new () => BaseEntity_ProductEntity;
+};
 
-export type UserEntityInstance = BaseEntityInstance & {
+export type BaseEntity_UserEntity = ProtoFlat<BaseEntity, {
 	username: string;
 	email: string;
 	isActive: boolean;
-	AdminEntity: TypeConstructor<AdminEntityInstance>;
-}
+	AdminEntity: new () => BaseEntity_UserEntity_AdminEntity;
+	UserEntity: undefined;
+	ProductEntity: undefined;
+}>;
 
-export type AdminEntityInstance = UserEntityInstance & {
+export type BaseEntity_UserEntity_AdminEntity = ProtoFlat<BaseEntity_UserEntity, {
 	role: string;
 	permissions: Array<string>;
-}
+	AdminEntity: undefined;
+}>;
 
-export type ProductEntityInstance = BaseEntityInstance & {
+export type BaseEntity_ProductEntity = ProtoFlat<BaseEntity, {
 	sku: string;
 	name: string;
 	price: number;
-}
+	ProductEntity: undefined;
+	UserEntity: undefined;
+}>;
 
-export type ConfigurableEntityInstance = {
-	config: object;
-}
+export type ConfigurableEntity = {
+	config: Record<string, unknown>;
+};
 
-export type ExcludeExampleUserInstance = {
+export type ExcludeExampleUser = {
 	name: string;
 	email: string;
-}
+};
 
-export type ExcludeExampleOrderInstance = {
+export type ExcludeExampleOrder = {
 	orderId: string;
 	total: number;
-}
+};
 
-export type GlobalUserTypeInstance = {
-	name: string;
-	email: string;
-	createdAt: Date;
-	GlobalAdminType: TypeConstructor<GlobalAdminTypeInstance>;
-}
-
-export type GlobalAdminTypeInstance = GlobalUserTypeInstance & {
-	role: string;
-	permissions: Array<unknown>;
-	GlobalSuperAdminType: TypeConstructor<GlobalSuperAdminTypeInstance>;
-}
-
-export type GlobalSuperAdminTypeInstance = GlobalAdminTypeInstance & {
-	isSystemAdmin: boolean;
-	accessLevel: number;
-}
-
-export type GlobalOrderInstance = {
-	orderId: string;
-	total: number;
-	GlobalAugmentedOrder: TypeConstructor<GlobalAugmentedOrderInstance>;
-}
-
-export type GlobalAugmentedOrderInstance = GlobalOrderInstance & {
-	addition: string;
-	GlobalAugmentedOrderNext: TypeConstructor<GlobalAugmentedOrderNextInstance>;
-}
-
-export type GlobalAugmentedOrderNextInstance = GlobalAugmentedOrderInstance & {
-	next: number;
-}
-
-export type UserTypeInstance = {
+export type UserType = {
 	name: string;
 	email: string;
 	createdAt: Date;
-	AdminType: TypeConstructor<AdminTypeInstance>;
-}
+	AdminType: new () => UserType_AdminType;
+};
 
-export type AdminTypeInstance = UserTypeInstance & {
+export type UserType_AdminType = ProtoFlat<UserType, {
 	role: string;
 	permissions: Array<unknown>;
-	SuperAdminType: TypeConstructor<SuperAdminTypeInstance>;
-}
+	SuperAdminType: new () => UserType_AdminType_SuperAdminType;
+	AdminType: undefined;
+}>;
 
-export type SuperAdminTypeInstance = AdminTypeInstance & {
+export type UserType_AdminType_SuperAdminType = ProtoFlat<UserType_AdminType, {
 	isSystemAdmin: boolean;
 	accessLevel: number;
-}
+	SuperAdminType: undefined;
+}>;
 
-export type OrderInstance = {
+export type Order = {
 	orderId: string;
 	total: number;
-	AugmentedOrder: TypeConstructor<AugmentedOrderInstance>;
-}
+	AugmentedOrder: new () => Order_AugmentedOrder;
+};
 
-export type AugmentedOrderInstance = OrderInstance & {
+export type Order_AugmentedOrder = ProtoFlat<Order, {
 	addition: string;
-	AugmentedOrderNext: TypeConstructor<AugmentedOrderNextInstance>;
-}
+	AugmentedOrderNext: new () => Order_AugmentedOrder_AugmentedOrderNext;
+	AugmentedOrder: undefined;
+}>;
 
-export type AugmentedOrderNextInstance = AugmentedOrderInstance & {
+export type Order_AugmentedOrder_AugmentedOrderNext = ProtoFlat<Order_AugmentedOrder, {
 	next: number;
-}
+	AugmentedOrderNext: undefined;
+}>;
 
-export type RefUserTypeInstance = {
-	name: string;
-	email: string;
-	createdAt: Date;
-	RefAdminType: TypeConstructor<RefAdminTypeInstance>;
-}
-
-export type RefAdminTypeInstance = RefUserTypeInstance & {
-	role: string;
-	permissions: Array<unknown>;
-	RefSuperAdminType: TypeConstructor<RefSuperAdminTypeInstance>;
-}
-
-export type RefSuperAdminTypeInstance = RefAdminTypeInstance & {
-	isSystemAdmin: boolean;
-	accessLevel: number;
-}
-
-export type RefOrderInstance = {
-	orderId: string;
-	total: number;
-	RefAugmentedOrder: TypeConstructor<RefAugmentedOrderInstance>;
-}
-
-export type RefAugmentedOrderInstance = RefOrderInstance & {
-	addition: string;
-	RefAugmentedOrderNext: TypeConstructor<RefAugmentedOrderNextInstance>;
-}
-
-export type RefAugmentedOrderNextInstance = RefAugmentedOrderInstance & {
-	next: number;
-}
-
-export type SomeNewTypeInstance = {
+export type SomeNewType = {
 	name: string;
 	email: string;
 	filed: number;
-}
+};
 
-export type ProductTypeInstance = {
+export type ProductType = {
 	id: string;
 	name: string;
 	price: number;
-	DigitalProductType: TypeConstructor<DigitalProductTypeInstance>;
-	PhysicalProductType: TypeConstructor<PhysicalProductTypeInstance>;
-}
+	DigitalProductType: new () => ProductType_DigitalProductType;
+	PhysicalProductType: new () => ProductType_PhysicalProductType;
+};
 
-export type DigitalProductTypeInstance = ProductTypeInstance & {
+export type ProductType_DigitalProductType = ProtoFlat<ProductType, {
 	downloadUrl: string;
 	fileSize: number;
 	format: string;
-}
+	DigitalProductType: undefined;
+	PhysicalProductType: undefined;
+}>;
 
-export type PhysicalProductTypeInstance = ProductTypeInstance & {
+export type ProductType_PhysicalProductType = ProtoFlat<ProductType, {
 	weight: number;
 	dimensions: object;
 	inStock: boolean;
-}
+	PhysicalProductType: undefined;
+	DigitalProductType: undefined;
+}>;
 
-export type CustomerTypeInstance = {
+export type CustomerType = {
 	id: string;
 	name: string;
 	email: string;
-	PremiumCustomerType: TypeConstructor<PremiumCustomerTypeInstance>;
-}
+	PremiumCustomerType: new () => CustomerType_PremiumCustomerType;
+};
 
-export type PremiumCustomerTypeInstance = CustomerTypeInstance & {
+export type CustomerType_PremiumCustomerType = ProtoFlat<CustomerType, {
 	loyaltyPoints: number;
 	membershipLevel: string;
-}
+	PremiumCustomerType: undefined;
+}>;
 
-export type InvoiceInstance = {
+export type Invoice = {
 	invoiceId: string;
 	amount: number;
 	issuedAt: Date;
-}
+};
 
-export type PaymentInstance = {
+export type Payment = {
 	paymentId: string;
 	method: string;
-	status: string;
-}
+	status: 'pending' | 'completed' | 'failed';
+};
 
-export type ServiceTypeInstance = {
+export type ServiceType = {
 	id: string;
 	name: string;
 	description: string;
-	WebServiceType: TypeConstructor<WebServiceTypeInstance>;
-	DatabaseServiceType: TypeConstructor<DatabaseServiceTypeInstance>;
-}
+	WebServiceType: new () => ServiceType_WebServiceType;
+	DatabaseServiceType: new () => ServiceType_DatabaseServiceType;
+};
 
-export type WebServiceTypeInstance = ServiceTypeInstance & {
+export type ServiceType_WebServiceType = ProtoFlat<ServiceType, {
 	endpoint: string;
 	method: string;
-}
+	WebServiceType: undefined;
+	DatabaseServiceType: undefined;
+}>;
 
-export type DatabaseServiceTypeInstance = ServiceTypeInstance & {
+export type ServiceType_DatabaseServiceType = ProtoFlat<ServiceType, {
 	connectionString: string;
 	poolSize: number;
-}
+	DatabaseServiceType: undefined;
+	WebServiceType: undefined;
+}>;
 
-export type ConfigTypeInstance = {
+export type ConfigType = {
 	env: string;
 	debug: boolean;
-	ProductionConfigType: TypeConstructor<ProductionConfigTypeInstance>;
-}
+	ProductionConfigType: new () => ConfigType_ProductionConfigType;
+};
 
-export type ProductionConfigTypeInstance = ConfigTypeInstance & {
+export type ConfigType_ProductionConfigType = ProtoFlat<ConfigType, {
 	env: string;
 	ssl: boolean;
 	caching: boolean;
-}
+	ProductionConfigType: undefined;
+}>;
 
-export type LoggerInstance = {
-	level: string;
+export type Logger = {
+	level: 'debug' | 'info' | 'warn' | 'error';
 	prefix: string;
-}
+};
 
-export type CacheInstance = {
+export type Cache = {
 	ttl: number;
 	maxSize: number;
-}
+};
 
-export type StrictEntityInstance = {
+export type StrictEntity = {
 	value: string;
 	count: number;
-	StrictChild: TypeConstructor<StrictChildInstance>;
-}
+	StrictChild: new () => StrictEntity_StrictChild;
+};
 
-export type StrictChildInstance = StrictEntityInstance & {
+export type StrictEntity_StrictChild = ProtoFlat<StrictEntity, {
 	childValue: string;
-}
+	StrictChild: undefined;
+}>;
 
-export type BaseWithPrototypeInstance = {
+export type BaseWithPrototype = {
 	baseField: number;
 	name: string;
-	DerivedFromBase: TypeConstructor<DerivedFromBaseInstance>;
-}
+	DerivedFromBase: new () => BaseWithPrototype_DerivedFromBase;
+};
 
-export type DerivedFromBaseInstance = BaseWithPrototypeInstance & {
+export type BaseWithPrototype_DerivedFromBase = ProtoFlat<BaseWithPrototype, {
 	derivedField: number;
 	extra: string;
-}
+	DerivedFromBase: undefined;
+}>;
 
-export type MyFnTypeInstance = {
-}
+export type MyFnType = {
+};
 
-export type AssignTypeInstance = {
-}
+export type AssignType = {
+};
 
-export type MultiDecoratedInstance = {
+export type MultiDecorated = {
 	strictField: string;
-}
+};

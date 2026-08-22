@@ -6,28 +6,35 @@
 // This example uses global types from .tactica/index.d.ts
 // Run with: npm run generate-types:global (uses --module-augmentation flag)
 //
-// NO IMPORTS NEEDED - types are globally available!
+// NO IMPORTS NEEDED for define() `this` types - they are globally available!
 // This works because index.d.ts uses "declare global" to make types
 // accessible without imports.
+//
+// Exception: decorated classes. TypeScript declaration merging does not
+// cross module boundaries, and this file is a module (it has imports),
+// so the local class `GlobalOrder` shadows the global type of the same
+// name. For the nested-constructor cast we import the generated type
+// under an alias:
 
 import { define, decorate } from 'mnemonica';
+import type { GlobalOrder as GlobalOrderInstance } from '../.tactica/types';
 
 // ============================================
 // Example 1: Basic Type Hierarchy with define()
 // ============================================
 
-const GlobalUserType = define('GlobalUserType', function (this: GlobalUserTypeInstance) {
+const GlobalUserType = define('GlobalUserType', function (this: GlobalUserType) {
 	this.name = '';
 	this.email = '';
 	this.createdAt = new Date();
 });
 
-const GlobalAdminType = GlobalUserType.define('GlobalAdminType', function (this: GlobalAdminTypeInstance) {
+const GlobalAdminType = GlobalUserType.define('GlobalAdminType', function (this: GlobalAdminType) {
 	this.role = 'admin';
 	this.permissions = ['read', 'write', 'delete'];
 });
 
-const GlobalSuperAdminType = GlobalAdminType.define('GlobalSuperAdminType', function (this: GlobalSuperAdminTypeInstance) {
+const GlobalSuperAdminType = GlobalAdminType.define('GlobalSuperAdminType', function (this: GlobalSuperAdminType) {
 	this.isSystemAdmin = true;
 	this.accessLevel = 999;
 });
@@ -58,7 +65,7 @@ class GlobalAugmentedOrderNext {
 
 console.log('=== Global Example: Mnemonica Type Hierarchy ===\n');
 
-// Create a user - hover here to see: const user: GlobalUserTypeInstance
+// Create a user - hover here to see: const user: GlobalUserType
 const user = new GlobalUserType();
 console.log('Created GlobalUser:', {
 	name: user.name,
@@ -67,7 +74,7 @@ console.log('Created GlobalUser:', {
 });
 
 // Create an admin from the user instance
-// Hover to see: const admin: GlobalAdminTypeInstance
+// Hover to see: const admin: GlobalAdminType
 const admin = new user.GlobalAdminType();
 console.log('\nCreated GlobalAdmin from GlobalUser:', {
 	name: admin.name,
@@ -77,7 +84,7 @@ console.log('\nCreated GlobalAdmin from GlobalUser:', {
 });
 
 // Create a super admin from the admin instance
-// Hover to see: const superAdmin: GlobalSuperAdminTypeInstance
+// Hover to see: const superAdmin: GlobalSuperAdminType
 const superAdmin = new admin.GlobalSuperAdminType();
 console.log('\nCreated GlobalSuperAdmin from GlobalAdmin:', {
 	name: superAdmin.name,
@@ -113,3 +120,10 @@ console.log('\nCreated GlobalAugmentedOrderNext:', {
 });
 
 console.log('\n=== Global Example completed successfully! ===');
+
+// GlobalSuperAdminType and GlobalAugmentedOrderNext are used through the
+// mnemonica graph, not by identifier — export them
+export {
+	GlobalSuperAdminType,
+	GlobalAugmentedOrderNext,
+};

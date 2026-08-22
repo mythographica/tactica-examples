@@ -21,23 +21,28 @@
 /// <reference types="../.tactica/index" />
 
 import { define, decorate } from 'mnemonica';
+// Decorated classes are the exception to the "no imports" approach:
+// the local class `RefOrder` shadows the global type of the same name
+// (declaration merging does not cross module boundaries), so the
+// nested-constructor cast uses an aliased import of the generated type.
+import type { RefOrder as RefOrderInstance } from '../.tactica/types';
 
 // ============================================
 // Example 1: Basic Type Hierarchy with define()
 // ============================================
 
-const RefUserType = define('RefUserType', function (this: RefUserTypeInstance) {
+const RefUserType = define('RefUserType', function (this: RefUserType) {
 	this.name = '';
 	this.email = '';
 	this.createdAt = new Date();
 });
 
-const RefAdminType = RefUserType.define('RefAdminType', function (this: RefAdminTypeInstance) {
+const RefAdminType = RefUserType.define('RefAdminType', function (this: RefAdminType) {
 	this.role = 'admin';
 	this.permissions = ['read', 'write', 'delete'];
 });
 
-const RefSuperAdminType = RefAdminType.define('RefSuperAdminType', function (this: RefSuperAdminTypeInstance) {
+const RefSuperAdminType = RefAdminType.define('RefSuperAdminType', function (this: RefSuperAdminType) {
 	this.isSystemAdmin = true;
 	this.accessLevel = 999;
 });
@@ -68,7 +73,7 @@ class RefAugmentedOrderNext {
 
 console.log('=== Reference Example: Mnemonica Type Hierarchy ===\n');
 
-// Create a user - hover here to see: const user: RefUserTypeInstance
+// Create a user - hover here to see: const user: RefUserType
 const user = new RefUserType();
 console.log('Created RefUser:', {
 	name: user.name,
@@ -77,7 +82,7 @@ console.log('Created RefUser:', {
 });
 
 // Create an admin from the user instance
-// Hover to see: const admin: RefAdminTypeInstance
+// Hover to see: const admin: RefAdminType
 const admin = new user.RefAdminType();
 console.log('\nCreated RefAdmin from RefUser:', {
 	name: admin.name,
@@ -87,7 +92,7 @@ console.log('\nCreated RefAdmin from RefUser:', {
 });
 
 // Create a super admin from the admin instance
-// Hover to see: const superAdmin: RefSuperAdminTypeInstance
+// Hover to see: const superAdmin: RefSuperAdminType
 const superAdmin = new admin.RefSuperAdminType();
 console.log('\nCreated RefSuperAdmin from RefAdmin:', {
 	name: superAdmin.name,
@@ -123,3 +128,10 @@ console.log('\nCreated RefAugmentedOrderNext:', {
 });
 
 console.log('\n=== Reference Example completed successfully! ===');
+
+// RefSuperAdminType and RefAugmentedOrderNext are used through the
+// mnemonica graph, not by identifier — export them
+export {
+	RefSuperAdminType,
+	RefAugmentedOrderNext,
+};

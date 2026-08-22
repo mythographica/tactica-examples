@@ -1,0 +1,310 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-08-22T16:28:47.926Z",
+  "definitions": {
+    "StandardType": {
+      "name": "StandardType",
+      "location": "/code/mnemonica/tactica-examples/src/config-options.ts:10:22",
+      "kind": "define",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "StrictType": {
+      "name": "StrictType",
+      "location": "/code/mnemonica/tactica-examples/src/config-options.ts:19:20",
+      "kind": "define",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": true
+    },
+    "StandardType.StandardSubtype": {
+      "name": "StandardSubtype",
+      "location": "/code/mnemonica/tactica-examples/src/config-options.ts:27:38",
+      "kind": "define",
+      "parent": "StandardType",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "BaseEntity": {
+      "name": "BaseEntity",
+      "location": "/code/mnemonica/tactica-examples/src/decorators.ts:14:1",
+      "kind": "decorate",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "BaseEntity.UserEntity": {
+      "name": "UserEntity",
+      "location": "/code/mnemonica/tactica-examples/src/decorators.ts:22:1",
+      "kind": "decorate",
+      "parent": "BaseEntity",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "BaseEntity.ProductEntity": {
+      "name": "ProductEntity",
+      "location": "/code/mnemonica/tactica-examples/src/decorators.ts:30:1",
+      "kind": "decorate",
+      "parent": "BaseEntity",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "BaseEntity.UserEntity.AdminEntity": {
+      "name": "AdminEntity",
+      "location": "/code/mnemonica/tactica-examples/src/decorators.ts:38:1",
+      "kind": "decorate",
+      "parent": "BaseEntity.UserEntity",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "ConfigurableEntity": {
+      "name": "ConfigurableEntity",
+      "location": "/code/mnemonica/tactica-examples/src/decorators.ts:45:1",
+      "kind": "decorate",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "ExcludeExampleUser": {
+      "name": "ExcludeExampleUser",
+      "location": "/code/mnemonica/tactica-examples/src/example-exclude.ts:31:28",
+      "kind": "define",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "ExcludeExampleOrder": {
+      "name": "ExcludeExampleOrder",
+      "location": "/code/mnemonica/tactica-examples/src/example-exclude.ts:40:1",
+      "kind": "decorate",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "UserType": {
+      "name": "UserType",
+      "location": "/code/mnemonica/tactica-examples/src/index.ts:35:18",
+      "kind": "define",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "UserType.AdminType": {
+      "name": "AdminType",
+      "location": "/code/mnemonica/tactica-examples/src/index.ts:42:28",
+      "kind": "define",
+      "parent": "UserType",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "UserType.AdminType.SuperAdminType": {
+      "name": "SuperAdminType",
+      "location": "/code/mnemonica/tactica-examples/src/index.ts:48:34",
+      "kind": "define",
+      "parent": "UserType.AdminType",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "Order": {
+      "name": "Order",
+      "location": "/code/mnemonica/tactica-examples/src/index.ts:58:1",
+      "kind": "decorate",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "Order.AugmentedOrder": {
+      "name": "AugmentedOrder",
+      "location": "/code/mnemonica/tactica-examples/src/index.ts:64:1",
+      "kind": "decorate",
+      "parent": "Order",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "Order.AugmentedOrder.AugmentedOrderNext": {
+      "name": "AugmentedOrderNext",
+      "location": "/code/mnemonica/tactica-examples/src/index.ts:69:1",
+      "kind": "decorate",
+      "parent": "Order.AugmentedOrder",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "SomeNewType": {
+      "name": "SomeNewType",
+      "location": "/code/mnemonica/tactica-examples/src/index.ts:24:25",
+      "kind": "define",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "ProductType": {
+      "name": "ProductType",
+      "location": "/code/mnemonica/tactica-examples/src/models.ts:14:21",
+      "kind": "define",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "ProductType.DigitalProductType": {
+      "name": "DigitalProductType",
+      "location": "/code/mnemonica/tactica-examples/src/models.ts:20:40",
+      "kind": "define",
+      "parent": "ProductType",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "ProductType.PhysicalProductType": {
+      "name": "PhysicalProductType",
+      "location": "/code/mnemonica/tactica-examples/src/models.ts:26:41",
+      "kind": "define",
+      "parent": "ProductType",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "CustomerType": {
+      "name": "CustomerType",
+      "location": "/code/mnemonica/tactica-examples/src/models.ts:33:22",
+      "kind": "define",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "CustomerType.PremiumCustomerType": {
+      "name": "PremiumCustomerType",
+      "location": "/code/mnemonica/tactica-examples/src/models.ts:39:42",
+      "kind": "define",
+      "parent": "CustomerType",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "Invoice": {
+      "name": "Invoice",
+      "location": "/code/mnemonica/tactica-examples/src/models.ts:45:1",
+      "kind": "decorate",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "Payment": {
+      "name": "Payment",
+      "location": "/code/mnemonica/tactica-examples/src/models.ts:52:1",
+      "kind": "decorate",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "ServiceType": {
+      "name": "ServiceType",
+      "location": "/code/mnemonica/tactica-examples/src/services.ts:14:21",
+      "kind": "define",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "ServiceType.WebServiceType": {
+      "name": "WebServiceType",
+      "location": "/code/mnemonica/tactica-examples/src/services.ts:20:36",
+      "kind": "define",
+      "parent": "ServiceType",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "ServiceType.DatabaseServiceType": {
+      "name": "DatabaseServiceType",
+      "location": "/code/mnemonica/tactica-examples/src/services.ts:25:41",
+      "kind": "define",
+      "parent": "ServiceType",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "ConfigType": {
+      "name": "ConfigType",
+      "location": "/code/mnemonica/tactica-examples/src/services.ts:31:20",
+      "kind": "define",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "ConfigType.ProductionConfigType": {
+      "name": "ProductionConfigType",
+      "location": "/code/mnemonica/tactica-examples/src/services.ts:36:41",
+      "kind": "define",
+      "parent": "ConfigType",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "Logger": {
+      "name": "Logger",
+      "location": "/code/mnemonica/tactica-examples/src/services.ts:43:1",
+      "kind": "decorate",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "Cache": {
+      "name": "Cache",
+      "location": "/code/mnemonica/tactica-examples/src/services.ts:49:1",
+      "kind": "decorate",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "StrictEntity": {
+      "name": "StrictEntity",
+      "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:22:1",
+      "kind": "decorate",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "StrictEntity.StrictChild": {
+      "name": "StrictChild",
+      "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:34:1",
+      "kind": "decorate",
+      "parent": "StrictEntity",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "BaseWithPrototype": {
+      "name": "BaseWithPrototype",
+      "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:47:1",
+      "kind": "decorate",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "BaseWithPrototype.DerivedFromBase": {
+      "name": "DerivedFromBase",
+      "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:56:1",
+      "kind": "decorate",
+      "parent": "BaseWithPrototype",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "MyFnType": {
+      "name": "MyFnType",
+      "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:75:18",
+      "kind": "define",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "AssignType": {
+      "name": "AssignType",
+      "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:81:20",
+      "kind": "define",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "MultiDecorated": {
+      "name": "MultiDecorated",
+      "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:89:1",
+      "kind": "decorate",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": true
+    }
+  }
+}

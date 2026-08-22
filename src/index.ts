@@ -4,17 +4,20 @@
 // Tactica Example - Use mnemonica directly!
 // ============================================
 // After running `npm run generate-types`, tactica generates
-// .mnemonica/types.ts with all instance interfaces.
+// .tactica/types.ts with all instance interfaces.
 //
 // Import the types and use them with mnemonica's define() and decorate().
+// Note: generated types are named after the type itself (`UserType`),
+// nested types use underscore paths (`UserType_AdminType`). We alias them
+// to `*Instance` here because the const constructors below share those names.
 
 import { define, decorate, apply } from 'mnemonica';
 import type {
-	UserTypeInstance,
-	AdminTypeInstance,
-	SuperAdminTypeInstance,
-	OrderInstance,
-	SomeNewTypeInstance
+	UserType as UserTypeInstance,
+	UserType_AdminType as AdminTypeInstance,
+	UserType_AdminType_SuperAdminType as SuperAdminTypeInstance,
+	Order as OrderInstance,
+	SomeNewType as SomeNewTypeInstance
 } from '../.tactica/types';
 
 
@@ -139,8 +142,12 @@ console.log('\n=== Using SuperAdminType directly ===');
 const directSuperAdmin = new admin.SuperAdminType();
 console.log('Direct SuperAdmin:', directSuperAdmin.isSystemAdmin, directSuperAdmin.accessLevel);
 
-// Apply SuperAdminType to user instance
-const appliedSuperAdmin = apply(user, SuperAdminType);
+// Apply SuperAdminType to user instance, level by level:
+// apply() requires the type to be a DIRECT subtype constructor
+// reachable on that instance — apply(user, SuperAdminType) throws
+// WRONG_MODIFICATION_PATTERN because SuperAdminType hangs under AdminType
+const appliedAdmin = apply(user, AdminType);
+const appliedSuperAdmin = apply(appliedAdmin, SuperAdminType);
 console.log('Applied SuperAdmin:', appliedSuperAdmin.isSystemAdmin, appliedSuperAdmin.accessLevel);
 
 // Create a new chain starting from an AugmentedOrder instance
@@ -148,5 +155,15 @@ const anotherOrder = new Order() as OrderInstance;
 const anotherAugmented = new anotherOrder.AugmentedOrder();
 console.log('Another AugmentedOrder:', anotherAugmented.addition);
 
+// SomeNewType demo (odd name with digits works too)
+const someNew = new SomeNewType_123();
+console.log('SomeNewType:', someNew.name, someNew.filed);
+
 console.log('\n=== Example completed successfully! ===');
+
+// AugmentedOrderNext is used through the mnemonica graph
+// (new augmentedOrder.AugmentedOrderNext()), not by identifier
+export {
+	AugmentedOrderNext,
+};
 

@@ -14,15 +14,20 @@
 		"resolveJsonModule": true,
 		"outDir": "./build",
 		"rootDir": ".",
-		"typeRoots": ["./node_modules/@types", "./.tactica"]
+		"typeRoots": ["./node_modules/@types", "./.tactica"],
+		"types": ["node"]
 	},
 	"include": [
 		"src/**/*.ts",
-		".tactica/types.ts",
-		".tactica/index.d.ts"
+		".tactica/types.ts"
 	],
 	"exclude": [
 		"node_modules",
-		"build"
+		"build",
+		// Global-mode demos: tactica 0.1.9 --module-augmentation generates a
+		// self-conflicting index.d.ts (type + interface name collisions,
+		// TS2300). Excluded from the build until tactica fixes global mode.
+		"src/example-global.ts",
+		"src/example-reference.ts"
 	]
 }

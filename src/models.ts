@@ -5,6 +5,10 @@
 // ============================================
 
 import { define, decorate } from 'mnemonica';
+import type {
+	Invoice as InvoiceInstance,
+	Payment as PaymentInstance,
+} from '../.tactica/types';
 
 // Product hierarchy
 const ProductType = define('ProductType', function (this: any) {

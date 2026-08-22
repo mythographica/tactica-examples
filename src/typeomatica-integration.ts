@@ -7,6 +7,11 @@
 
 import { define, decorate } from 'mnemonica';
 import { Strict, BaseClass } from 'typeomatica';
+import type {
+	StrictEntity as StrictEntityInstance,
+	BaseWithPrototype as BaseWithPrototypeInstance,
+	MultiDecorated as MultiDecoratedInstance,
+} from '../.tactica/types';
 
 // ============================================
 // Example 1: @Strict decorator with @decorate
@@ -55,15 +60,17 @@ class DerivedFromBase {
 }
 
 // ============================================
-// Example 3: ConstructorFunction pattern
+// Example 3: Standalone function as construct handler
 // ============================================
+// (the old `ConstructorFunction<T>` cast export is gone from mnemonica —
+// annotate `this` with the property types instead; tactica cannot trace
+// assignments inside a standalone function, so the inline type is the
+// source of truth here)
 
-import { ConstructorFunction } from 'mnemonica';
-
-const MyFunctionConstructor = function (this: any) {
+const MyFunctionConstructor = function (this: { fnField: number; fnName: string }) {
 	this.fnField = 123;
 	this.fnName = 'constructor';
-} as ConstructorFunction<{ fnField: number; fnName: string }>;
+};
 
 const MyFnType = define('MyFnType', MyFunctionConstructor);
 

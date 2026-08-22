@@ -5,6 +5,10 @@
 // ============================================
 
 import { define, decorate } from 'mnemonica';
+import type {
+	Logger as LoggerInstance,
+	Cache as CacheInstance,
+} from '../.tactica/types';
 
 // Service hierarchy
 const ServiceType = define('ServiceType', function (this: any) {

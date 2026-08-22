@@ -22,7 +22,7 @@
 // excluded from type generation using --exclude "example-exclude.ts"
 
 import { define, decorate } from 'mnemonica';
-import type { ExcludeExampleUserInstance } from '../.tactica/types';
+import type { ExcludeExampleUser as ExcludeExampleUserInstance } from '../.tactica/types';
 
 // ============================================
 // Example: User type that might be excluded
@@ -56,3 +56,8 @@ const user = new ExcludeExampleUser();
 console.log('Created user:', user);
 
 console.log('\n=== Exclude Example completed ===');
+
+// Used through the mnemonica graph, not by identifier
+export {
+	ExcludeExampleOrder,
+};

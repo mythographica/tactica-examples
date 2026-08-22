@@ -5,6 +5,10 @@
 // ============================================
 
 import { decorate } from 'mnemonica';
+import type {
+	BaseEntity as BaseEntityInstance,
+	ConfigurableEntity as ConfigurableEntityInstance,
+} from '../.tactica/types';
 
 // Base class decorated with @decorate()
 @decorate()
