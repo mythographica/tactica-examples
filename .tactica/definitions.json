@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-22T16:28:47.926Z",
+  "generatedAt": "2026-08-25T13:09:04.150Z",
   "definitions": {
     "StandardType": {
       "name": "StandardType",
@@ -82,6 +82,54 @@
       "strictChain": true,
       "blockErrors": false
     },
+    "GlobalUserType": {
+      "name": "GlobalUserType",
+      "location": "/code/mnemonica/tactica-examples/src/example-global.ts:26:24",
+      "kind": "define",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "GlobalUserType.GlobalAdminType": {
+      "name": "GlobalAdminType",
+      "location": "/code/mnemonica/tactica-examples/src/example-global.ts:32:40",
+      "kind": "define",
+      "parent": "GlobalUserType",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "GlobalUserType.GlobalAdminType.GlobalSuperAdminType": {
+      "name": "GlobalSuperAdminType",
+      "location": "/code/mnemonica/tactica-examples/src/example-global.ts:37:46",
+      "kind": "define",
+      "parent": "GlobalUserType.GlobalAdminType",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "GlobalOrder": {
+      "name": "GlobalOrder",
+      "location": "/code/mnemonica/tactica-examples/src/example-global.ts:46:1",
+      "kind": "decorate",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "GlobalOrder.GlobalAugmentedOrder": {
+      "name": "GlobalAugmentedOrder",
+      "location": "/code/mnemonica/tactica-examples/src/example-global.ts:52:1",
+      "kind": "decorate",
+      "parent": "GlobalOrder",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "GlobalOrder.GlobalAugmentedOrder.GlobalAugmentedOrderNext": {
+      "name": "GlobalAugmentedOrderNext",
+      "location": "/code/mnemonica/tactica-examples/src/example-global.ts:57:1",
+      "kind": "decorate",
+      "parent": "GlobalOrder.GlobalAugmentedOrder",
+      "strictChain": true,
+      "blockErrors": false
+    },
     "UserType": {
       "name": "UserType",
       "location": "/code/mnemonica/tactica-examples/src/index.ts:35:18",
@@ -127,6 +175,54 @@
       "location": "/code/mnemonica/tactica-examples/src/index.ts:69:1",
       "kind": "decorate",
       "parent": "Order.AugmentedOrder",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "RefUserType": {
+      "name": "RefUserType",
+      "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:34:21",
+      "kind": "define",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "RefUserType.RefAdminType": {
+      "name": "RefAdminType",
+      "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:40:34",
+      "kind": "define",
+      "parent": "RefUserType",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "RefUserType.RefAdminType.RefSuperAdminType": {
+      "name": "RefSuperAdminType",
+      "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:45:40",
+      "kind": "define",
+      "parent": "RefUserType.RefAdminType",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "RefOrder": {
+      "name": "RefOrder",
+      "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:54:1",
+      "kind": "decorate",
+      "parent": null,
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "RefOrder.RefAugmentedOrder": {
+      "name": "RefAugmentedOrder",
+      "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:60:1",
+      "kind": "decorate",
+      "parent": "RefOrder",
+      "strictChain": true,
+      "blockErrors": false
+    },
+    "RefOrder.RefAugmentedOrder.RefAugmentedOrderNext": {
+      "name": "RefAugmentedOrderNext",
+      "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:65:1",
+      "kind": "decorate",
+      "parent": "RefOrder.RefAugmentedOrder",
       "strictChain": true,
       "blockErrors": false
     },

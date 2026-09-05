@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-22T16:28:47.927Z",
+  "generatedAt": "2026-08-25T13:09:04.152Z",
   "roots": [
     {
       "name": "StandardType",
@@ -66,6 +66,46 @@
       "children": []
     },
     {
+      "name": "GlobalUserType",
+      "fullPath": "GlobalUserType",
+      "location": "/code/mnemonica/tactica-examples/src/example-global.ts:26:24",
+      "children": [
+        {
+          "name": "GlobalAdminType",
+          "fullPath": "GlobalUserType.GlobalAdminType",
+          "location": "/code/mnemonica/tactica-examples/src/example-global.ts:32:40",
+          "children": [
+            {
+              "name": "GlobalSuperAdminType",
+              "fullPath": "GlobalUserType.GlobalAdminType.GlobalSuperAdminType",
+              "location": "/code/mnemonica/tactica-examples/src/example-global.ts:37:46",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GlobalOrder",
+      "fullPath": "GlobalOrder",
+      "location": "/code/mnemonica/tactica-examples/src/example-global.ts:46:1",
+      "children": [
+        {
+          "name": "GlobalAugmentedOrder",
+          "fullPath": "GlobalOrder.GlobalAugmentedOrder",
+          "location": "/code/mnemonica/tactica-examples/src/example-global.ts:52:1",
+          "children": [
+            {
+              "name": "GlobalAugmentedOrderNext",
+              "fullPath": "GlobalOrder.GlobalAugmentedOrder.GlobalAugmentedOrderNext",
+              "location": "/code/mnemonica/tactica-examples/src/example-global.ts:57:1",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "UserType",
       "fullPath": "UserType",
       "location": "/code/mnemonica/tactica-examples/src/index.ts:35:18",
@@ -99,6 +139,46 @@
               "name": "AugmentedOrderNext",
               "fullPath": "Order.AugmentedOrder.AugmentedOrderNext",
               "location": "/code/mnemonica/tactica-examples/src/index.ts:69:1",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RefUserType",
+      "fullPath": "RefUserType",
+      "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:34:21",
+      "children": [
+        {
+          "name": "RefAdminType",
+          "fullPath": "RefUserType.RefAdminType",
+          "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:40:34",
+          "children": [
+            {
+              "name": "RefSuperAdminType",
+              "fullPath": "RefUserType.RefAdminType.RefSuperAdminType",
+              "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:45:40",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RefOrder",
+      "fullPath": "RefOrder",
+      "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:54:1",
+      "children": [
+        {
+          "name": "RefAugmentedOrder",
+          "fullPath": "RefOrder.RefAugmentedOrder",
+          "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:60:1",
+          "children": [
+            {
+              "name": "RefAugmentedOrderNext",
+              "fullPath": "RefOrder.RefAugmentedOrder.RefAugmentedOrderNext",
+              "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:65:1",
               "children": []
             }
           ]

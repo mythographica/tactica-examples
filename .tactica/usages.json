@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-22T16:28:47.926Z",
+  "generatedAt": "2026-08-25T13:09:04.151Z",
   "usages": {
     "StandardType": [
       {
@@ -83,6 +83,61 @@
         "location": "/code/mnemonica/tactica-examples/src/example-exclude.ts:55:14",
         "kind": "instantiation",
         "code": "new ExcludeExampleUser()"
+      }
+    ],
+    "GlobalUserType.GlobalAdminType": [
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:78:15",
+        "kind": "instantiation",
+        "code": "new user.GlobalAdminType()"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:78:19",
+        "kind": "propertyAccess",
+        "code": "user.GlobalAdminType"
+      }
+    ],
+    "GlobalUserType.GlobalAdminType.GlobalSuperAdminType": [
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:88:20",
+        "kind": "instantiation",
+        "code": "new admin.GlobalSuperAdminType()"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:88:24",
+        "kind": "propertyAccess",
+        "code": "admin.GlobalSuperAdminType"
+      }
+    ],
+    "GlobalOrder": [
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:101:15",
+        "kind": "instantiation",
+        "code": "new GlobalOrder()"
+      }
+    ],
+    "GlobalOrder.GlobalAugmentedOrder": [
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:109:24",
+        "kind": "instantiation",
+        "code": "new order.GlobalAugmentedOrder()"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:109:28",
+        "kind": "propertyAccess",
+        "code": "order.GlobalAugmentedOrder"
+      }
+    ],
+    "GlobalOrder.GlobalAugmentedOrder.GlobalAugmentedOrderNext": [
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:117:28",
+        "kind": "instantiation",
+        "code": "new augmentedOrder.GlobalAugmentedOrderNext()"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:117:32",
+        "kind": "propertyAccess",
+        "code": "augmentedOrder.GlobalAugmentedOrderNext"
       }
     ],
     "UserType.AdminType": [
@@ -208,6 +263,61 @@
         "location": "/code/mnemonica/tactica-examples/src/index.ts:129:32",
         "kind": "propertyAccess",
         "code": "augmentedOrder.AugmentedOrderNext"
+      }
+    ],
+    "RefUserType.RefAdminType": [
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:86:15",
+        "kind": "instantiation",
+        "code": "new user.RefAdminType()"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:86:19",
+        "kind": "propertyAccess",
+        "code": "user.RefAdminType"
+      }
+    ],
+    "RefUserType.RefAdminType.RefSuperAdminType": [
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:96:20",
+        "kind": "instantiation",
+        "code": "new admin.RefSuperAdminType()"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:96:24",
+        "kind": "propertyAccess",
+        "code": "admin.RefSuperAdminType"
+      }
+    ],
+    "RefOrder": [
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:109:15",
+        "kind": "instantiation",
+        "code": "new RefOrder()"
+      }
+    ],
+    "RefOrder.RefAugmentedOrder": [
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:117:24",
+        "kind": "instantiation",
+        "code": "new order.RefAugmentedOrder()"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:117:28",
+        "kind": "propertyAccess",
+        "code": "order.RefAugmentedOrder"
+      }
+    ],
+    "RefOrder.RefAugmentedOrder.RefAugmentedOrderNext": [
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:125:28",
+        "kind": "instantiation",
+        "code": "new augmentedOrder.RefAugmentedOrderNext()"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:125:32",
+        "kind": "propertyAccess",
+        "code": "augmentedOrder.RefAugmentedOrderNext"
       }
     ],
     "ProductType": [

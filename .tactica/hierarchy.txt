@@ -9,12 +9,24 @@ Type Hierarchy (Trie):
 ├── ConfigurableEntity
 ├── ExcludeExampleUser
 ├── ExcludeExampleOrder
+├── GlobalUserType
+│   └── GlobalUserType_GlobalAdminType
+│       └── GlobalUserType_GlobalAdminType_GlobalSuperAdminType
+├── GlobalOrder
+│   └── GlobalOrder_GlobalAugmentedOrder
+│       └── GlobalOrder_GlobalAugmentedOrder_GlobalAugmentedOrderNext
 ├── UserType
 │   └── UserType_AdminType
 │       └── UserType_AdminType_SuperAdminType
 ├── Order
 │   └── Order_AugmentedOrder
 │       └── Order_AugmentedOrder_AugmentedOrderNext
+├── RefUserType
+│   └── RefUserType_RefAdminType
+│       └── RefUserType_RefAdminType_RefSuperAdminType
+├── RefOrder
+│   └── RefOrder_RefAugmentedOrder
+│       └── RefOrder_RefAugmentedOrder_RefAugmentedOrderNext
 ├── SomeNewType
 ├── ProductType
 │   ├── ProductType_DigitalProductType

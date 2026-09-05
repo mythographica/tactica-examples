@@ -65,6 +65,43 @@ export type ExcludeExampleOrder = {
 	total: number;
 };
 
+export type GlobalUserType = {
+	name: string;
+	email: string;
+	createdAt: Date;
+	GlobalAdminType: new () => GlobalUserType_GlobalAdminType;
+};
+
+export type GlobalUserType_GlobalAdminType = ProtoFlat<GlobalUserType, {
+	role: string;
+	permissions: Array<unknown>;
+	GlobalSuperAdminType: new () => GlobalUserType_GlobalAdminType_GlobalSuperAdminType;
+	GlobalAdminType: undefined;
+}>;
+
+export type GlobalUserType_GlobalAdminType_GlobalSuperAdminType = ProtoFlat<GlobalUserType_GlobalAdminType, {
+	isSystemAdmin: boolean;
+	accessLevel: number;
+	GlobalSuperAdminType: undefined;
+}>;
+
+export type GlobalOrder = {
+	orderId: string;
+	total: number;
+	GlobalAugmentedOrder: new () => GlobalOrder_GlobalAugmentedOrder;
+};
+
+export type GlobalOrder_GlobalAugmentedOrder = ProtoFlat<GlobalOrder, {
+	addition: string;
+	GlobalAugmentedOrderNext: new () => GlobalOrder_GlobalAugmentedOrder_GlobalAugmentedOrderNext;
+	GlobalAugmentedOrder: undefined;
+}>;
+
+export type GlobalOrder_GlobalAugmentedOrder_GlobalAugmentedOrderNext = ProtoFlat<GlobalOrder_GlobalAugmentedOrder, {
+	next: number;
+	GlobalAugmentedOrderNext: undefined;
+}>;
+
 export type UserType = {
 	name: string;
 	email: string;
@@ -100,6 +137,43 @@ export type Order_AugmentedOrder = ProtoFlat<Order, {
 export type Order_AugmentedOrder_AugmentedOrderNext = ProtoFlat<Order_AugmentedOrder, {
 	next: number;
 	AugmentedOrderNext: undefined;
+}>;
+
+export type RefUserType = {
+	name: string;
+	email: string;
+	createdAt: Date;
+	RefAdminType: new () => RefUserType_RefAdminType;
+};
+
+export type RefUserType_RefAdminType = ProtoFlat<RefUserType, {
+	role: string;
+	permissions: Array<unknown>;
+	RefSuperAdminType: new () => RefUserType_RefAdminType_RefSuperAdminType;
+	RefAdminType: undefined;
+}>;
+
+export type RefUserType_RefAdminType_RefSuperAdminType = ProtoFlat<RefUserType_RefAdminType, {
+	isSystemAdmin: boolean;
+	accessLevel: number;
+	RefSuperAdminType: undefined;
+}>;
+
+export type RefOrder = {
+	orderId: string;
+	total: number;
+	RefAugmentedOrder: new () => RefOrder_RefAugmentedOrder;
+};
+
+export type RefOrder_RefAugmentedOrder = ProtoFlat<RefOrder, {
+	addition: string;
+	RefAugmentedOrderNext: new () => RefOrder_RefAugmentedOrder_RefAugmentedOrderNext;
+	RefAugmentedOrder: undefined;
+}>;
+
+export type RefOrder_RefAugmentedOrder_RefAugmentedOrderNext = ProtoFlat<RefOrder_RefAugmentedOrder, {
+	next: number;
+	RefAugmentedOrderNext: undefined;
 }>;
 
 export type SomeNewType = {
