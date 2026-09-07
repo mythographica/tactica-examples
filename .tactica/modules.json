@@ -1,0 +1,735 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-09-07T21:48:15.114Z",
+  "modules": {
+    "/code/mnemonica/tactica-examples/src/config-options.ts": {
+      "filePath": "/code/mnemonica/tactica-examples/src/config-options.ts",
+      "definedTypes": [
+        "StandardType",
+        "StrictType",
+        "StandardType.StandardSubtype"
+      ],
+      "exportedBindings": [
+        {
+          "name": "StandardType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/config-options.ts",
+          "isReExport": false
+        },
+        {
+          "name": "StrictType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/config-options.ts",
+          "isReExport": false
+        },
+        {
+          "name": "StandardSubtype",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/config-options.ts",
+          "isReExport": false
+        }
+      ],
+      "importedBindings": [
+        {
+          "name": "define",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        }
+      ],
+      "dependencies": [],
+      "unresolvedSpecifiers": [],
+      "builtinSpecifiers": []
+    },
+    "/code/mnemonica/tactica-examples/src/decorators.ts": {
+      "filePath": "/code/mnemonica/tactica-examples/src/decorators.ts",
+      "definedTypes": [
+        "BaseEntity",
+        "BaseEntity.UserEntity",
+        "BaseEntity.ProductEntity",
+        "BaseEntity.UserEntity.AdminEntity",
+        "ConfigurableEntity"
+      ],
+      "exportedBindings": [
+        {
+          "name": "BaseEntity",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/decorators.ts",
+          "isReExport": false
+        },
+        {
+          "name": "UserEntity",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/decorators.ts",
+          "isReExport": false
+        },
+        {
+          "name": "ProductEntity",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/decorators.ts",
+          "isReExport": false
+        },
+        {
+          "name": "AdminEntity",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/decorators.ts",
+          "isReExport": false
+        },
+        {
+          "name": "ConfigurableEntity",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/decorators.ts",
+          "isReExport": false
+        }
+      ],
+      "importedBindings": [
+        {
+          "name": "decorate",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "BaseEntityInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "BaseEntity"
+        },
+        {
+          "name": "ConfigurableEntityInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "ConfigurableEntity"
+        }
+      ],
+      "dependencies": [],
+      "unresolvedSpecifiers": [],
+      "builtinSpecifiers": []
+    },
+    "/code/mnemonica/tactica-examples/src/example-exclude.ts": {
+      "filePath": "/code/mnemonica/tactica-examples/src/example-exclude.ts",
+      "definedTypes": [
+        "ExcludeExampleUser",
+        "ExcludeExampleOrder"
+      ],
+      "exportedBindings": [
+        {
+          "name": "ExcludeExampleOrder",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/example-exclude.ts",
+          "isReExport": false
+        }
+      ],
+      "importedBindings": [
+        {
+          "name": "define",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "decorate",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "ExcludeExampleUserInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "ExcludeExampleUser"
+        }
+      ],
+      "dependencies": [],
+      "unresolvedSpecifiers": [],
+      "builtinSpecifiers": []
+    },
+    "/code/mnemonica/tactica-examples/src/example-global.ts": {
+      "filePath": "/code/mnemonica/tactica-examples/src/example-global.ts",
+      "definedTypes": [
+        "GlobalUserType",
+        "GlobalUserType.GlobalAdminType",
+        "GlobalUserType.GlobalAdminType.GlobalSuperAdminType",
+        "GlobalOrder",
+        "GlobalOrder.GlobalAugmentedOrder",
+        "GlobalOrder.GlobalAugmentedOrder.GlobalAugmentedOrderNext"
+      ],
+      "exportedBindings": [
+        {
+          "name": "GlobalSuperAdminType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/example-global.ts",
+          "isReExport": false
+        },
+        {
+          "name": "GlobalAugmentedOrderNext",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/example-global.ts",
+          "isReExport": false
+        }
+      ],
+      "importedBindings": [
+        {
+          "name": "define",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "decorate",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "GlobalOrderInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "GlobalOrder"
+        }
+      ],
+      "dependencies": [],
+      "unresolvedSpecifiers": [],
+      "builtinSpecifiers": []
+    },
+    "/code/mnemonica/tactica-examples/src/example-import.ts": {
+      "filePath": "/code/mnemonica/tactica-examples/src/example-import.ts",
+      "definedTypes": [],
+      "exportedBindings": [
+        {
+          "name": "SuperAdminType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/example-import.ts",
+          "isReExport": false
+        },
+        {
+          "name": "AugmentedOrderNext",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/example-import.ts",
+          "isReExport": false
+        }
+      ],
+      "importedBindings": [
+        {
+          "name": "define",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "decorate",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "UserTypeInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "UserType"
+        },
+        {
+          "name": "AdminTypeInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "UserType_AdminType"
+        },
+        {
+          "name": "SuperAdminTypeInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "UserType_AdminType_SuperAdminType"
+        },
+        {
+          "name": "OrderInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "Order"
+        }
+      ],
+      "dependencies": [],
+      "unresolvedSpecifiers": [],
+      "builtinSpecifiers": []
+    },
+    "/code/mnemonica/tactica-examples/src/example-reference.ts": {
+      "filePath": "/code/mnemonica/tactica-examples/src/example-reference.ts",
+      "definedTypes": [
+        "RefUserType",
+        "RefUserType.RefAdminType",
+        "RefUserType.RefAdminType.RefSuperAdminType",
+        "RefOrder",
+        "RefOrder.RefAugmentedOrder",
+        "RefOrder.RefAugmentedOrder.RefAugmentedOrderNext"
+      ],
+      "exportedBindings": [
+        {
+          "name": "RefSuperAdminType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/example-reference.ts",
+          "isReExport": false
+        },
+        {
+          "name": "RefAugmentedOrderNext",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/example-reference.ts",
+          "isReExport": false
+        }
+      ],
+      "importedBindings": [
+        {
+          "name": "define",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "decorate",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "RefOrderInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "RefOrder"
+        }
+      ],
+      "dependencies": [],
+      "unresolvedSpecifiers": [],
+      "builtinSpecifiers": []
+    },
+    "/code/mnemonica/tactica-examples/src/index.ts": {
+      "filePath": "/code/mnemonica/tactica-examples/src/index.ts",
+      "definedTypes": [
+        "UserType",
+        "UserType.AdminType",
+        "UserType.AdminType.SuperAdminType",
+        "Order",
+        "Order.AugmentedOrder",
+        "Order.AugmentedOrder.AugmentedOrderNext",
+        "SomeNewType"
+      ],
+      "exportedBindings": [
+        {
+          "name": "AugmentedOrderNext",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/index.ts",
+          "isReExport": false
+        }
+      ],
+      "importedBindings": [
+        {
+          "name": "define",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "decorate",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "apply",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "UserTypeInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "UserType"
+        },
+        {
+          "name": "AdminTypeInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "UserType_AdminType"
+        },
+        {
+          "name": "SuperAdminTypeInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "UserType_AdminType_SuperAdminType"
+        },
+        {
+          "name": "OrderInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "Order"
+        },
+        {
+          "name": "SomeNewTypeInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "SomeNewType"
+        }
+      ],
+      "dependencies": [],
+      "unresolvedSpecifiers": [],
+      "builtinSpecifiers": []
+    },
+    "/code/mnemonica/tactica-examples/src/models.ts": {
+      "filePath": "/code/mnemonica/tactica-examples/src/models.ts",
+      "definedTypes": [
+        "ProductType",
+        "ProductType.DigitalProductType",
+        "ProductType.PhysicalProductType",
+        "CustomerType",
+        "CustomerType.PremiumCustomerType",
+        "Invoice",
+        "Payment"
+      ],
+      "exportedBindings": [
+        {
+          "name": "ProductType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/models.ts",
+          "isReExport": false
+        },
+        {
+          "name": "DigitalProductType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/models.ts",
+          "isReExport": false
+        },
+        {
+          "name": "PhysicalProductType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/models.ts",
+          "isReExport": false
+        },
+        {
+          "name": "CustomerType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/models.ts",
+          "isReExport": false
+        },
+        {
+          "name": "PremiumCustomerType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/models.ts",
+          "isReExport": false
+        },
+        {
+          "name": "Invoice",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/models.ts",
+          "isReExport": false
+        },
+        {
+          "name": "Payment",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/models.ts",
+          "isReExport": false
+        }
+      ],
+      "importedBindings": [
+        {
+          "name": "define",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "decorate",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "InvoiceInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "Invoice"
+        },
+        {
+          "name": "PaymentInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "Payment"
+        }
+      ],
+      "dependencies": [],
+      "unresolvedSpecifiers": [],
+      "builtinSpecifiers": []
+    },
+    "/code/mnemonica/tactica-examples/src/services.ts": {
+      "filePath": "/code/mnemonica/tactica-examples/src/services.ts",
+      "definedTypes": [
+        "ServiceType",
+        "ServiceType.WebServiceType",
+        "ServiceType.DatabaseServiceType",
+        "ConfigType",
+        "ConfigType.ProductionConfigType",
+        "Logger",
+        "Cache"
+      ],
+      "exportedBindings": [
+        {
+          "name": "ServiceType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/services.ts",
+          "isReExport": false
+        },
+        {
+          "name": "WebServiceType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/services.ts",
+          "isReExport": false
+        },
+        {
+          "name": "DatabaseServiceType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/services.ts",
+          "isReExport": false
+        },
+        {
+          "name": "ConfigType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/services.ts",
+          "isReExport": false
+        },
+        {
+          "name": "ProductionConfigType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/services.ts",
+          "isReExport": false
+        },
+        {
+          "name": "Logger",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/services.ts",
+          "isReExport": false
+        },
+        {
+          "name": "Cache",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/services.ts",
+          "isReExport": false
+        }
+      ],
+      "importedBindings": [
+        {
+          "name": "define",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "decorate",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "LoggerInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "Logger"
+        },
+        {
+          "name": "CacheInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "Cache"
+        }
+      ],
+      "dependencies": [],
+      "unresolvedSpecifiers": [],
+      "builtinSpecifiers": []
+    },
+    "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts": {
+      "filePath": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+      "definedTypes": [
+        "StrictEntity",
+        "StrictEntity.StrictChild",
+        "BaseWithPrototype",
+        "BaseWithPrototype.DerivedFromBase",
+        "MyFnType",
+        "AssignType",
+        "MultiDecorated"
+      ],
+      "exportedBindings": [
+        {
+          "name": "StrictEntity",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+          "isReExport": false
+        },
+        {
+          "name": "StrictChild",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+          "isReExport": false
+        },
+        {
+          "name": "BaseWithPrototype",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+          "isReExport": false
+        },
+        {
+          "name": "DerivedFromBase",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+          "isReExport": false
+        },
+        {
+          "name": "MyFnType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+          "isReExport": false
+        },
+        {
+          "name": "AssignType",
+          "kind": "const",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+          "isReExport": false
+        },
+        {
+          "name": "MultiDecorated",
+          "kind": "class",
+          "sourceModule": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+          "isReExport": false
+        }
+      ],
+      "importedBindings": [
+        {
+          "name": "define",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "decorate",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/mnemonica/build/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "Strict",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/typeomatica/lib/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "BaseClass",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/node_modules/typeomatica/lib/index.d.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "external": true
+        },
+        {
+          "name": "StrictEntityInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "StrictEntity"
+        },
+        {
+          "name": "BaseWithPrototypeInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "BaseWithPrototype"
+        },
+        {
+          "name": "MultiDecoratedInstance",
+          "kind": "unknown",
+          "sourceModule": "/code/mnemonica/tactica-examples/.tactica/types.ts",
+          "importKind": "named",
+          "isReExport": false,
+          "importAlias": "MultiDecorated"
+        }
+      ],
+      "dependencies": [],
+      "unresolvedSpecifiers": [],
+      "builtinSpecifiers": []
+    }
+  },
+  "edges": [],
+  "cycles": []
+}

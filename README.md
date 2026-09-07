@@ -2,7 +2,7 @@
 
 This is a working example of using `@mnemonica/tactica` to generate TypeScript types for [mnemonica](https://github.com/wentout/mnemonica).
 
-Pinned to the published stack: `mnemonica` 1.2.7, `typeomatica` 0.3.62, `@mnemonica/tactica` 0.1.9 (use `npm run use:local` to switch back to `file:` sibling checkouts for development).
+Pinned to the published stack: `mnemonica` 1.2.9, `typeomatica` 0.3.62, `@mnemonica/tactica` 0.2.0 (use `npm run use:local` to switch back to `file:` sibling checkouts for development).
 
 ## Quick Start
 
@@ -38,7 +38,7 @@ npm run generate-types
   constructor: `import type { UserType as UserTypeInstance } from '../.tactica/types'`
 - See `src/example-import.ts` for an example
 
-### Global Mode (legacy — currently broken in tactica 0.1.9)
+### Global Mode (legacy)
 
 ```bash
 npm run generate-types:global
@@ -46,20 +46,19 @@ npm run generate-types:global
 ```
 
 - Generates `.tactica/index.d.ts` with `declare global`
-- **Known issue:** tactica 0.1.9's global output declares both a `type` and
-  an `interface` under every type name in the same global scope, which fails
-  with `TS2300: Duplicate identifier`. The global-mode demos
-  (`src/example-global.ts`, `src/example-reference.ts`) are excluded from
-  `tsconfig.json` until tactica fixes global mode.
+- Root types are declared as **interfaces only** — a same-named `type` alias
+  would collide with the merging interface in the global scope (TS2300);
+  nested types keep their `ProtoFlat` aliases. The 0.1.9-era
+  duplicate-identifier failure is fixed since tactica 0.2.0.
 - The triple-slash variant (`/// <reference types="../.tactica/index" />`,
-  see `src/example-reference.ts`) shares the same fate.
+  see `src/example-reference.ts`) works the same way.
 
 ## Source Files
 
 - **`src/index.ts`** - Main entry point with complete type hierarchy examples
 - **`src/example-import.ts`** - Example using explicit type imports (default mode)
-- **`src/example-global.ts`** - Global types demo (excluded from build: legacy mode broken in tactica 0.1.9)
-- **`src/example-reference.ts`** - Triple-slash reference demo (same exclusion)
+- **`src/example-global.ts`** - Global types demo (legacy `--module-augmentation` mode)
+- **`src/example-reference.ts`** - Triple-slash reference demo (same legacy mode)
 - **`src/example-exclude.ts`** - Example demonstrating the --exclude option
 - **`src/decorators.ts`** - @decorate() decorator examples with parent classes
 - **`src/config-options.ts`** - define() configuration options (`strictChain`, `blockErrors`)
@@ -155,7 +154,7 @@ npx tactica --include "src/models/*"
 - `.tactica/registry.ts` - TypeRegistry augmentation for typed `lookup()`
 - `.tactica/hierarchy.json`, `flow.json`, `definitions.json`, `usages.json`,
   `hierarchy.txt` - graph data (Mnemographica renders from these)
-- tsconfig.json: `"include": ["src/**/*.ts", ".tactica/types.ts"]`
+- tsconfig.json: `"include": ["src/**/*.ts", ".tactica/types.ts", ".tactica/index.d.ts"]`
 - tsconfig.json also needs `"types": ["node"]` when `typeRoots` is set:
   without it, TypeScript tries to auto-include the deprecated empty
   `@types/chokidar` stub (a transitive tactica dependency) and fails with

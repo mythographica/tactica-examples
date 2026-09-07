@@ -1,0 +1,516 @@
+{
+  "version": 2,
+  "generatedAt": "2026-09-07T21:48:15.116Z",
+  "points": [],
+  "creationGraph": {
+    "nodes": [
+      {
+        "scopeId": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+        "name": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+        "kind": "module",
+        "filePath": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:1:1",
+        "starter": true
+      },
+      {
+        "scopeId": "/code/mnemonica/tactica-examples/src/services.ts",
+        "name": "/code/mnemonica/tactica-examples/src/services.ts",
+        "kind": "module",
+        "filePath": "/code/mnemonica/tactica-examples/src/services.ts",
+        "location": "/code/mnemonica/tactica-examples/src/services.ts:1:1",
+        "starter": true
+      },
+      {
+        "scopeId": "/code/mnemonica/tactica-examples/src/models.ts",
+        "name": "/code/mnemonica/tactica-examples/src/models.ts",
+        "kind": "module",
+        "filePath": "/code/mnemonica/tactica-examples/src/models.ts",
+        "location": "/code/mnemonica/tactica-examples/src/models.ts:1:1",
+        "starter": true
+      },
+      {
+        "scopeId": "/code/mnemonica/tactica-examples/src/example-reference.ts",
+        "name": "/code/mnemonica/tactica-examples/src/example-reference.ts",
+        "kind": "module",
+        "filePath": "/code/mnemonica/tactica-examples/src/example-reference.ts",
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:1:1",
+        "starter": true
+      },
+      {
+        "scopeId": "/code/mnemonica/tactica-examples/src/index.ts",
+        "name": "/code/mnemonica/tactica-examples/src/index.ts",
+        "kind": "module",
+        "filePath": "/code/mnemonica/tactica-examples/src/index.ts",
+        "location": "/code/mnemonica/tactica-examples/src/index.ts:1:1",
+        "starter": true
+      },
+      {
+        "scopeId": "/code/mnemonica/tactica-examples/src/example-import.ts",
+        "name": "/code/mnemonica/tactica-examples/src/example-import.ts",
+        "kind": "module",
+        "filePath": "/code/mnemonica/tactica-examples/src/example-import.ts",
+        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:1:1",
+        "starter": true
+      },
+      {
+        "scopeId": "/code/mnemonica/tactica-examples/src/example-global.ts",
+        "name": "/code/mnemonica/tactica-examples/src/example-global.ts",
+        "kind": "module",
+        "filePath": "/code/mnemonica/tactica-examples/src/example-global.ts",
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:1:1",
+        "starter": true
+      },
+      {
+        "scopeId": "/code/mnemonica/tactica-examples/src/example-exclude.ts",
+        "name": "/code/mnemonica/tactica-examples/src/example-exclude.ts",
+        "kind": "module",
+        "filePath": "/code/mnemonica/tactica-examples/src/example-exclude.ts",
+        "location": "/code/mnemonica/tactica-examples/src/example-exclude.ts:1:1",
+        "starter": true
+      },
+      {
+        "scopeId": "/code/mnemonica/tactica-examples/src/decorators.ts",
+        "name": "/code/mnemonica/tactica-examples/src/decorators.ts",
+        "kind": "module",
+        "filePath": "/code/mnemonica/tactica-examples/src/decorators.ts",
+        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:1:1",
+        "starter": true
+      },
+      {
+        "scopeId": "/code/mnemonica/tactica-examples/src/config-options.ts",
+        "name": "/code/mnemonica/tactica-examples/src/config-options.ts",
+        "kind": "module",
+        "filePath": "/code/mnemonica/tactica-examples/src/config-options.ts",
+        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:1:1",
+        "starter": true
+      }
+    ],
+    "edges": [],
+    "anchors": [
+      {
+        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:38:18",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/config-options.ts",
+        "typePath": "StandardType",
+        "constructorText": "StandardType",
+        "rooted": true,
+        "variable": "standard"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:41:16",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/config-options.ts",
+        "typePath": "StrictType",
+        "constructorText": "StrictType",
+        "rooted": true,
+        "variable": "strict"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:45:21",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/config-options.ts",
+        "typePath": "StandardType.StandardSubtype",
+        "constructorText": "standard.StandardSubtype",
+        "rooted": true,
+        "variable": "standardSub"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:57:20",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/decorators.ts",
+        "typePath": "BaseEntity",
+        "constructorText": "BaseEntity",
+        "rooted": true,
+        "variable": "baseEntity"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:61:14",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/decorators.ts",
+        "typePath": "BaseEntity.UserEntity",
+        "constructorText": "baseEntity.UserEntity",
+        "rooted": true,
+        "variable": "user"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:65:17",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/decorators.ts",
+        "typePath": "BaseEntity.ProductEntity",
+        "constructorText": "baseEntity.ProductEntity",
+        "rooted": true,
+        "variable": "product"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:69:15",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/decorators.ts",
+        "typePath": "BaseEntity.UserEntity.AdminEntity",
+        "constructorText": "user.AdminEntity",
+        "rooted": true,
+        "variable": "admin"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:73:22",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/decorators.ts",
+        "typePath": "ConfigurableEntity",
+        "constructorText": "ConfigurableEntity",
+        "rooted": true,
+        "variable": "configEntity"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-exclude.ts:55:14",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-exclude.ts",
+        "typePath": "ExcludeExampleUser",
+        "constructorText": "ExcludeExampleUser",
+        "rooted": true,
+        "variable": "user"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:78:15",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-global.ts",
+        "typePath": "GlobalUserType.GlobalAdminType",
+        "constructorText": "user.GlobalAdminType",
+        "rooted": true,
+        "variable": "admin"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:88:20",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-global.ts",
+        "typePath": "GlobalUserType.GlobalAdminType.GlobalSuperAdminType",
+        "constructorText": "admin.GlobalSuperAdminType",
+        "rooted": true,
+        "variable": "superAdmin"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:101:15",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-global.ts",
+        "typePath": "GlobalOrder",
+        "constructorText": "GlobalOrder",
+        "rooted": true,
+        "variable": "order"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:109:24",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-global.ts",
+        "typePath": "GlobalOrder.GlobalAugmentedOrder",
+        "constructorText": "order.GlobalAugmentedOrder",
+        "rooted": true,
+        "variable": "augmentedOrder"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:117:28",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-global.ts",
+        "typePath": "GlobalOrder.GlobalAugmentedOrder.GlobalAugmentedOrderNext",
+        "constructorText": "augmentedOrder.GlobalAugmentedOrderNext",
+        "rooted": true,
+        "variable": "augmentedOrderNext"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:76:15",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-import.ts",
+        "typePath": "UserType.AdminType",
+        "constructorText": "user.AdminType",
+        "rooted": true,
+        "variable": "admin"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/index.ts:91:15",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/index.ts",
+        "typePath": "UserType.AdminType",
+        "constructorText": "user.AdminType",
+        "rooted": true,
+        "variable": "admin"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:86:20",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-import.ts",
+        "typePath": "UserType.AdminType.SuperAdminType",
+        "constructorText": "admin.SuperAdminType",
+        "rooted": true,
+        "variable": "superAdmin"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/index.ts:101:20",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/index.ts",
+        "typePath": "UserType.AdminType.SuperAdminType",
+        "constructorText": "admin.SuperAdminType",
+        "rooted": true,
+        "variable": "superAdmin"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/index.ts:142:26",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/index.ts",
+        "typePath": "UserType.AdminType.SuperAdminType",
+        "constructorText": "admin.SuperAdminType",
+        "rooted": true,
+        "variable": "directSuperAdmin"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:98:15",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-import.ts",
+        "typePath": "Order",
+        "constructorText": "Order",
+        "rooted": true,
+        "variable": "order"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/index.ts:113:15",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/index.ts",
+        "typePath": "Order",
+        "constructorText": "Order",
+        "rooted": true,
+        "variable": "order"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/index.ts:154:22",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/index.ts",
+        "typePath": "Order",
+        "constructorText": "Order",
+        "rooted": true,
+        "variable": "anotherOrder"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:106:24",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-import.ts",
+        "typePath": "Order.AugmentedOrder",
+        "constructorText": "order.AugmentedOrder",
+        "rooted": true,
+        "variable": "augmentedOrder"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/index.ts:121:24",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/index.ts",
+        "typePath": "Order.AugmentedOrder",
+        "constructorText": "order.AugmentedOrder",
+        "rooted": true,
+        "variable": "augmentedOrder"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/index.ts:155:26",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/index.ts",
+        "typePath": "Order.AugmentedOrder",
+        "constructorText": "anotherOrder.AugmentedOrder",
+        "rooted": true,
+        "variable": "anotherAugmented"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:114:28",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-import.ts",
+        "typePath": "Order.AugmentedOrder.AugmentedOrderNext",
+        "constructorText": "augmentedOrder.AugmentedOrderNext",
+        "rooted": true,
+        "variable": "augmentedOrderNext"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/index.ts:129:28",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/index.ts",
+        "typePath": "Order.AugmentedOrder.AugmentedOrderNext",
+        "constructorText": "augmentedOrder.AugmentedOrderNext",
+        "rooted": true,
+        "variable": "augmentedOrderNext"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:86:15",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-reference.ts",
+        "typePath": "RefUserType.RefAdminType",
+        "constructorText": "user.RefAdminType",
+        "rooted": true,
+        "variable": "admin"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:96:20",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-reference.ts",
+        "typePath": "RefUserType.RefAdminType.RefSuperAdminType",
+        "constructorText": "admin.RefSuperAdminType",
+        "rooted": true,
+        "variable": "superAdmin"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:109:15",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-reference.ts",
+        "typePath": "RefOrder",
+        "constructorText": "RefOrder",
+        "rooted": true,
+        "variable": "order"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:117:24",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-reference.ts",
+        "typePath": "RefOrder.RefAugmentedOrder",
+        "constructorText": "order.RefAugmentedOrder",
+        "rooted": true,
+        "variable": "augmentedOrder"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:125:28",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/example-reference.ts",
+        "typePath": "RefOrder.RefAugmentedOrder.RefAugmentedOrderNext",
+        "constructorText": "augmentedOrder.RefAugmentedOrderNext",
+        "rooted": true,
+        "variable": "augmentedOrderNext"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/models.ts:66:17",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/models.ts",
+        "typePath": "ProductType",
+        "constructorText": "ProductType",
+        "rooted": true,
+        "variable": "product"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/models.ts:69:24",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/models.ts",
+        "typePath": "ProductType.DigitalProductType",
+        "constructorText": "product.DigitalProductType",
+        "rooted": true,
+        "variable": "digitalProduct"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/models.ts:72:25",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/models.ts",
+        "typePath": "ProductType.PhysicalProductType",
+        "constructorText": "product.PhysicalProductType",
+        "rooted": true,
+        "variable": "physicalProduct"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/models.ts:76:18",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/models.ts",
+        "typePath": "CustomerType",
+        "constructorText": "CustomerType",
+        "rooted": true,
+        "variable": "customer"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/models.ts:79:25",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/models.ts",
+        "typePath": "CustomerType.PremiumCustomerType",
+        "constructorText": "customer.PremiumCustomerType",
+        "rooted": true,
+        "variable": "premiumCustomer"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/models.ts:83:17",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/models.ts",
+        "typePath": "Invoice",
+        "constructorText": "Invoice",
+        "rooted": true,
+        "variable": "invoice"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/models.ts:86:17",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/models.ts",
+        "typePath": "Payment",
+        "constructorText": "Payment",
+        "rooted": true,
+        "variable": "payment"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/services.ts:62:17",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/services.ts",
+        "typePath": "ServiceType",
+        "constructorText": "ServiceType",
+        "rooted": true,
+        "variable": "service"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/services.ts:65:20",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/services.ts",
+        "typePath": "ServiceType.WebServiceType",
+        "constructorText": "service.WebServiceType",
+        "rooted": true,
+        "variable": "webService"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/services.ts:68:19",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/services.ts",
+        "typePath": "ServiceType.DatabaseServiceType",
+        "constructorText": "service.DatabaseServiceType",
+        "rooted": true,
+        "variable": "dbService"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/services.ts:72:16",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/services.ts",
+        "typePath": "ConfigType",
+        "constructorText": "ConfigType",
+        "rooted": true,
+        "variable": "config"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/services.ts:75:20",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/services.ts",
+        "typePath": "ConfigType.ProductionConfigType",
+        "constructorText": "config.ProductionConfigType",
+        "rooted": true,
+        "variable": "prodConfig"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/services.ts:79:16",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/services.ts",
+        "typePath": "Logger",
+        "constructorText": "Logger",
+        "rooted": true,
+        "variable": "logger"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/services.ts:82:15",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/services.ts",
+        "typePath": "Cache",
+        "constructorText": "Cache",
+        "rooted": true,
+        "variable": "cache"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:106:22",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+        "typePath": "StrictEntity",
+        "constructorText": "StrictEntity",
+        "rooted": true,
+        "variable": "strictEntity"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:109:21",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+        "typePath": "StrictEntity.StrictChild",
+        "constructorText": "strictEntity.StrictChild",
+        "rooted": true,
+        "variable": "strictChild"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:113:19",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+        "typePath": "BaseWithPrototype",
+        "constructorText": "BaseWithPrototype",
+        "rooted": true,
+        "variable": "baseProto"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:116:17",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+        "typePath": "BaseWithPrototype.DerivedFromBase",
+        "constructorText": "baseProto.DerivedFromBase",
+        "rooted": true,
+        "variable": "derived"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:120:20",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+        "typePath": "MyFnType",
+        "constructorText": "MyFnType",
+        "rooted": true,
+        "variable": "fnInstance"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:124:24",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+        "typePath": "AssignType",
+        "constructorText": "AssignType",
+        "rooted": true,
+        "variable": "assignInstance"
+      },
+      {
+        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:128:15",
+        "holderScopeId": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts",
+        "typePath": "MultiDecorated",
+        "constructorText": "MultiDecorated",
+        "rooted": true,
+        "variable": "multi"
+      }
+    ]
+  }
+}
