@@ -8,7 +8,10 @@ import type { ProtoFlat } from 'mnemonica';
 
 export type StandardType = {
 	data: string;
-	StandardSubtype: new () => StandardType_StandardSubtype;
+	StandardSubtype: {
+		new (): StandardType_StandardSubtype;
+		(): StandardType_StandardSubtype;
+	};
 };
 
 export type StandardType_StandardSubtype = ProtoFlat<StandardType, {
@@ -24,15 +27,24 @@ export type BaseEntity = {
 	id: string;
 	createdAt: Date;
 	updatedAt: Date;
-	UserEntity: new () => BaseEntity_UserEntity;
-	ProductEntity: new () => BaseEntity_ProductEntity;
+	UserEntity: {
+		new (): BaseEntity_UserEntity;
+		(): BaseEntity_UserEntity;
+	};
+	ProductEntity: {
+		new (): BaseEntity_ProductEntity;
+		(): BaseEntity_ProductEntity;
+	};
 };
 
 export type BaseEntity_UserEntity = ProtoFlat<BaseEntity, {
 	username: string;
 	email: string;
 	isActive: boolean;
-	AdminEntity: new () => BaseEntity_UserEntity_AdminEntity;
+	AdminEntity: {
+		new (): BaseEntity_UserEntity_AdminEntity;
+		(): BaseEntity_UserEntity_AdminEntity;
+	};
 	UserEntity: undefined;
 	ProductEntity: undefined;
 }>;
@@ -69,13 +81,19 @@ export type GlobalUserType = {
 	name: string;
 	email: string;
 	createdAt: Date;
-	GlobalAdminType: new () => GlobalUserType_GlobalAdminType;
+	GlobalAdminType: {
+		new (): GlobalUserType_GlobalAdminType;
+		(): GlobalUserType_GlobalAdminType;
+	};
 };
 
 export type GlobalUserType_GlobalAdminType = ProtoFlat<GlobalUserType, {
 	role: string;
 	permissions: Array<unknown>;
-	GlobalSuperAdminType: new () => GlobalUserType_GlobalAdminType_GlobalSuperAdminType;
+	GlobalSuperAdminType: {
+		new (): GlobalUserType_GlobalAdminType_GlobalSuperAdminType;
+		(): GlobalUserType_GlobalAdminType_GlobalSuperAdminType;
+	};
 	GlobalAdminType: undefined;
 }>;
 
@@ -88,12 +106,18 @@ export type GlobalUserType_GlobalAdminType_GlobalSuperAdminType = ProtoFlat<Glob
 export type GlobalOrder = {
 	orderId: string;
 	total: number;
-	GlobalAugmentedOrder: new () => GlobalOrder_GlobalAugmentedOrder;
+	GlobalAugmentedOrder: {
+		new (): GlobalOrder_GlobalAugmentedOrder;
+		(): GlobalOrder_GlobalAugmentedOrder;
+	};
 };
 
 export type GlobalOrder_GlobalAugmentedOrder = ProtoFlat<GlobalOrder, {
 	addition: string;
-	GlobalAugmentedOrderNext: new () => GlobalOrder_GlobalAugmentedOrder_GlobalAugmentedOrderNext;
+	GlobalAugmentedOrderNext: {
+		new (): GlobalOrder_GlobalAugmentedOrder_GlobalAugmentedOrderNext;
+		(): GlobalOrder_GlobalAugmentedOrder_GlobalAugmentedOrderNext;
+	};
 	GlobalAugmentedOrder: undefined;
 }>;
 
@@ -102,54 +126,23 @@ export type GlobalOrder_GlobalAugmentedOrder_GlobalAugmentedOrderNext = ProtoFla
 	GlobalAugmentedOrderNext: undefined;
 }>;
 
-export type UserType = {
-	name: string;
-	email: string;
-	createdAt: Date;
-	AdminType: new () => UserType_AdminType;
-};
-
-export type UserType_AdminType = ProtoFlat<UserType, {
-	role: string;
-	permissions: Array<unknown>;
-	SuperAdminType: new () => UserType_AdminType_SuperAdminType;
-	AdminType: undefined;
-}>;
-
-export type UserType_AdminType_SuperAdminType = ProtoFlat<UserType_AdminType, {
-	isSystemAdmin: boolean;
-	accessLevel: number;
-	SuperAdminType: undefined;
-}>;
-
-export type Order = {
-	orderId: string;
-	total: number;
-	AugmentedOrder: new () => Order_AugmentedOrder;
-};
-
-export type Order_AugmentedOrder = ProtoFlat<Order, {
-	addition: string;
-	AugmentedOrderNext: new () => Order_AugmentedOrder_AugmentedOrderNext;
-	AugmentedOrder: undefined;
-}>;
-
-export type Order_AugmentedOrder_AugmentedOrderNext = ProtoFlat<Order_AugmentedOrder, {
-	next: number;
-	AugmentedOrderNext: undefined;
-}>;
-
 export type RefUserType = {
 	name: string;
 	email: string;
 	createdAt: Date;
-	RefAdminType: new () => RefUserType_RefAdminType;
+	RefAdminType: {
+		new (): RefUserType_RefAdminType;
+		(): RefUserType_RefAdminType;
+	};
 };
 
 export type RefUserType_RefAdminType = ProtoFlat<RefUserType, {
 	role: string;
 	permissions: Array<unknown>;
-	RefSuperAdminType: new () => RefUserType_RefAdminType_RefSuperAdminType;
+	RefSuperAdminType: {
+		new (): RefUserType_RefAdminType_RefSuperAdminType;
+		(): RefUserType_RefAdminType_RefSuperAdminType;
+	};
 	RefAdminType: undefined;
 }>;
 
@@ -162,12 +155,18 @@ export type RefUserType_RefAdminType_RefSuperAdminType = ProtoFlat<RefUserType_R
 export type RefOrder = {
 	orderId: string;
 	total: number;
-	RefAugmentedOrder: new () => RefOrder_RefAugmentedOrder;
+	RefAugmentedOrder: {
+		new (): RefOrder_RefAugmentedOrder;
+		(): RefOrder_RefAugmentedOrder;
+	};
 };
 
 export type RefOrder_RefAugmentedOrder = ProtoFlat<RefOrder, {
 	addition: string;
-	RefAugmentedOrderNext: new () => RefOrder_RefAugmentedOrder_RefAugmentedOrderNext;
+	RefAugmentedOrderNext: {
+		new (): RefOrder_RefAugmentedOrder_RefAugmentedOrderNext;
+		(): RefOrder_RefAugmentedOrder_RefAugmentedOrderNext;
+	};
 	RefAugmentedOrder: undefined;
 }>;
 
@@ -182,12 +181,67 @@ export type SomeNewType = {
 	filed: number;
 };
 
+export type UserType = {
+	name: string;
+	email: string;
+	createdAt: Date;
+	AdminType: {
+		new (): UserType_AdminType;
+		(): UserType_AdminType;
+	};
+};
+
+export type UserType_AdminType = ProtoFlat<UserType, {
+	role: string;
+	permissions: Array<unknown>;
+	SuperAdminType: {
+		new (): UserType_AdminType_SuperAdminType;
+		(): UserType_AdminType_SuperAdminType;
+	};
+	AdminType: undefined;
+}>;
+
+export type UserType_AdminType_SuperAdminType = ProtoFlat<UserType_AdminType, {
+	isSystemAdmin: boolean;
+	accessLevel: number;
+	SuperAdminType: undefined;
+}>;
+
+export type Order = {
+	orderId: string;
+	total: number;
+	AugmentedOrder: {
+		new (): Order_AugmentedOrder;
+		(): Order_AugmentedOrder;
+	};
+};
+
+export type Order_AugmentedOrder = ProtoFlat<Order, {
+	addition: string;
+	AugmentedOrderNext: {
+		new (): Order_AugmentedOrder_AugmentedOrderNext;
+		(): Order_AugmentedOrder_AugmentedOrderNext;
+	};
+	AugmentedOrder: undefined;
+}>;
+
+export type Order_AugmentedOrder_AugmentedOrderNext = ProtoFlat<Order_AugmentedOrder, {
+	next: number;
+	AugmentedOrderNext: undefined;
+}>;
+
 export type ProductType = {
 	id: string;
 	name: string;
 	price: number;
-	DigitalProductType: new () => ProductType_DigitalProductType;
-	PhysicalProductType: new () => ProductType_PhysicalProductType;
+	DigitalProductType: {
+		new (): ProductType_DigitalProductType;
+		(): ProductType_DigitalProductType;
+	};
+	PhysicalProductType: {
+		new (): ProductType_PhysicalProductType;
+		(): ProductType_PhysicalProductType;
+	};
 };
 
 export type ProductType_DigitalProductType = ProtoFlat<ProductType, {
@@ -210,7 +264,10 @@ export type CustomerType = {
 	id: string;
 	name: string;
 	email: string;
-	PremiumCustomerType: new () => CustomerType_PremiumCustomerType;
+	PremiumCustomerType: {
+		new (): CustomerType_PremiumCustomerType;
+		(): CustomerType_PremiumCustomerType;
+	};
 };
 
 export type CustomerType_PremiumCustomerType = ProtoFlat<CustomerType, {
@@ -235,8 +292,14 @@ export type ServiceType = {
 	id: string;
 	name: string;
 	description: string;
-	WebServiceType: new () => ServiceType_WebServiceType;
-	DatabaseServiceType: new () => ServiceType_DatabaseServiceType;
+	WebServiceType: {
+		new (): ServiceType_WebServiceType;
+		(): ServiceType_WebServiceType;
+	};
+	DatabaseServiceType: {
+		new (): ServiceType_DatabaseServiceType;
+		(): ServiceType_DatabaseServiceType;
+	};
 };
 
 export type ServiceType_WebServiceType = ProtoFlat<ServiceType, {
@@ -256,7 +319,10 @@ export type ServiceType_DatabaseServiceType = ProtoFlat<ServiceType, {
 export type ConfigType = {
 	env: string;
 	debug: boolean;
-	ProductionConfigType: new () => ConfigType_ProductionConfigType;
+	ProductionConfigType: {
+		new (): ConfigType_ProductionConfigType;
+		(): ConfigType_ProductionConfigType;
+	};
 };
 
 export type ConfigType_ProductionConfigType = ProtoFlat<ConfigType, {
@@ -279,7 +345,10 @@ export type Cache = {
 export type StrictEntity = {
 	value: string;
 	count: number;
-	StrictChild: new () => StrictEntity_StrictChild;
+	StrictChild: {
+		new (): StrictEntity_StrictChild;
+		(): StrictEntity_StrictChild;
+	};
 };
 
 export type StrictEntity_StrictChild = ProtoFlat<StrictEntity, {
@@ -290,7 +359,10 @@ export type StrictEntity_StrictChild = ProtoFlat<StrictEntity, {
 export type BaseWithPrototype = {
 	baseField: number;
 	name: string;
-	DerivedFromBase: new () => BaseWithPrototype_DerivedFromBase;
+	DerivedFromBase: {
+		new (): BaseWithPrototype_DerivedFromBase;
+		(): BaseWithPrototype_DerivedFromBase;
+	};
 };
 
 export type BaseWithPrototype_DerivedFromBase = ProtoFlat<BaseWithPrototype, {

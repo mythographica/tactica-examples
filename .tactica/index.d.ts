@@ -62,30 +62,6 @@ declare global {
 		GlobalAugmentedOrderNext: undefined;
 	}>;
 
-	type UserType_AdminType = ProtoFlat<UserType, {
-		role: string;
-		permissions: Array<unknown>;
-		SuperAdminType: new () => UserType_AdminType_SuperAdminType;
-		AdminType: undefined;
-	}>;
-
-	type UserType_AdminType_SuperAdminType = ProtoFlat<UserType_AdminType, {
-		isSystemAdmin: boolean;
-		accessLevel: number;
-		SuperAdminType: undefined;
-	}>;
-
-	type Order_AugmentedOrder = ProtoFlat<Order, {
-		addition: string;
-		AugmentedOrderNext: new () => Order_AugmentedOrder_AugmentedOrderNext;
-		AugmentedOrder: undefined;
-	}>;
-
-	type Order_AugmentedOrder_AugmentedOrderNext = ProtoFlat<Order_AugmentedOrder, {
-		next: number;
-		AugmentedOrderNext: undefined;
-	}>;
-
 	type RefUserType_RefAdminType = ProtoFlat<RefUserType, {
 		role: string;
 		permissions: Array<unknown>;
@@ -108,6 +84,30 @@ declare global {
 	type RefOrder_RefAugmentedOrder_RefAugmentedOrderNext = ProtoFlat<RefOrder_RefAugmentedOrder, {
 		next: number;
 		RefAugmentedOrderNext: undefined;
+	}>;
+
+	type UserType_AdminType = ProtoFlat<UserType, {
+		role: string;
+		permissions: Array<unknown>;
+		SuperAdminType: new () => UserType_AdminType_SuperAdminType;
+		AdminType: undefined;
+	}>;
+
+	type UserType_AdminType_SuperAdminType = ProtoFlat<UserType_AdminType, {
+		isSystemAdmin: boolean;
+		accessLevel: number;
+		SuperAdminType: undefined;
+	}>;
+
+	type Order_AugmentedOrder = ProtoFlat<Order, {
+		addition: string;
+		AugmentedOrderNext: new () => Order_AugmentedOrder_AugmentedOrderNext;
+		AugmentedOrder: undefined;
+	}>;
+
+	type Order_AugmentedOrder_AugmentedOrderNext = ProtoFlat<Order_AugmentedOrder, {
+		next: number;
+		AugmentedOrderNext: undefined;
 	}>;
 
 	type ProductType_DigitalProductType = ProtoFlat<ProductType, {
@@ -250,37 +250,6 @@ declare global {
 		next: number;
 	}
 
-	interface UserType {
-		name: string;
-		email: string;
-		createdAt: Date;
-		AdminType: new () => UserType_AdminType;
-	}
-
-	interface AdminType extends UserType {
-		role: string;
-		permissions: Array<unknown>;
-	}
-
-	interface SuperAdminType extends AdminType {
-		isSystemAdmin: boolean;
-		accessLevel: number;
-	}
-
-	interface Order {
-		orderId: string;
-		total: number;
-		AugmentedOrder: new () => Order_AugmentedOrder;
-	}
-
-	interface AugmentedOrder extends Order {
-		addition: string;
-	}
-
-	interface AugmentedOrderNext extends AugmentedOrder {
-		next: number;
-	}
-
 	interface RefUserType {
 		name: string;
 		email: string;
@@ -316,6 +285,37 @@ declare global {
 		name: string;
 		email: string;
 		filed: number;
+	}
+
+	interface UserType {
+		name: string;
+		email: string;
+		createdAt: Date;
+		AdminType: new () => UserType_AdminType;
+	}
+
+	interface AdminType extends UserType {
+		role: string;
+		permissions: Array<unknown>;
+	}
+
+	interface SuperAdminType extends AdminType {
+		isSystemAdmin: boolean;
+		accessLevel: number;
+	}
+
+	interface Order {
+		orderId: string;
+		total: number;
+		AugmentedOrder: new () => Order_AugmentedOrder;
+	}
+
+	interface AugmentedOrder extends Order {
+		addition: string;
+	}
+
+	interface AugmentedOrderNext extends AugmentedOrder {
+		next: number;
 	}
 
 	interface ProductType {

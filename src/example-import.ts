@@ -8,6 +8,14 @@
 //
 // Types are imported explicitly from the generated types file.
 // This is the default and recommended approach.
+//
+// NOTE (tactica 0.3.x): this file re-defines the same type names as
+// index.ts as a parallel consumption-style demo — legal only because
+// the two never co-load at runtime (nothing imports this file). The
+// generation scripts pass --exclude "example-import.ts" so the
+// one-namespace law (duplicate definitions abort by design) does not
+// fire; the file still type-checks against the types generated from
+// index.ts.
 
 import { define, decorate } from 'mnemonica';
 import type {

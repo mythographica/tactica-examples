@@ -1,16 +1,16 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-09-07T21:48:15.117Z",
+  "generatedAt": "2026-09-27T20:16:04.771Z",
   "roots": [
     {
       "name": "StandardType",
       "fullPath": "StandardType",
-      "location": "/code/mnemonica/tactica-examples/src/config-options.ts:10:22",
+      "location": "src/config-options.ts:10:22",
       "children": [
         {
           "name": "StandardSubtype",
           "fullPath": "StandardType.StandardSubtype",
-          "location": "/code/mnemonica/tactica-examples/src/config-options.ts:27:38",
+          "location": "src/config-options.ts:27:38",
           "children": []
         }
       ]
@@ -18,23 +18,23 @@
     {
       "name": "StrictType",
       "fullPath": "StrictType",
-      "location": "/code/mnemonica/tactica-examples/src/config-options.ts:19:20",
+      "location": "src/config-options.ts:19:20",
       "children": []
     },
     {
       "name": "BaseEntity",
       "fullPath": "BaseEntity",
-      "location": "/code/mnemonica/tactica-examples/src/decorators.ts:14:1",
+      "location": "src/decorators.ts:14:1",
       "children": [
         {
           "name": "UserEntity",
           "fullPath": "BaseEntity.UserEntity",
-          "location": "/code/mnemonica/tactica-examples/src/decorators.ts:22:1",
+          "location": "src/decorators.ts:22:1",
           "children": [
             {
               "name": "AdminEntity",
               "fullPath": "BaseEntity.UserEntity.AdminEntity",
-              "location": "/code/mnemonica/tactica-examples/src/decorators.ts:38:1",
+              "location": "src/decorators.ts:38:1",
               "children": []
             }
           ]
@@ -42,7 +42,7 @@
         {
           "name": "ProductEntity",
           "fullPath": "BaseEntity.ProductEntity",
-          "location": "/code/mnemonica/tactica-examples/src/decorators.ts:30:1",
+          "location": "src/decorators.ts:30:1",
           "children": []
         }
       ]
@@ -50,35 +50,35 @@
     {
       "name": "ConfigurableEntity",
       "fullPath": "ConfigurableEntity",
-      "location": "/code/mnemonica/tactica-examples/src/decorators.ts:45:1",
+      "location": "src/decorators.ts:45:1",
       "children": []
     },
     {
       "name": "ExcludeExampleUser",
       "fullPath": "ExcludeExampleUser",
-      "location": "/code/mnemonica/tactica-examples/src/example-exclude.ts:31:28",
+      "location": "src/example-exclude.ts:31:28",
       "children": []
     },
     {
       "name": "ExcludeExampleOrder",
       "fullPath": "ExcludeExampleOrder",
-      "location": "/code/mnemonica/tactica-examples/src/example-exclude.ts:40:1",
+      "location": "src/example-exclude.ts:40:1",
       "children": []
     },
     {
       "name": "GlobalUserType",
       "fullPath": "GlobalUserType",
-      "location": "/code/mnemonica/tactica-examples/src/example-global.ts:26:24",
+      "location": "src/example-global.ts:26:24",
       "children": [
         {
           "name": "GlobalAdminType",
           "fullPath": "GlobalUserType.GlobalAdminType",
-          "location": "/code/mnemonica/tactica-examples/src/example-global.ts:32:40",
+          "location": "src/example-global.ts:32:40",
           "children": [
             {
               "name": "GlobalSuperAdminType",
               "fullPath": "GlobalUserType.GlobalAdminType.GlobalSuperAdminType",
-              "location": "/code/mnemonica/tactica-examples/src/example-global.ts:37:46",
+              "location": "src/example-global.ts:37:46",
               "children": []
             }
           ]
@@ -88,57 +88,17 @@
     {
       "name": "GlobalOrder",
       "fullPath": "GlobalOrder",
-      "location": "/code/mnemonica/tactica-examples/src/example-global.ts:46:1",
+      "location": "src/example-global.ts:46:1",
       "children": [
         {
           "name": "GlobalAugmentedOrder",
           "fullPath": "GlobalOrder.GlobalAugmentedOrder",
-          "location": "/code/mnemonica/tactica-examples/src/example-global.ts:52:1",
+          "location": "src/example-global.ts:52:1",
           "children": [
             {
               "name": "GlobalAugmentedOrderNext",
               "fullPath": "GlobalOrder.GlobalAugmentedOrder.GlobalAugmentedOrderNext",
-              "location": "/code/mnemonica/tactica-examples/src/example-global.ts:57:1",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "UserType",
-      "fullPath": "UserType",
-      "location": "/code/mnemonica/tactica-examples/src/index.ts:35:18",
-      "children": [
-        {
-          "name": "AdminType",
-          "fullPath": "UserType.AdminType",
-          "location": "/code/mnemonica/tactica-examples/src/index.ts:42:28",
-          "children": [
-            {
-              "name": "SuperAdminType",
-              "fullPath": "UserType.AdminType.SuperAdminType",
-              "location": "/code/mnemonica/tactica-examples/src/index.ts:48:34",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Order",
-      "fullPath": "Order",
-      "location": "/code/mnemonica/tactica-examples/src/index.ts:58:1",
-      "children": [
-        {
-          "name": "AugmentedOrder",
-          "fullPath": "Order.AugmentedOrder",
-          "location": "/code/mnemonica/tactica-examples/src/index.ts:64:1",
-          "children": [
-            {
-              "name": "AugmentedOrderNext",
-              "fullPath": "Order.AugmentedOrder.AugmentedOrderNext",
-              "location": "/code/mnemonica/tactica-examples/src/index.ts:69:1",
+              "location": "src/example-global.ts:57:1",
               "children": []
             }
           ]
@@ -148,17 +108,17 @@
     {
       "name": "RefUserType",
       "fullPath": "RefUserType",
-      "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:34:21",
+      "location": "src/example-reference.ts:34:21",
       "children": [
         {
           "name": "RefAdminType",
           "fullPath": "RefUserType.RefAdminType",
-          "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:40:34",
+          "location": "src/example-reference.ts:40:34",
           "children": [
             {
               "name": "RefSuperAdminType",
               "fullPath": "RefUserType.RefAdminType.RefSuperAdminType",
-              "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:45:40",
+              "location": "src/example-reference.ts:45:40",
               "children": []
             }
           ]
@@ -168,17 +128,17 @@
     {
       "name": "RefOrder",
       "fullPath": "RefOrder",
-      "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:54:1",
+      "location": "src/example-reference.ts:54:1",
       "children": [
         {
           "name": "RefAugmentedOrder",
           "fullPath": "RefOrder.RefAugmentedOrder",
-          "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:60:1",
+          "location": "src/example-reference.ts:60:1",
           "children": [
             {
               "name": "RefAugmentedOrderNext",
               "fullPath": "RefOrder.RefAugmentedOrder.RefAugmentedOrderNext",
-              "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:65:1",
+              "location": "src/example-reference.ts:65:1",
               "children": []
             }
           ]
@@ -188,24 +148,64 @@
     {
       "name": "SomeNewType",
       "fullPath": "SomeNewType",
-      "location": "/code/mnemonica/tactica-examples/src/index.ts:24:25",
+      "location": "src/index.ts:24:25",
       "children": []
+    },
+    {
+      "name": "UserType",
+      "fullPath": "UserType",
+      "location": "src/index.ts:35:18",
+      "children": [
+        {
+          "name": "AdminType",
+          "fullPath": "UserType.AdminType",
+          "location": "src/index.ts:42:28",
+          "children": [
+            {
+              "name": "SuperAdminType",
+              "fullPath": "UserType.AdminType.SuperAdminType",
+              "location": "src/index.ts:48:34",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "fullPath": "Order",
+      "location": "src/index.ts:58:1",
+      "children": [
+        {
+          "name": "AugmentedOrder",
+          "fullPath": "Order.AugmentedOrder",
+          "location": "src/index.ts:64:1",
+          "children": [
+            {
+              "name": "AugmentedOrderNext",
+              "fullPath": "Order.AugmentedOrder.AugmentedOrderNext",
+              "location": "src/index.ts:69:1",
+              "children": []
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "ProductType",
       "fullPath": "ProductType",
-      "location": "/code/mnemonica/tactica-examples/src/models.ts:14:21",
+      "location": "src/models.ts:14:21",
       "children": [
         {
           "name": "DigitalProductType",
           "fullPath": "ProductType.DigitalProductType",
-          "location": "/code/mnemonica/tactica-examples/src/models.ts:20:40",
+          "location": "src/models.ts:20:40",
           "children": []
         },
         {
           "name": "PhysicalProductType",
           "fullPath": "ProductType.PhysicalProductType",
-          "location": "/code/mnemonica/tactica-examples/src/models.ts:26:41",
+          "location": "src/models.ts:26:41",
           "children": []
         }
       ]
@@ -213,12 +213,12 @@
     {
       "name": "CustomerType",
       "fullPath": "CustomerType",
-      "location": "/code/mnemonica/tactica-examples/src/models.ts:33:22",
+      "location": "src/models.ts:33:22",
       "children": [
         {
           "name": "PremiumCustomerType",
           "fullPath": "CustomerType.PremiumCustomerType",
-          "location": "/code/mnemonica/tactica-examples/src/models.ts:39:42",
+          "location": "src/models.ts:39:42",
           "children": []
         }
       ]
@@ -226,30 +226,30 @@
     {
       "name": "Invoice",
       "fullPath": "Invoice",
-      "location": "/code/mnemonica/tactica-examples/src/models.ts:45:1",
+      "location": "src/models.ts:45:1",
       "children": []
     },
     {
       "name": "Payment",
       "fullPath": "Payment",
-      "location": "/code/mnemonica/tactica-examples/src/models.ts:52:1",
+      "location": "src/models.ts:52:1",
       "children": []
     },
     {
       "name": "ServiceType",
       "fullPath": "ServiceType",
-      "location": "/code/mnemonica/tactica-examples/src/services.ts:14:21",
+      "location": "src/services.ts:14:21",
       "children": [
         {
           "name": "WebServiceType",
           "fullPath": "ServiceType.WebServiceType",
-          "location": "/code/mnemonica/tactica-examples/src/services.ts:20:36",
+          "location": "src/services.ts:20:36",
           "children": []
         },
         {
           "name": "DatabaseServiceType",
           "fullPath": "ServiceType.DatabaseServiceType",
-          "location": "/code/mnemonica/tactica-examples/src/services.ts:25:41",
+          "location": "src/services.ts:25:41",
           "children": []
         }
       ]
@@ -257,12 +257,12 @@
     {
       "name": "ConfigType",
       "fullPath": "ConfigType",
-      "location": "/code/mnemonica/tactica-examples/src/services.ts:31:20",
+      "location": "src/services.ts:31:20",
       "children": [
         {
           "name": "ProductionConfigType",
           "fullPath": "ConfigType.ProductionConfigType",
-          "location": "/code/mnemonica/tactica-examples/src/services.ts:36:41",
+          "location": "src/services.ts:36:41",
           "children": []
         }
       ]
@@ -270,24 +270,24 @@
     {
       "name": "Logger",
       "fullPath": "Logger",
-      "location": "/code/mnemonica/tactica-examples/src/services.ts:43:1",
+      "location": "src/services.ts:43:1",
       "children": []
     },
     {
       "name": "Cache",
       "fullPath": "Cache",
-      "location": "/code/mnemonica/tactica-examples/src/services.ts:49:1",
+      "location": "src/services.ts:49:1",
       "children": []
     },
     {
       "name": "StrictEntity",
       "fullPath": "StrictEntity",
-      "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:22:1",
+      "location": "src/typeomatica-integration.ts:22:1",
       "children": [
         {
           "name": "StrictChild",
           "fullPath": "StrictEntity.StrictChild",
-          "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:34:1",
+          "location": "src/typeomatica-integration.ts:34:1",
           "children": []
         }
       ]
@@ -295,12 +295,12 @@
     {
       "name": "BaseWithPrototype",
       "fullPath": "BaseWithPrototype",
-      "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:47:1",
+      "location": "src/typeomatica-integration.ts:47:1",
       "children": [
         {
           "name": "DerivedFromBase",
           "fullPath": "BaseWithPrototype.DerivedFromBase",
-          "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:56:1",
+          "location": "src/typeomatica-integration.ts:56:1",
           "children": []
         }
       ]
@@ -308,19 +308,19 @@
     {
       "name": "MyFnType",
       "fullPath": "MyFnType",
-      "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:75:18",
+      "location": "src/typeomatica-integration.ts:75:18",
       "children": []
     },
     {
       "name": "AssignType",
       "fullPath": "AssignType",
-      "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:81:20",
+      "location": "src/typeomatica-integration.ts:81:20",
       "children": []
     },
     {
       "name": "MultiDecorated",
       "fullPath": "MultiDecorated",
-      "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:89:1",
+      "location": "src/typeomatica-integration.ts:89:1",
       "children": []
     }
   ]

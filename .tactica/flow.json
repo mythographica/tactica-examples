@@ -1,30 +1,30 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-09-07T21:48:15.110Z",
+  "generatedAt": "2026-09-27T20:16:04.763Z",
   "flow": {
     "StandardType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:38:18",
+        "location": "src/config-options.ts:38:18",
         "kind": "instantiation",
         "code": "new StandardType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:39:1",
+        "location": "src/config-options.ts:39:1",
         "kind": "passAsArg",
         "code": "console.log('Standard instance:', standard.data)",
         "targetType": "StandardType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:39:35",
+        "location": "src/config-options.ts:39:35",
         "kind": "propertyRead",
         "code": "standard.data",
         "propertyName": "data",
         "targetType": "StandardType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:45:25",
+        "location": "src/config-options.ts:45:25",
         "kind": "propertyRead",
         "code": "standard.StandardSubtype",
         "propertyName": "StandardSubtype",
@@ -33,20 +33,20 @@
     ],
     "StrictType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:41:16",
+        "location": "src/config-options.ts:41:16",
         "kind": "instantiation",
         "code": "new StrictType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:42:1",
+        "location": "src/config-options.ts:42:1",
         "kind": "passAsArg",
         "code": "console.log('Strict instance:', strict.data)",
         "targetType": "StrictType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:42:33",
+        "location": "src/config-options.ts:42:33",
         "kind": "propertyRead",
         "code": "strict.data",
         "propertyName": "data",
@@ -55,27 +55,27 @@
     ],
     "StandardType.StandardSubtype": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:45:21",
+        "location": "src/config-options.ts:45:21",
         "kind": "instantiation",
         "code": "new standard.StandardSubtype()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:46:1",
+        "location": "src/config-options.ts:46:1",
         "kind": "passAsArg",
         "code": "console.log('StandardSubtype inherited:', standardSub.data, '| own:', standardSub.subtypeData)",
         "targetType": "StandardType.StandardSubtype",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:46:43",
+        "location": "src/config-options.ts:46:43",
         "kind": "propertyRead",
         "code": "standardSub.data",
         "propertyName": "data",
         "targetType": "StandardType.StandardSubtype"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/config-options.ts:46:71",
+        "location": "src/config-options.ts:46:71",
         "kind": "propertyRead",
         "code": "standardSub.subtypeData",
         "propertyName": "subtypeData",
@@ -84,186 +84,37 @@
     ],
     "Date": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:17:20",
+        "location": "src/decorators.ts:17:20",
         "kind": "instantiation",
         "code": "new Date()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:18:20",
+        "location": "src/decorators.ts:18:20",
         "kind": "instantiation",
         "code": "new Date()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:29:19",
+        "location": "src/example-global.ts:29:19",
         "kind": "instantiation",
         "code": "new Date()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:69:14",
-        "kind": "instantiation",
-        "code": "new GlobalUserType()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:71:8",
-        "kind": "propertyRead",
-        "code": "user.name",
-        "propertyName": "name",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:72:9",
-        "kind": "propertyRead",
-        "code": "user.email",
-        "propertyName": "email",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:73:13",
-        "kind": "propertyRead",
-        "code": "user.createdAt",
-        "propertyName": "createdAt",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:78:19",
-        "kind": "propertyRead",
-        "code": "user.GlobalAdminType",
-        "propertyName": "GlobalAdminType",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:27:19",
+        "location": "src/example-reference.ts:37:19",
         "kind": "instantiation",
         "code": "new Date()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:67:14",
-        "kind": "instantiation",
-        "code": "new UserType()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:69:8",
-        "kind": "propertyRead",
-        "code": "user.name",
-        "propertyName": "name",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:70:9",
-        "kind": "propertyRead",
-        "code": "user.email",
-        "propertyName": "email",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:71:13",
-        "kind": "propertyRead",
-        "code": "user.createdAt",
-        "propertyName": "createdAt",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:76:19",
-        "kind": "propertyRead",
-        "code": "user.AdminType",
-        "propertyName": "AdminType",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:37:19",
+        "location": "src/index.ts:38:19",
         "kind": "instantiation",
         "code": "new Date()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:77:14",
-        "kind": "instantiation",
-        "code": "new RefUserType()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:79:8",
-        "kind": "propertyRead",
-        "code": "user.name",
-        "propertyName": "name",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:80:9",
-        "kind": "propertyRead",
-        "code": "user.email",
-        "propertyName": "email",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:81:13",
-        "kind": "propertyRead",
-        "code": "user.createdAt",
-        "propertyName": "createdAt",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:86:19",
-        "kind": "propertyRead",
-        "code": "user.RefAdminType",
-        "propertyName": "RefAdminType",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:38:19",
-        "kind": "instantiation",
-        "code": "new Date()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:82:14",
-        "kind": "instantiation",
-        "code": "new UserType()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:84:8",
-        "kind": "propertyRead",
-        "code": "user.name",
-        "propertyName": "name",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:85:9",
-        "kind": "propertyRead",
-        "code": "user.email",
-        "propertyName": "email",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:86:13",
-        "kind": "propertyRead",
-        "code": "user.createdAt",
-        "propertyName": "createdAt",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:91:19",
-        "kind": "propertyRead",
-        "code": "user.AdminType",
-        "propertyName": "AdminType",
-        "targetType": "Date"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:149:22",
-        "kind": "passAsArg",
-        "code": "apply(user, AdminType)",
-        "targetType": "Date",
-        "context": "arg 0 to apply"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:49:19",
+        "location": "src/models.ts:49:19",
         "kind": "instantiation",
         "code": "new Date()",
         "context": "new expression"
@@ -271,41 +122,41 @@
     ],
     "BaseEntity": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:57:20",
+        "location": "src/decorators.ts:57:20",
         "kind": "instantiation",
         "code": "new BaseEntity()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:58:1",
+        "location": "src/decorators.ts:58:1",
         "kind": "passAsArg",
         "code": "console.log('BaseEntity:', baseEntity.id, baseEntity.createdAt)",
         "targetType": "BaseEntity",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:58:28",
+        "location": "src/decorators.ts:58:28",
         "kind": "propertyRead",
         "code": "baseEntity.id",
         "propertyName": "id",
         "targetType": "BaseEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:58:43",
+        "location": "src/decorators.ts:58:43",
         "kind": "propertyRead",
         "code": "baseEntity.createdAt",
         "propertyName": "createdAt",
         "targetType": "BaseEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:61:18",
+        "location": "src/decorators.ts:61:18",
         "kind": "propertyRead",
         "code": "baseEntity.UserEntity",
         "propertyName": "UserEntity",
         "targetType": "BaseEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:65:21",
+        "location": "src/decorators.ts:65:21",
         "kind": "propertyRead",
         "code": "baseEntity.ProductEntity",
         "propertyName": "ProductEntity",
@@ -314,48 +165,48 @@
     ],
     "BaseEntity.UserEntity": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:61:14",
+        "location": "src/decorators.ts:61:14",
         "kind": "instantiation",
         "code": "new baseEntity.UserEntity()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:62:1",
+        "location": "src/decorators.ts:62:1",
         "kind": "passAsArg",
         "code": "console.log('UserEntity:', user.id, user.username, user.email, user.isActive)",
         "targetType": "BaseEntity.UserEntity",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:62:28",
+        "location": "src/decorators.ts:62:28",
         "kind": "propertyRead",
         "code": "user.id",
         "propertyName": "id",
         "targetType": "BaseEntity.UserEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:62:37",
+        "location": "src/decorators.ts:62:37",
         "kind": "propertyRead",
         "code": "user.username",
         "propertyName": "username",
         "targetType": "BaseEntity.UserEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:62:52",
+        "location": "src/decorators.ts:62:52",
         "kind": "propertyRead",
         "code": "user.email",
         "propertyName": "email",
         "targetType": "BaseEntity.UserEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:62:64",
+        "location": "src/decorators.ts:62:64",
         "kind": "propertyRead",
         "code": "user.isActive",
         "propertyName": "isActive",
         "targetType": "BaseEntity.UserEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:69:19",
+        "location": "src/decorators.ts:69:19",
         "kind": "propertyRead",
         "code": "user.AdminEntity",
         "propertyName": "AdminEntity",
@@ -364,41 +215,41 @@
     ],
     "BaseEntity.ProductEntity": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:65:17",
+        "location": "src/decorators.ts:65:17",
         "kind": "instantiation",
         "code": "new baseEntity.ProductEntity()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:66:1",
+        "location": "src/decorators.ts:66:1",
         "kind": "passAsArg",
         "code": "console.log('ProductEntity:', product.id, product.sku, product.name, product.price)",
         "targetType": "BaseEntity.ProductEntity",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:66:31",
+        "location": "src/decorators.ts:66:31",
         "kind": "propertyRead",
         "code": "product.id",
         "propertyName": "id",
         "targetType": "BaseEntity.ProductEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:66:43",
+        "location": "src/decorators.ts:66:43",
         "kind": "propertyRead",
         "code": "product.sku",
         "propertyName": "sku",
         "targetType": "BaseEntity.ProductEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:66:56",
+        "location": "src/decorators.ts:66:56",
         "kind": "propertyRead",
         "code": "product.name",
         "propertyName": "name",
         "targetType": "BaseEntity.ProductEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:66:70",
+        "location": "src/decorators.ts:66:70",
         "kind": "propertyRead",
         "code": "product.price",
         "propertyName": "price",
@@ -407,41 +258,41 @@
     ],
     "BaseEntity.UserEntity.AdminEntity": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:69:15",
+        "location": "src/decorators.ts:69:15",
         "kind": "instantiation",
         "code": "new user.AdminEntity()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:70:1",
+        "location": "src/decorators.ts:70:1",
         "kind": "passAsArg",
         "code": "console.log('AdminEntity:', admin.id, admin.username, admin.role, admin.permissions)",
         "targetType": "BaseEntity.UserEntity.AdminEntity",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:70:29",
+        "location": "src/decorators.ts:70:29",
         "kind": "propertyRead",
         "code": "admin.id",
         "propertyName": "id",
         "targetType": "BaseEntity.UserEntity.AdminEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:70:39",
+        "location": "src/decorators.ts:70:39",
         "kind": "propertyRead",
         "code": "admin.username",
         "propertyName": "username",
         "targetType": "BaseEntity.UserEntity.AdminEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:70:55",
+        "location": "src/decorators.ts:70:55",
         "kind": "propertyRead",
         "code": "admin.role",
         "propertyName": "role",
         "targetType": "BaseEntity.UserEntity.AdminEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:70:67",
+        "location": "src/decorators.ts:70:67",
         "kind": "propertyRead",
         "code": "admin.permissions",
         "propertyName": "permissions",
@@ -450,20 +301,20 @@
     ],
     "ConfigurableEntity": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:73:22",
+        "location": "src/decorators.ts:73:22",
         "kind": "instantiation",
         "code": "new ConfigurableEntity()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:74:1",
+        "location": "src/decorators.ts:74:1",
         "kind": "passAsArg",
         "code": "console.log('ConfigurableEntity:', configEntity.config)",
         "targetType": "ConfigurableEntity",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/decorators.ts:74:36",
+        "location": "src/decorators.ts:74:36",
         "kind": "propertyRead",
         "code": "configEntity.config",
         "propertyName": "config",
@@ -472,56 +323,92 @@
     ],
     "ExcludeExampleUser": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-exclude.ts:55:14",
+        "location": "src/example-exclude.ts:55:14",
         "kind": "instantiation",
         "code": "new ExcludeExampleUser()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-exclude.ts:56:1",
+        "location": "src/example-exclude.ts:56:1",
         "kind": "passAsArg",
         "code": "console.log('Created user:', user)",
         "targetType": "ExcludeExampleUser",
         "context": "arg 1 to log"
       }
     ],
+    "GlobalUserType": [
+      {
+        "location": "src/example-global.ts:69:14",
+        "kind": "instantiation",
+        "code": "new GlobalUserType()",
+        "context": "new expression"
+      },
+      {
+        "location": "src/example-global.ts:71:8",
+        "kind": "propertyRead",
+        "code": "user.name",
+        "propertyName": "name",
+        "targetType": "GlobalUserType"
+      },
+      {
+        "location": "src/example-global.ts:72:9",
+        "kind": "propertyRead",
+        "code": "user.email",
+        "propertyName": "email",
+        "targetType": "GlobalUserType"
+      },
+      {
+        "location": "src/example-global.ts:73:13",
+        "kind": "propertyRead",
+        "code": "user.createdAt",
+        "propertyName": "createdAt",
+        "targetType": "GlobalUserType"
+      },
+      {
+        "location": "src/example-global.ts:78:19",
+        "kind": "propertyRead",
+        "code": "user.GlobalAdminType",
+        "propertyName": "GlobalAdminType",
+        "targetType": "GlobalUserType"
+      }
+    ],
     "GlobalUserType.GlobalAdminType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:78:15",
+        "location": "src/example-global.ts:78:15",
         "kind": "instantiation",
         "code": "new user.GlobalAdminType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:80:8",
+        "location": "src/example-global.ts:80:8",
         "kind": "propertyRead",
         "code": "admin.name",
         "propertyName": "name",
         "targetType": "GlobalUserType.GlobalAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:81:9",
+        "location": "src/example-global.ts:81:9",
         "kind": "propertyRead",
         "code": "admin.email",
         "propertyName": "email",
         "targetType": "GlobalUserType.GlobalAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:82:8",
+        "location": "src/example-global.ts:82:8",
         "kind": "propertyRead",
         "code": "admin.role",
         "propertyName": "role",
         "targetType": "GlobalUserType.GlobalAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:83:15",
+        "location": "src/example-global.ts:83:15",
         "kind": "propertyRead",
         "code": "admin.permissions",
         "propertyName": "permissions",
         "targetType": "GlobalUserType.GlobalAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:88:24",
+        "location": "src/example-global.ts:88:24",
         "kind": "propertyRead",
         "code": "admin.GlobalSuperAdminType",
         "propertyName": "GlobalSuperAdminType",
@@ -530,48 +417,48 @@
     ],
     "GlobalUserType.GlobalAdminType.GlobalSuperAdminType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:88:20",
+        "location": "src/example-global.ts:88:20",
         "kind": "instantiation",
         "code": "new admin.GlobalSuperAdminType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:90:8",
+        "location": "src/example-global.ts:90:8",
         "kind": "propertyRead",
         "code": "superAdmin.name",
         "propertyName": "name",
         "targetType": "GlobalUserType.GlobalAdminType.GlobalSuperAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:91:9",
+        "location": "src/example-global.ts:91:9",
         "kind": "propertyRead",
         "code": "superAdmin.email",
         "propertyName": "email",
         "targetType": "GlobalUserType.GlobalAdminType.GlobalSuperAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:92:8",
+        "location": "src/example-global.ts:92:8",
         "kind": "propertyRead",
         "code": "superAdmin.role",
         "propertyName": "role",
         "targetType": "GlobalUserType.GlobalAdminType.GlobalSuperAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:93:15",
+        "location": "src/example-global.ts:93:15",
         "kind": "propertyRead",
         "code": "superAdmin.permissions",
         "propertyName": "permissions",
         "targetType": "GlobalUserType.GlobalAdminType.GlobalSuperAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:94:17",
+        "location": "src/example-global.ts:94:17",
         "kind": "propertyRead",
         "code": "superAdmin.isSystemAdmin",
         "propertyName": "isSystemAdmin",
         "targetType": "GlobalUserType.GlobalAdminType.GlobalSuperAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:95:15",
+        "location": "src/example-global.ts:95:15",
         "kind": "propertyRead",
         "code": "superAdmin.accessLevel",
         "propertyName": "accessLevel",
@@ -580,27 +467,27 @@
     ],
     "GlobalOrder": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:101:15",
+        "location": "src/example-global.ts:101:15",
         "kind": "instantiation",
         "code": "new GlobalOrder()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:103:11",
+        "location": "src/example-global.ts:103:11",
         "kind": "propertyRead",
         "code": "order.orderId",
         "propertyName": "orderId",
         "targetType": "GlobalOrder"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:104:9",
+        "location": "src/example-global.ts:104:9",
         "kind": "propertyRead",
         "code": "order.total",
         "propertyName": "total",
         "targetType": "GlobalOrder"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:109:28",
+        "location": "src/example-global.ts:109:28",
         "kind": "propertyRead",
         "code": "order.GlobalAugmentedOrder",
         "propertyName": "GlobalAugmentedOrder",
@@ -609,34 +496,34 @@
     ],
     "GlobalOrder.GlobalAugmentedOrder": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:109:24",
+        "location": "src/example-global.ts:109:24",
         "kind": "instantiation",
         "code": "new order.GlobalAugmentedOrder()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:111:11",
+        "location": "src/example-global.ts:111:11",
         "kind": "propertyRead",
         "code": "augmentedOrder.orderId",
         "propertyName": "orderId",
         "targetType": "GlobalOrder.GlobalAugmentedOrder"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:112:9",
+        "location": "src/example-global.ts:112:9",
         "kind": "propertyRead",
         "code": "augmentedOrder.total",
         "propertyName": "total",
         "targetType": "GlobalOrder.GlobalAugmentedOrder"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:113:12",
+        "location": "src/example-global.ts:113:12",
         "kind": "propertyRead",
         "code": "augmentedOrder.addition",
         "propertyName": "addition",
         "targetType": "GlobalOrder.GlobalAugmentedOrder"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:117:32",
+        "location": "src/example-global.ts:117:32",
         "kind": "propertyRead",
         "code": "augmentedOrder.GlobalAugmentedOrderNext",
         "propertyName": "GlobalAugmentedOrderNext",
@@ -645,459 +532,92 @@
     ],
     "GlobalOrder.GlobalAugmentedOrder.GlobalAugmentedOrderNext": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:117:28",
+        "location": "src/example-global.ts:117:28",
         "kind": "instantiation",
         "code": "new augmentedOrder.GlobalAugmentedOrderNext()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-global.ts:119:8",
+        "location": "src/example-global.ts:119:8",
         "kind": "propertyRead",
         "code": "augmentedOrderNext.next",
         "propertyName": "next",
         "targetType": "GlobalOrder.GlobalAugmentedOrder.GlobalAugmentedOrderNext"
       }
     ],
-    "UserType.AdminType": [
+    "RefUserType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:76:15",
+        "location": "src/example-reference.ts:77:14",
         "kind": "instantiation",
-        "code": "new user.AdminType()",
+        "code": "new RefUserType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:78:8",
+        "location": "src/example-reference.ts:79:8",
         "kind": "propertyRead",
-        "code": "admin.name",
+        "code": "user.name",
         "propertyName": "name",
-        "targetType": "UserType.AdminType"
+        "targetType": "RefUserType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:79:9",
+        "location": "src/example-reference.ts:80:9",
         "kind": "propertyRead",
-        "code": "admin.email",
+        "code": "user.email",
         "propertyName": "email",
-        "targetType": "UserType.AdminType"
+        "targetType": "RefUserType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:80:8",
+        "location": "src/example-reference.ts:81:13",
         "kind": "propertyRead",
-        "code": "admin.role",
-        "propertyName": "role",
-        "targetType": "UserType.AdminType"
+        "code": "user.createdAt",
+        "propertyName": "createdAt",
+        "targetType": "RefUserType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:81:15",
+        "location": "src/example-reference.ts:86:19",
         "kind": "propertyRead",
-        "code": "admin.permissions",
-        "propertyName": "permissions",
-        "targetType": "UserType.AdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:86:24",
-        "kind": "propertyRead",
-        "code": "admin.SuperAdminType",
-        "propertyName": "SuperAdminType",
-        "targetType": "UserType.AdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:91:15",
-        "kind": "instantiation",
-        "code": "new user.AdminType()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:93:8",
-        "kind": "propertyRead",
-        "code": "admin.name",
-        "propertyName": "name",
-        "targetType": "UserType.AdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:94:9",
-        "kind": "propertyRead",
-        "code": "admin.email",
-        "propertyName": "email",
-        "targetType": "UserType.AdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:95:8",
-        "kind": "propertyRead",
-        "code": "admin.role",
-        "propertyName": "role",
-        "targetType": "UserType.AdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:96:15",
-        "kind": "propertyRead",
-        "code": "admin.permissions",
-        "propertyName": "permissions",
-        "targetType": "UserType.AdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:101:24",
-        "kind": "propertyRead",
-        "code": "admin.SuperAdminType",
-        "propertyName": "SuperAdminType",
-        "targetType": "UserType.AdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:142:30",
-        "kind": "propertyRead",
-        "code": "admin.SuperAdminType",
-        "propertyName": "SuperAdminType",
-        "targetType": "UserType.AdminType"
-      }
-    ],
-    "UserType.AdminType.SuperAdminType": [
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:86:20",
-        "kind": "instantiation",
-        "code": "new admin.SuperAdminType()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:88:8",
-        "kind": "propertyRead",
-        "code": "superAdmin.name",
-        "propertyName": "name",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:89:9",
-        "kind": "propertyRead",
-        "code": "superAdmin.email",
-        "propertyName": "email",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:90:8",
-        "kind": "propertyRead",
-        "code": "superAdmin.role",
-        "propertyName": "role",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:91:15",
-        "kind": "propertyRead",
-        "code": "superAdmin.permissions",
-        "propertyName": "permissions",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:92:17",
-        "kind": "propertyRead",
-        "code": "superAdmin.isSystemAdmin",
-        "propertyName": "isSystemAdmin",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:93:15",
-        "kind": "propertyRead",
-        "code": "superAdmin.accessLevel",
-        "propertyName": "accessLevel",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:101:20",
-        "kind": "instantiation",
-        "code": "new admin.SuperAdminType()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:103:8",
-        "kind": "propertyRead",
-        "code": "superAdmin.name",
-        "propertyName": "name",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:104:9",
-        "kind": "propertyRead",
-        "code": "superAdmin.email",
-        "propertyName": "email",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:105:8",
-        "kind": "propertyRead",
-        "code": "superAdmin.role",
-        "propertyName": "role",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:106:15",
-        "kind": "propertyRead",
-        "code": "superAdmin.permissions",
-        "propertyName": "permissions",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:107:17",
-        "kind": "propertyRead",
-        "code": "superAdmin.isSystemAdmin",
-        "propertyName": "isSystemAdmin",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:108:15",
-        "kind": "propertyRead",
-        "code": "superAdmin.accessLevel",
-        "propertyName": "accessLevel",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:142:26",
-        "kind": "instantiation",
-        "code": "new admin.SuperAdminType()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:143:1",
-        "kind": "passAsArg",
-        "code": "console.log('Direct SuperAdmin:', directSuperAdmin.isSystemAdmin, directSuperAdmin.accessLevel)",
-        "targetType": "UserType.AdminType.SuperAdminType",
-        "context": "arg 1 to log"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:143:35",
-        "kind": "propertyRead",
-        "code": "directSuperAdmin.isSystemAdmin",
-        "propertyName": "isSystemAdmin",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:143:67",
-        "kind": "propertyRead",
-        "code": "directSuperAdmin.accessLevel",
-        "propertyName": "accessLevel",
-        "targetType": "UserType.AdminType.SuperAdminType"
-      }
-    ],
-    "Order": [
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:98:15",
-        "kind": "instantiation",
-        "code": "new Order()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:100:11",
-        "kind": "propertyRead",
-        "code": "order.orderId",
-        "propertyName": "orderId",
-        "targetType": "Order"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:101:9",
-        "kind": "propertyRead",
-        "code": "order.total",
-        "propertyName": "total",
-        "targetType": "Order"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:106:28",
-        "kind": "propertyRead",
-        "code": "order.AugmentedOrder",
-        "propertyName": "AugmentedOrder",
-        "targetType": "Order"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:113:15",
-        "kind": "instantiation",
-        "code": "new Order()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:115:11",
-        "kind": "propertyRead",
-        "code": "order.orderId",
-        "propertyName": "orderId",
-        "targetType": "Order"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:116:9",
-        "kind": "propertyRead",
-        "code": "order.total",
-        "propertyName": "total",
-        "targetType": "Order"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:121:28",
-        "kind": "propertyRead",
-        "code": "order.AugmentedOrder",
-        "propertyName": "AugmentedOrder",
-        "targetType": "Order"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:154:22",
-        "kind": "instantiation",
-        "code": "new Order()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:155:30",
-        "kind": "propertyRead",
-        "code": "anotherOrder.AugmentedOrder",
-        "propertyName": "AugmentedOrder",
-        "targetType": "Order"
-      }
-    ],
-    "Order.AugmentedOrder": [
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:106:24",
-        "kind": "instantiation",
-        "code": "new order.AugmentedOrder()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:108:11",
-        "kind": "propertyRead",
-        "code": "augmentedOrder.orderId",
-        "propertyName": "orderId",
-        "targetType": "Order.AugmentedOrder"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:109:9",
-        "kind": "propertyRead",
-        "code": "augmentedOrder.total",
-        "propertyName": "total",
-        "targetType": "Order.AugmentedOrder"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:110:12",
-        "kind": "propertyRead",
-        "code": "augmentedOrder.addition",
-        "propertyName": "addition",
-        "targetType": "Order.AugmentedOrder"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:114:32",
-        "kind": "propertyRead",
-        "code": "augmentedOrder.AugmentedOrderNext",
-        "propertyName": "AugmentedOrderNext",
-        "targetType": "Order.AugmentedOrder"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:121:24",
-        "kind": "instantiation",
-        "code": "new order.AugmentedOrder()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:123:11",
-        "kind": "propertyRead",
-        "code": "augmentedOrder.orderId",
-        "propertyName": "orderId",
-        "targetType": "Order.AugmentedOrder"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:124:9",
-        "kind": "propertyRead",
-        "code": "augmentedOrder.total",
-        "propertyName": "total",
-        "targetType": "Order.AugmentedOrder"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:125:12",
-        "kind": "propertyRead",
-        "code": "augmentedOrder.addition",
-        "propertyName": "addition",
-        "targetType": "Order.AugmentedOrder"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:129:32",
-        "kind": "propertyRead",
-        "code": "augmentedOrder.AugmentedOrderNext",
-        "propertyName": "AugmentedOrderNext",
-        "targetType": "Order.AugmentedOrder"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:155:26",
-        "kind": "instantiation",
-        "code": "new anotherOrder.AugmentedOrder()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:156:1",
-        "kind": "passAsArg",
-        "code": "console.log('Another AugmentedOrder:', anotherAugmented.addition)",
-        "targetType": "Order.AugmentedOrder",
-        "context": "arg 1 to log"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:156:40",
-        "kind": "propertyRead",
-        "code": "anotherAugmented.addition",
-        "propertyName": "addition",
-        "targetType": "Order.AugmentedOrder"
-      }
-    ],
-    "Order.AugmentedOrder.AugmentedOrderNext": [
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:114:28",
-        "kind": "instantiation",
-        "code": "new augmentedOrder.AugmentedOrderNext()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/example-import.ts:116:8",
-        "kind": "propertyRead",
-        "code": "augmentedOrderNext.next",
-        "propertyName": "next",
-        "targetType": "Order.AugmentedOrder.AugmentedOrderNext"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:129:28",
-        "kind": "instantiation",
-        "code": "new augmentedOrder.AugmentedOrderNext()",
-        "context": "new expression"
-      },
-      {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:131:8",
-        "kind": "propertyRead",
-        "code": "augmentedOrderNext.next",
-        "propertyName": "next",
-        "targetType": "Order.AugmentedOrder.AugmentedOrderNext"
+        "code": "user.RefAdminType",
+        "propertyName": "RefAdminType",
+        "targetType": "RefUserType"
       }
     ],
     "RefUserType.RefAdminType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:86:15",
+        "location": "src/example-reference.ts:86:15",
         "kind": "instantiation",
         "code": "new user.RefAdminType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:88:8",
+        "location": "src/example-reference.ts:88:8",
         "kind": "propertyRead",
         "code": "admin.name",
         "propertyName": "name",
         "targetType": "RefUserType.RefAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:89:9",
+        "location": "src/example-reference.ts:89:9",
         "kind": "propertyRead",
         "code": "admin.email",
         "propertyName": "email",
         "targetType": "RefUserType.RefAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:90:8",
+        "location": "src/example-reference.ts:90:8",
         "kind": "propertyRead",
         "code": "admin.role",
         "propertyName": "role",
         "targetType": "RefUserType.RefAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:91:15",
+        "location": "src/example-reference.ts:91:15",
         "kind": "propertyRead",
         "code": "admin.permissions",
         "propertyName": "permissions",
         "targetType": "RefUserType.RefAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:96:24",
+        "location": "src/example-reference.ts:96:24",
         "kind": "propertyRead",
         "code": "admin.RefSuperAdminType",
         "propertyName": "RefSuperAdminType",
@@ -1106,48 +626,48 @@
     ],
     "RefUserType.RefAdminType.RefSuperAdminType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:96:20",
+        "location": "src/example-reference.ts:96:20",
         "kind": "instantiation",
         "code": "new admin.RefSuperAdminType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:98:8",
+        "location": "src/example-reference.ts:98:8",
         "kind": "propertyRead",
         "code": "superAdmin.name",
         "propertyName": "name",
         "targetType": "RefUserType.RefAdminType.RefSuperAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:99:9",
+        "location": "src/example-reference.ts:99:9",
         "kind": "propertyRead",
         "code": "superAdmin.email",
         "propertyName": "email",
         "targetType": "RefUserType.RefAdminType.RefSuperAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:100:8",
+        "location": "src/example-reference.ts:100:8",
         "kind": "propertyRead",
         "code": "superAdmin.role",
         "propertyName": "role",
         "targetType": "RefUserType.RefAdminType.RefSuperAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:101:15",
+        "location": "src/example-reference.ts:101:15",
         "kind": "propertyRead",
         "code": "superAdmin.permissions",
         "propertyName": "permissions",
         "targetType": "RefUserType.RefAdminType.RefSuperAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:102:17",
+        "location": "src/example-reference.ts:102:17",
         "kind": "propertyRead",
         "code": "superAdmin.isSystemAdmin",
         "propertyName": "isSystemAdmin",
         "targetType": "RefUserType.RefAdminType.RefSuperAdminType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:103:15",
+        "location": "src/example-reference.ts:103:15",
         "kind": "propertyRead",
         "code": "superAdmin.accessLevel",
         "propertyName": "accessLevel",
@@ -1156,27 +676,27 @@
     ],
     "RefOrder": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:109:15",
+        "location": "src/example-reference.ts:109:15",
         "kind": "instantiation",
         "code": "new RefOrder()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:111:11",
+        "location": "src/example-reference.ts:111:11",
         "kind": "propertyRead",
         "code": "order.orderId",
         "propertyName": "orderId",
         "targetType": "RefOrder"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:112:9",
+        "location": "src/example-reference.ts:112:9",
         "kind": "propertyRead",
         "code": "order.total",
         "propertyName": "total",
         "targetType": "RefOrder"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:117:28",
+        "location": "src/example-reference.ts:117:28",
         "kind": "propertyRead",
         "code": "order.RefAugmentedOrder",
         "propertyName": "RefAugmentedOrder",
@@ -1185,34 +705,34 @@
     ],
     "RefOrder.RefAugmentedOrder": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:117:24",
+        "location": "src/example-reference.ts:117:24",
         "kind": "instantiation",
         "code": "new order.RefAugmentedOrder()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:119:11",
+        "location": "src/example-reference.ts:119:11",
         "kind": "propertyRead",
         "code": "augmentedOrder.orderId",
         "propertyName": "orderId",
         "targetType": "RefOrder.RefAugmentedOrder"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:120:9",
+        "location": "src/example-reference.ts:120:9",
         "kind": "propertyRead",
         "code": "augmentedOrder.total",
         "propertyName": "total",
         "targetType": "RefOrder.RefAugmentedOrder"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:121:12",
+        "location": "src/example-reference.ts:121:12",
         "kind": "propertyRead",
         "code": "augmentedOrder.addition",
         "propertyName": "addition",
         "targetType": "RefOrder.RefAugmentedOrder"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:125:32",
+        "location": "src/example-reference.ts:125:32",
         "kind": "propertyRead",
         "code": "augmentedOrder.RefAugmentedOrderNext",
         "propertyName": "RefAugmentedOrderNext",
@@ -1221,92 +741,429 @@
     ],
     "RefOrder.RefAugmentedOrder.RefAugmentedOrderNext": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:125:28",
+        "location": "src/example-reference.ts:125:28",
         "kind": "instantiation",
         "code": "new augmentedOrder.RefAugmentedOrderNext()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/example-reference.ts:127:8",
+        "location": "src/example-reference.ts:127:8",
         "kind": "propertyRead",
         "code": "augmentedOrderNext.next",
         "propertyName": "next",
         "targetType": "RefOrder.RefAugmentedOrder.RefAugmentedOrderNext"
       }
     ],
-    "SomeNewType_123": [
+    "UserType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:159:17",
+        "location": "src/index.ts:82:14",
+        "kind": "instantiation",
+        "code": "new UserType()",
+        "context": "new expression"
+      },
+      {
+        "location": "src/index.ts:84:8",
+        "kind": "propertyRead",
+        "code": "user.name",
+        "propertyName": "name",
+        "targetType": "UserType"
+      },
+      {
+        "location": "src/index.ts:85:9",
+        "kind": "propertyRead",
+        "code": "user.email",
+        "propertyName": "email",
+        "targetType": "UserType"
+      },
+      {
+        "location": "src/index.ts:86:13",
+        "kind": "propertyRead",
+        "code": "user.createdAt",
+        "propertyName": "createdAt",
+        "targetType": "UserType"
+      },
+      {
+        "location": "src/index.ts:91:19",
+        "kind": "propertyRead",
+        "code": "user.AdminType",
+        "propertyName": "AdminType",
+        "targetType": "UserType"
+      },
+      {
+        "location": "src/index.ts:149:22",
+        "kind": "passAsArg",
+        "code": "apply(user, AdminType)",
+        "targetType": "UserType",
+        "context": "arg 0 to apply"
+      }
+    ],
+    "UserType.AdminType": [
+      {
+        "location": "src/index.ts:91:15",
+        "kind": "instantiation",
+        "code": "new user.AdminType()",
+        "context": "new expression"
+      },
+      {
+        "location": "src/index.ts:93:8",
+        "kind": "propertyRead",
+        "code": "admin.name",
+        "propertyName": "name",
+        "targetType": "UserType.AdminType"
+      },
+      {
+        "location": "src/index.ts:94:9",
+        "kind": "propertyRead",
+        "code": "admin.email",
+        "propertyName": "email",
+        "targetType": "UserType.AdminType"
+      },
+      {
+        "location": "src/index.ts:95:8",
+        "kind": "propertyRead",
+        "code": "admin.role",
+        "propertyName": "role",
+        "targetType": "UserType.AdminType"
+      },
+      {
+        "location": "src/index.ts:96:15",
+        "kind": "propertyRead",
+        "code": "admin.permissions",
+        "propertyName": "permissions",
+        "targetType": "UserType.AdminType"
+      },
+      {
+        "location": "src/index.ts:101:24",
+        "kind": "propertyRead",
+        "code": "admin.SuperAdminType",
+        "propertyName": "SuperAdminType",
+        "targetType": "UserType.AdminType"
+      },
+      {
+        "location": "src/index.ts:142:30",
+        "kind": "propertyRead",
+        "code": "admin.SuperAdminType",
+        "propertyName": "SuperAdminType",
+        "targetType": "UserType.AdminType"
+      },
+      {
+        "location": "src/index.ts:149:22",
+        "kind": "instantiation",
+        "code": "apply(user, AdminType)",
+        "context": "call/apply construction"
+      },
+      {
+        "location": "src/index.ts:149:22",
+        "kind": "passAsArg",
+        "code": "apply(user, AdminType)",
+        "targetType": "UserType.AdminType",
+        "context": "arg 1 to apply"
+      },
+      {
+        "location": "src/index.ts:150:27",
+        "kind": "passAsArg",
+        "code": "apply(appliedAdmin, SuperAdminType)",
+        "targetType": "UserType.AdminType",
+        "context": "arg 0 to apply"
+      }
+    ],
+    "UserType.AdminType.SuperAdminType": [
+      {
+        "location": "src/index.ts:101:20",
+        "kind": "instantiation",
+        "code": "new admin.SuperAdminType()",
+        "context": "new expression"
+      },
+      {
+        "location": "src/index.ts:103:8",
+        "kind": "propertyRead",
+        "code": "superAdmin.name",
+        "propertyName": "name",
+        "targetType": "UserType.AdminType.SuperAdminType"
+      },
+      {
+        "location": "src/index.ts:104:9",
+        "kind": "propertyRead",
+        "code": "superAdmin.email",
+        "propertyName": "email",
+        "targetType": "UserType.AdminType.SuperAdminType"
+      },
+      {
+        "location": "src/index.ts:105:8",
+        "kind": "propertyRead",
+        "code": "superAdmin.role",
+        "propertyName": "role",
+        "targetType": "UserType.AdminType.SuperAdminType"
+      },
+      {
+        "location": "src/index.ts:106:15",
+        "kind": "propertyRead",
+        "code": "superAdmin.permissions",
+        "propertyName": "permissions",
+        "targetType": "UserType.AdminType.SuperAdminType"
+      },
+      {
+        "location": "src/index.ts:107:17",
+        "kind": "propertyRead",
+        "code": "superAdmin.isSystemAdmin",
+        "propertyName": "isSystemAdmin",
+        "targetType": "UserType.AdminType.SuperAdminType"
+      },
+      {
+        "location": "src/index.ts:108:15",
+        "kind": "propertyRead",
+        "code": "superAdmin.accessLevel",
+        "propertyName": "accessLevel",
+        "targetType": "UserType.AdminType.SuperAdminType"
+      },
+      {
+        "location": "src/index.ts:142:26",
+        "kind": "instantiation",
+        "code": "new admin.SuperAdminType()",
+        "context": "new expression"
+      },
+      {
+        "location": "src/index.ts:143:1",
+        "kind": "passAsArg",
+        "code": "console.log('Direct SuperAdmin:', directSuperAdmin.isSystemAdmin, directSuperAdmin.accessLevel)",
+        "targetType": "UserType.AdminType.SuperAdminType",
+        "context": "arg 1 to log"
+      },
+      {
+        "location": "src/index.ts:143:35",
+        "kind": "propertyRead",
+        "code": "directSuperAdmin.isSystemAdmin",
+        "propertyName": "isSystemAdmin",
+        "targetType": "UserType.AdminType.SuperAdminType"
+      },
+      {
+        "location": "src/index.ts:143:67",
+        "kind": "propertyRead",
+        "code": "directSuperAdmin.accessLevel",
+        "propertyName": "accessLevel",
+        "targetType": "UserType.AdminType.SuperAdminType"
+      },
+      {
+        "location": "src/index.ts:150:27",
+        "kind": "instantiation",
+        "code": "apply(appliedAdmin, SuperAdminType)",
+        "context": "call/apply construction"
+      },
+      {
+        "location": "src/index.ts:150:27",
+        "kind": "passAsArg",
+        "code": "apply(appliedAdmin, SuperAdminType)",
+        "targetType": "UserType.AdminType.SuperAdminType",
+        "context": "arg 1 to apply"
+      },
+      {
+        "location": "src/index.ts:151:1",
+        "kind": "passAsArg",
+        "code": "console.log('Applied SuperAdmin:', appliedSuperAdmin.isSystemAdmin, appliedSuperAdmin.accessLevel)",
+        "targetType": "UserType.AdminType.SuperAdminType",
+        "context": "arg 1 to log"
+      },
+      {
+        "location": "src/index.ts:151:36",
+        "kind": "propertyRead",
+        "code": "appliedSuperAdmin.isSystemAdmin",
+        "propertyName": "isSystemAdmin",
+        "targetType": "UserType.AdminType.SuperAdminType"
+      },
+      {
+        "location": "src/index.ts:151:69",
+        "kind": "propertyRead",
+        "code": "appliedSuperAdmin.accessLevel",
+        "propertyName": "accessLevel",
+        "targetType": "UserType.AdminType.SuperAdminType"
+      }
+    ],
+    "Order": [
+      {
+        "location": "src/index.ts:113:15",
+        "kind": "instantiation",
+        "code": "new Order()",
+        "context": "new expression"
+      },
+      {
+        "location": "src/index.ts:115:11",
+        "kind": "propertyRead",
+        "code": "order.orderId",
+        "propertyName": "orderId",
+        "targetType": "Order"
+      },
+      {
+        "location": "src/index.ts:116:9",
+        "kind": "propertyRead",
+        "code": "order.total",
+        "propertyName": "total",
+        "targetType": "Order"
+      },
+      {
+        "location": "src/index.ts:121:28",
+        "kind": "propertyRead",
+        "code": "order.AugmentedOrder",
+        "propertyName": "AugmentedOrder",
+        "targetType": "Order"
+      },
+      {
+        "location": "src/index.ts:154:22",
+        "kind": "instantiation",
+        "code": "new Order()",
+        "context": "new expression"
+      },
+      {
+        "location": "src/index.ts:155:30",
+        "kind": "propertyRead",
+        "code": "anotherOrder.AugmentedOrder",
+        "propertyName": "AugmentedOrder",
+        "targetType": "Order"
+      }
+    ],
+    "Order.AugmentedOrder": [
+      {
+        "location": "src/index.ts:121:24",
+        "kind": "instantiation",
+        "code": "new order.AugmentedOrder()",
+        "context": "new expression"
+      },
+      {
+        "location": "src/index.ts:123:11",
+        "kind": "propertyRead",
+        "code": "augmentedOrder.orderId",
+        "propertyName": "orderId",
+        "targetType": "Order.AugmentedOrder"
+      },
+      {
+        "location": "src/index.ts:124:9",
+        "kind": "propertyRead",
+        "code": "augmentedOrder.total",
+        "propertyName": "total",
+        "targetType": "Order.AugmentedOrder"
+      },
+      {
+        "location": "src/index.ts:125:12",
+        "kind": "propertyRead",
+        "code": "augmentedOrder.addition",
+        "propertyName": "addition",
+        "targetType": "Order.AugmentedOrder"
+      },
+      {
+        "location": "src/index.ts:129:32",
+        "kind": "propertyRead",
+        "code": "augmentedOrder.AugmentedOrderNext",
+        "propertyName": "AugmentedOrderNext",
+        "targetType": "Order.AugmentedOrder"
+      },
+      {
+        "location": "src/index.ts:155:26",
+        "kind": "instantiation",
+        "code": "new anotherOrder.AugmentedOrder()",
+        "context": "new expression"
+      },
+      {
+        "location": "src/index.ts:156:1",
+        "kind": "passAsArg",
+        "code": "console.log('Another AugmentedOrder:', anotherAugmented.addition)",
+        "targetType": "Order.AugmentedOrder",
+        "context": "arg 1 to log"
+      },
+      {
+        "location": "src/index.ts:156:40",
+        "kind": "propertyRead",
+        "code": "anotherAugmented.addition",
+        "propertyName": "addition",
+        "targetType": "Order.AugmentedOrder"
+      }
+    ],
+    "Order.AugmentedOrder.AugmentedOrderNext": [
+      {
+        "location": "src/index.ts:129:28",
+        "kind": "instantiation",
+        "code": "new augmentedOrder.AugmentedOrderNext()",
+        "context": "new expression"
+      },
+      {
+        "location": "src/index.ts:131:8",
+        "kind": "propertyRead",
+        "code": "augmentedOrderNext.next",
+        "propertyName": "next",
+        "targetType": "Order.AugmentedOrder.AugmentedOrderNext"
+      }
+    ],
+    "SomeNewType": [
+      {
+        "location": "src/index.ts:159:17",
         "kind": "instantiation",
         "code": "new SomeNewType_123()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:160:1",
+        "location": "src/index.ts:160:1",
         "kind": "passAsArg",
         "code": "console.log('SomeNewType:', someNew.name, someNew.filed)",
-        "targetType": "SomeNewType_123",
+        "targetType": "SomeNewType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:160:29",
+        "location": "src/index.ts:160:29",
         "kind": "propertyRead",
         "code": "someNew.name",
         "propertyName": "name",
-        "targetType": "SomeNewType_123"
+        "targetType": "SomeNewType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/index.ts:160:43",
+        "location": "src/index.ts:160:43",
         "kind": "propertyRead",
         "code": "someNew.filed",
         "propertyName": "filed",
-        "targetType": "SomeNewType_123"
+        "targetType": "SomeNewType"
       }
     ],
     "ProductType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:66:17",
+        "location": "src/models.ts:66:17",
         "kind": "instantiation",
         "code": "new ProductType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:67:1",
+        "location": "src/models.ts:67:1",
         "kind": "passAsArg",
         "code": "console.log('Product:', product.id, product.name, product.price)",
         "targetType": "ProductType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:67:25",
+        "location": "src/models.ts:67:25",
         "kind": "propertyRead",
         "code": "product.id",
         "propertyName": "id",
         "targetType": "ProductType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:67:37",
+        "location": "src/models.ts:67:37",
         "kind": "propertyRead",
         "code": "product.name",
         "propertyName": "name",
         "targetType": "ProductType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:67:51",
+        "location": "src/models.ts:67:51",
         "kind": "propertyRead",
         "code": "product.price",
         "propertyName": "price",
         "targetType": "ProductType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:69:28",
+        "location": "src/models.ts:69:28",
         "kind": "propertyRead",
         "code": "product.DigitalProductType",
         "propertyName": "DigitalProductType",
         "targetType": "ProductType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:72:29",
+        "location": "src/models.ts:72:29",
         "kind": "propertyRead",
         "code": "product.PhysicalProductType",
         "propertyName": "PhysicalProductType",
@@ -1315,34 +1172,34 @@
     ],
     "ProductType.DigitalProductType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:69:24",
+        "location": "src/models.ts:69:24",
         "kind": "instantiation",
         "code": "new product.DigitalProductType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:70:1",
+        "location": "src/models.ts:70:1",
         "kind": "passAsArg",
         "code": "console.log('DigitalProduct:', digitalProduct.id, digitalProduct.downloadUrl, digitalProduct.format)",
         "targetType": "ProductType.DigitalProductType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:70:32",
+        "location": "src/models.ts:70:32",
         "kind": "propertyRead",
         "code": "digitalProduct.id",
         "propertyName": "id",
         "targetType": "ProductType.DigitalProductType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:70:51",
+        "location": "src/models.ts:70:51",
         "kind": "propertyRead",
         "code": "digitalProduct.downloadUrl",
         "propertyName": "downloadUrl",
         "targetType": "ProductType.DigitalProductType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:70:79",
+        "location": "src/models.ts:70:79",
         "kind": "propertyRead",
         "code": "digitalProduct.format",
         "propertyName": "format",
@@ -1351,34 +1208,34 @@
     ],
     "ProductType.PhysicalProductType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:72:25",
+        "location": "src/models.ts:72:25",
         "kind": "instantiation",
         "code": "new product.PhysicalProductType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:73:1",
+        "location": "src/models.ts:73:1",
         "kind": "passAsArg",
         "code": "console.log('PhysicalProduct:', physicalProduct.id, physicalProduct.weight, physicalProduct.inStock)",
         "targetType": "ProductType.PhysicalProductType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:73:33",
+        "location": "src/models.ts:73:33",
         "kind": "propertyRead",
         "code": "physicalProduct.id",
         "propertyName": "id",
         "targetType": "ProductType.PhysicalProductType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:73:53",
+        "location": "src/models.ts:73:53",
         "kind": "propertyRead",
         "code": "physicalProduct.weight",
         "propertyName": "weight",
         "targetType": "ProductType.PhysicalProductType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:73:77",
+        "location": "src/models.ts:73:77",
         "kind": "propertyRead",
         "code": "physicalProduct.inStock",
         "propertyName": "inStock",
@@ -1387,41 +1244,41 @@
     ],
     "CustomerType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:76:18",
+        "location": "src/models.ts:76:18",
         "kind": "instantiation",
         "code": "new CustomerType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:77:1",
+        "location": "src/models.ts:77:1",
         "kind": "passAsArg",
         "code": "console.log('Customer:', customer.id, customer.name, customer.email)",
         "targetType": "CustomerType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:77:26",
+        "location": "src/models.ts:77:26",
         "kind": "propertyRead",
         "code": "customer.id",
         "propertyName": "id",
         "targetType": "CustomerType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:77:39",
+        "location": "src/models.ts:77:39",
         "kind": "propertyRead",
         "code": "customer.name",
         "propertyName": "name",
         "targetType": "CustomerType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:77:54",
+        "location": "src/models.ts:77:54",
         "kind": "propertyRead",
         "code": "customer.email",
         "propertyName": "email",
         "targetType": "CustomerType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:79:29",
+        "location": "src/models.ts:79:29",
         "kind": "propertyRead",
         "code": "customer.PremiumCustomerType",
         "propertyName": "PremiumCustomerType",
@@ -1430,34 +1287,34 @@
     ],
     "CustomerType.PremiumCustomerType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:79:25",
+        "location": "src/models.ts:79:25",
         "kind": "instantiation",
         "code": "new customer.PremiumCustomerType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:80:1",
+        "location": "src/models.ts:80:1",
         "kind": "passAsArg",
         "code": "console.log('PremiumCustomer:', premiumCustomer.id, premiumCustomer.loyaltyPoints, premiumCustomer.m",
         "targetType": "CustomerType.PremiumCustomerType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:80:33",
+        "location": "src/models.ts:80:33",
         "kind": "propertyRead",
         "code": "premiumCustomer.id",
         "propertyName": "id",
         "targetType": "CustomerType.PremiumCustomerType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:80:53",
+        "location": "src/models.ts:80:53",
         "kind": "propertyRead",
         "code": "premiumCustomer.loyaltyPoints",
         "propertyName": "loyaltyPoints",
         "targetType": "CustomerType.PremiumCustomerType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:80:84",
+        "location": "src/models.ts:80:84",
         "kind": "propertyRead",
         "code": "premiumCustomer.membershipLevel",
         "propertyName": "membershipLevel",
@@ -1466,34 +1323,34 @@
     ],
     "Invoice": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:83:17",
+        "location": "src/models.ts:83:17",
         "kind": "instantiation",
         "code": "new Invoice()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:84:1",
+        "location": "src/models.ts:84:1",
         "kind": "passAsArg",
         "code": "console.log('Invoice:', invoice.invoiceId, invoice.amount, invoice.issuedAt)",
         "targetType": "Invoice",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:84:25",
+        "location": "src/models.ts:84:25",
         "kind": "propertyRead",
         "code": "invoice.invoiceId",
         "propertyName": "invoiceId",
         "targetType": "Invoice"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:84:44",
+        "location": "src/models.ts:84:44",
         "kind": "propertyRead",
         "code": "invoice.amount",
         "propertyName": "amount",
         "targetType": "Invoice"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:84:60",
+        "location": "src/models.ts:84:60",
         "kind": "propertyRead",
         "code": "invoice.issuedAt",
         "propertyName": "issuedAt",
@@ -1502,34 +1359,34 @@
     ],
     "Payment": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:86:17",
+        "location": "src/models.ts:86:17",
         "kind": "instantiation",
         "code": "new Payment()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:87:1",
+        "location": "src/models.ts:87:1",
         "kind": "passAsArg",
         "code": "console.log('Payment:', payment.paymentId, payment.method, payment.status)",
         "targetType": "Payment",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:87:25",
+        "location": "src/models.ts:87:25",
         "kind": "propertyRead",
         "code": "payment.paymentId",
         "propertyName": "paymentId",
         "targetType": "Payment"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:87:44",
+        "location": "src/models.ts:87:44",
         "kind": "propertyRead",
         "code": "payment.method",
         "propertyName": "method",
         "targetType": "Payment"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/models.ts:87:60",
+        "location": "src/models.ts:87:60",
         "kind": "propertyRead",
         "code": "payment.status",
         "propertyName": "status",
@@ -1538,48 +1395,48 @@
     ],
     "ServiceType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:62:17",
+        "location": "src/services.ts:62:17",
         "kind": "instantiation",
         "code": "new ServiceType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:63:1",
+        "location": "src/services.ts:63:1",
         "kind": "passAsArg",
         "code": "console.log('Service:', service.id, service.name, service.description)",
         "targetType": "ServiceType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:63:25",
+        "location": "src/services.ts:63:25",
         "kind": "propertyRead",
         "code": "service.id",
         "propertyName": "id",
         "targetType": "ServiceType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:63:37",
+        "location": "src/services.ts:63:37",
         "kind": "propertyRead",
         "code": "service.name",
         "propertyName": "name",
         "targetType": "ServiceType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:63:51",
+        "location": "src/services.ts:63:51",
         "kind": "propertyRead",
         "code": "service.description",
         "propertyName": "description",
         "targetType": "ServiceType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:65:24",
+        "location": "src/services.ts:65:24",
         "kind": "propertyRead",
         "code": "service.WebServiceType",
         "propertyName": "WebServiceType",
         "targetType": "ServiceType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:68:23",
+        "location": "src/services.ts:68:23",
         "kind": "propertyRead",
         "code": "service.DatabaseServiceType",
         "propertyName": "DatabaseServiceType",
@@ -1588,34 +1445,34 @@
     ],
     "ServiceType.WebServiceType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:65:20",
+        "location": "src/services.ts:65:20",
         "kind": "instantiation",
         "code": "new service.WebServiceType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:66:1",
+        "location": "src/services.ts:66:1",
         "kind": "passAsArg",
         "code": "console.log('WebService:', webService.id, webService.endpoint, webService.method)",
         "targetType": "ServiceType.WebServiceType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:66:28",
+        "location": "src/services.ts:66:28",
         "kind": "propertyRead",
         "code": "webService.id",
         "propertyName": "id",
         "targetType": "ServiceType.WebServiceType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:66:43",
+        "location": "src/services.ts:66:43",
         "kind": "propertyRead",
         "code": "webService.endpoint",
         "propertyName": "endpoint",
         "targetType": "ServiceType.WebServiceType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:66:64",
+        "location": "src/services.ts:66:64",
         "kind": "propertyRead",
         "code": "webService.method",
         "propertyName": "method",
@@ -1624,34 +1481,34 @@
     ],
     "ServiceType.DatabaseServiceType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:68:19",
+        "location": "src/services.ts:68:19",
         "kind": "instantiation",
         "code": "new service.DatabaseServiceType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:69:1",
+        "location": "src/services.ts:69:1",
         "kind": "passAsArg",
         "code": "console.log('DatabaseService:', dbService.id, dbService.connectionString, dbService.poolSize)",
         "targetType": "ServiceType.DatabaseServiceType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:69:33",
+        "location": "src/services.ts:69:33",
         "kind": "propertyRead",
         "code": "dbService.id",
         "propertyName": "id",
         "targetType": "ServiceType.DatabaseServiceType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:69:47",
+        "location": "src/services.ts:69:47",
         "kind": "propertyRead",
         "code": "dbService.connectionString",
         "propertyName": "connectionString",
         "targetType": "ServiceType.DatabaseServiceType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:69:75",
+        "location": "src/services.ts:69:75",
         "kind": "propertyRead",
         "code": "dbService.poolSize",
         "propertyName": "poolSize",
@@ -1660,34 +1517,34 @@
     ],
     "ConfigType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:72:16",
+        "location": "src/services.ts:72:16",
         "kind": "instantiation",
         "code": "new ConfigType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:73:1",
+        "location": "src/services.ts:73:1",
         "kind": "passAsArg",
         "code": "console.log('Config:', config.env, config.debug)",
         "targetType": "ConfigType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:73:24",
+        "location": "src/services.ts:73:24",
         "kind": "propertyRead",
         "code": "config.env",
         "propertyName": "env",
         "targetType": "ConfigType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:73:36",
+        "location": "src/services.ts:73:36",
         "kind": "propertyRead",
         "code": "config.debug",
         "propertyName": "debug",
         "targetType": "ConfigType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:75:24",
+        "location": "src/services.ts:75:24",
         "kind": "propertyRead",
         "code": "config.ProductionConfigType",
         "propertyName": "ProductionConfigType",
@@ -1696,34 +1553,34 @@
     ],
     "ConfigType.ProductionConfigType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:75:20",
+        "location": "src/services.ts:75:20",
         "kind": "instantiation",
         "code": "new config.ProductionConfigType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:76:1",
+        "location": "src/services.ts:76:1",
         "kind": "passAsArg",
         "code": "console.log('ProductionConfig:', prodConfig.env, prodConfig.ssl, prodConfig.caching)",
         "targetType": "ConfigType.ProductionConfigType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:76:34",
+        "location": "src/services.ts:76:34",
         "kind": "propertyRead",
         "code": "prodConfig.env",
         "propertyName": "env",
         "targetType": "ConfigType.ProductionConfigType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:76:50",
+        "location": "src/services.ts:76:50",
         "kind": "propertyRead",
         "code": "prodConfig.ssl",
         "propertyName": "ssl",
         "targetType": "ConfigType.ProductionConfigType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:76:66",
+        "location": "src/services.ts:76:66",
         "kind": "propertyRead",
         "code": "prodConfig.caching",
         "propertyName": "caching",
@@ -1732,27 +1589,27 @@
     ],
     "Logger": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:79:16",
+        "location": "src/services.ts:79:16",
         "kind": "instantiation",
         "code": "new Logger()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:80:1",
+        "location": "src/services.ts:80:1",
         "kind": "passAsArg",
         "code": "console.log('Logger:', logger.level, logger.prefix)",
         "targetType": "Logger",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:80:24",
+        "location": "src/services.ts:80:24",
         "kind": "propertyRead",
         "code": "logger.level",
         "propertyName": "level",
         "targetType": "Logger"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:80:38",
+        "location": "src/services.ts:80:38",
         "kind": "propertyRead",
         "code": "logger.prefix",
         "propertyName": "prefix",
@@ -1761,27 +1618,27 @@
     ],
     "Cache": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:82:15",
+        "location": "src/services.ts:82:15",
         "kind": "instantiation",
         "code": "new Cache()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:83:1",
+        "location": "src/services.ts:83:1",
         "kind": "passAsArg",
         "code": "console.log('Cache:', cache.ttl, cache.maxSize)",
         "targetType": "Cache",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:83:23",
+        "location": "src/services.ts:83:23",
         "kind": "propertyRead",
         "code": "cache.ttl",
         "propertyName": "ttl",
         "targetType": "Cache"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/services.ts:83:34",
+        "location": "src/services.ts:83:34",
         "kind": "propertyRead",
         "code": "cache.maxSize",
         "propertyName": "maxSize",
@@ -1790,7 +1647,7 @@
     ],
     "BaseClass": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:54:52",
+        "location": "src/typeomatica-integration.ts:54:52",
         "kind": "instantiation",
         "code": "new BaseClass({ strict: true })",
         "context": "new expression"
@@ -1798,34 +1655,34 @@
     ],
     "StrictEntity": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:106:22",
+        "location": "src/typeomatica-integration.ts:106:22",
         "kind": "instantiation",
         "code": "new StrictEntity()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:107:1",
+        "location": "src/typeomatica-integration.ts:107:1",
         "kind": "passAsArg",
         "code": "console.log('StrictEntity:', strictEntity.value, strictEntity.count)",
         "targetType": "StrictEntity",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:107:30",
+        "location": "src/typeomatica-integration.ts:107:30",
         "kind": "propertyRead",
         "code": "strictEntity.value",
         "propertyName": "value",
         "targetType": "StrictEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:107:50",
+        "location": "src/typeomatica-integration.ts:107:50",
         "kind": "propertyRead",
         "code": "strictEntity.count",
         "propertyName": "count",
         "targetType": "StrictEntity"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:109:25",
+        "location": "src/typeomatica-integration.ts:109:25",
         "kind": "propertyRead",
         "code": "strictEntity.StrictChild",
         "propertyName": "StrictChild",
@@ -1834,34 +1691,34 @@
     ],
     "StrictEntity.StrictChild": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:109:21",
+        "location": "src/typeomatica-integration.ts:109:21",
         "kind": "instantiation",
         "code": "new strictEntity.StrictChild()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:110:1",
+        "location": "src/typeomatica-integration.ts:110:1",
         "kind": "passAsArg",
         "code": "console.log('StrictChild:', strictChild.value, strictChild.count, strictChild.childValue)",
         "targetType": "StrictEntity.StrictChild",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:110:29",
+        "location": "src/typeomatica-integration.ts:110:29",
         "kind": "propertyRead",
         "code": "strictChild.value",
         "propertyName": "value",
         "targetType": "StrictEntity.StrictChild"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:110:48",
+        "location": "src/typeomatica-integration.ts:110:48",
         "kind": "propertyRead",
         "code": "strictChild.count",
         "propertyName": "count",
         "targetType": "StrictEntity.StrictChild"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:110:67",
+        "location": "src/typeomatica-integration.ts:110:67",
         "kind": "propertyRead",
         "code": "strictChild.childValue",
         "propertyName": "childValue",
@@ -1870,34 +1727,34 @@
     ],
     "BaseWithPrototype": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:113:19",
+        "location": "src/typeomatica-integration.ts:113:19",
         "kind": "instantiation",
         "code": "new BaseWithPrototype()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:114:1",
+        "location": "src/typeomatica-integration.ts:114:1",
         "kind": "passAsArg",
         "code": "console.log('BaseWithPrototype:', baseProto.baseField, baseProto.name)",
         "targetType": "BaseWithPrototype",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:114:35",
+        "location": "src/typeomatica-integration.ts:114:35",
         "kind": "propertyRead",
         "code": "baseProto.baseField",
         "propertyName": "baseField",
         "targetType": "BaseWithPrototype"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:114:56",
+        "location": "src/typeomatica-integration.ts:114:56",
         "kind": "propertyRead",
         "code": "baseProto.name",
         "propertyName": "name",
         "targetType": "BaseWithPrototype"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:116:21",
+        "location": "src/typeomatica-integration.ts:116:21",
         "kind": "propertyRead",
         "code": "baseProto.DerivedFromBase",
         "propertyName": "DerivedFromBase",
@@ -1906,27 +1763,27 @@
     ],
     "BaseWithPrototype.DerivedFromBase": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:116:17",
+        "location": "src/typeomatica-integration.ts:116:17",
         "kind": "instantiation",
         "code": "new baseProto.DerivedFromBase()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:117:1",
+        "location": "src/typeomatica-integration.ts:117:1",
         "kind": "passAsArg",
         "code": "console.log('DerivedFromBase:', derived.baseField, derived.derivedField)",
         "targetType": "BaseWithPrototype.DerivedFromBase",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:117:33",
+        "location": "src/typeomatica-integration.ts:117:33",
         "kind": "propertyRead",
         "code": "derived.baseField",
         "propertyName": "baseField",
         "targetType": "BaseWithPrototype.DerivedFromBase"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:117:52",
+        "location": "src/typeomatica-integration.ts:117:52",
         "kind": "propertyRead",
         "code": "derived.derivedField",
         "propertyName": "derivedField",
@@ -1935,27 +1792,27 @@
     ],
     "MyFnType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:120:20",
+        "location": "src/typeomatica-integration.ts:120:20",
         "kind": "instantiation",
         "code": "new MyFnType()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:121:1",
+        "location": "src/typeomatica-integration.ts:121:1",
         "kind": "passAsArg",
         "code": "console.log('MyFnType:', fnInstance.fnField, fnInstance.fnName)",
         "targetType": "MyFnType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:121:26",
+        "location": "src/typeomatica-integration.ts:121:26",
         "kind": "propertyRead",
         "code": "fnInstance.fnField",
         "propertyName": "fnField",
         "targetType": "MyFnType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:121:46",
+        "location": "src/typeomatica-integration.ts:121:46",
         "kind": "propertyRead",
         "code": "fnInstance.fnName",
         "propertyName": "fnName",
@@ -1964,27 +1821,27 @@
     ],
     "AssignType": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:124:24",
+        "location": "src/typeomatica-integration.ts:124:24",
         "kind": "instantiation",
         "code": "new AssignType({ custom: 'data', number: 42 })",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:125:1",
+        "location": "src/typeomatica-integration.ts:125:1",
         "kind": "passAsArg",
         "code": "console.log('AssignType:', assignInstance.custom, assignInstance.number)",
         "targetType": "AssignType",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:125:28",
+        "location": "src/typeomatica-integration.ts:125:28",
         "kind": "propertyRead",
         "code": "assignInstance.custom",
         "propertyName": "custom",
         "targetType": "AssignType"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:125:51",
+        "location": "src/typeomatica-integration.ts:125:51",
         "kind": "propertyRead",
         "code": "assignInstance.number",
         "propertyName": "number",
@@ -1993,20 +1850,20 @@
     ],
     "MultiDecorated": [
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:128:15",
+        "location": "src/typeomatica-integration.ts:128:15",
         "kind": "instantiation",
         "code": "new MultiDecorated()",
         "context": "new expression"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:129:1",
+        "location": "src/typeomatica-integration.ts:129:1",
         "kind": "passAsArg",
         "code": "console.log('MultiDecorated:', multi.strictField)",
         "targetType": "MultiDecorated",
         "context": "arg 1 to log"
       },
       {
-        "location": "/code/mnemonica/tactica-examples/src/typeomatica-integration.ts:129:32",
+        "location": "src/typeomatica-integration.ts:129:32",
         "kind": "propertyRead",
         "code": "multi.strictField",
         "propertyName": "strictField",

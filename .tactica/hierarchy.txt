@@ -1,51 +1,51 @@
 Type Hierarchy (Trie):
-├── StandardType
-│   └── StandardType_StandardSubtype
-├── StrictType
+├── AssignType
 ├── BaseEntity
-│   ├── BaseEntity_UserEntity
-│   │   └── BaseEntity_UserEntity_AdminEntity
-│   └── BaseEntity_ProductEntity
+│   ├── BaseEntity_ProductEntity
+│   └── BaseEntity_UserEntity
+│       └── BaseEntity_UserEntity_AdminEntity
+├── BaseWithPrototype
+│   └── BaseWithPrototype_DerivedFromBase
+├── Cache
+├── ConfigType
+│   └── ConfigType_ProductionConfigType
 ├── ConfigurableEntity
-├── ExcludeExampleUser
+├── CustomerType
+│   └── CustomerType_PremiumCustomerType
 ├── ExcludeExampleOrder
-├── GlobalUserType
-│   └── GlobalUserType_GlobalAdminType
-│       └── GlobalUserType_GlobalAdminType_GlobalSuperAdminType
+├── ExcludeExampleUser
 ├── GlobalOrder
 │   └── GlobalOrder_GlobalAugmentedOrder
 │       └── GlobalOrder_GlobalAugmentedOrder_GlobalAugmentedOrderNext
-├── UserType
-│   └── UserType_AdminType
-│       └── UserType_AdminType_SuperAdminType
+├── GlobalUserType
+│   └── GlobalUserType_GlobalAdminType
+│       └── GlobalUserType_GlobalAdminType_GlobalSuperAdminType
+├── Invoice
+├── Logger
+├── MultiDecorated
+├── MyFnType
 ├── Order
 │   └── Order_AugmentedOrder
 │       └── Order_AugmentedOrder_AugmentedOrderNext
-├── RefUserType
-│   └── RefUserType_RefAdminType
-│       └── RefUserType_RefAdminType_RefSuperAdminType
-├── RefOrder
-│   └── RefOrder_RefAugmentedOrder
-│       └── RefOrder_RefAugmentedOrder_RefAugmentedOrderNext
-├── SomeNewType
+├── Payment
 ├── ProductType
 │   ├── ProductType_DigitalProductType
 │   └── ProductType_PhysicalProductType
-├── CustomerType
-│   └── CustomerType_PremiumCustomerType
-├── Invoice
-├── Payment
+├── RefOrder
+│   └── RefOrder_RefAugmentedOrder
+│       └── RefOrder_RefAugmentedOrder_RefAugmentedOrderNext
+├── RefUserType
+│   └── RefUserType_RefAdminType
+│       └── RefUserType_RefAdminType_RefSuperAdminType
 ├── ServiceType
-│   ├── ServiceType_WebServiceType
-│   └── ServiceType_DatabaseServiceType
-├── ConfigType
-│   └── ConfigType_ProductionConfigType
-├── Logger
-├── Cache
+│   ├── ServiceType_DatabaseServiceType
+│   └── ServiceType_WebServiceType
+├── SomeNewType
+├── StandardType
+│   └── StandardType_StandardSubtype
 ├── StrictEntity
 │   └── StrictEntity_StrictChild
-├── BaseWithPrototype
-│   └── BaseWithPrototype_DerivedFromBase
-├── MyFnType
-├── AssignType
-└── MultiDecorated
+├── StrictType
+└── UserType
+    └── UserType_AdminType
+        └── UserType_AdminType_SuperAdminType

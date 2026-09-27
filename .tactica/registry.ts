@@ -26,12 +26,6 @@ import type {
 	GlobalOrder,
 	GlobalOrder_GlobalAugmentedOrder,
 	GlobalOrder_GlobalAugmentedOrder_GlobalAugmentedOrderNext,
-	UserType,
-	UserType_AdminType,
-	UserType_AdminType_SuperAdminType,
-	Order,
-	Order_AugmentedOrder,
-	Order_AugmentedOrder_AugmentedOrderNext,
 	RefUserType,
 	RefUserType_RefAdminType,
 	RefUserType_RefAdminType_RefSuperAdminType,
@@ -39,6 +33,12 @@ import type {
 	RefOrder_RefAugmentedOrder,
 	RefOrder_RefAugmentedOrder_RefAugmentedOrderNext,
 	SomeNewType,
+	UserType,
+	UserType_AdminType,
+	UserType_AdminType_SuperAdminType,
+	Order,
+	Order_AugmentedOrder,
+	Order_AugmentedOrder_AugmentedOrderNext,
 	ProductType,
 	ProductType_DigitalProductType,
 	ProductType_PhysicalProductType,
@@ -86,12 +86,6 @@ declare module 'mnemonica' {
 		'GlobalOrder': new () => GlobalOrder;
 		'GlobalOrder.GlobalAugmentedOrder': new () => GlobalOrder_GlobalAugmentedOrder;
 		'GlobalOrder.GlobalAugmentedOrder.GlobalAugmentedOrderNext': new () => GlobalOrder_GlobalAugmentedOrder_GlobalAugmentedOrderNext;
-		'UserType': new () => UserType;
-		'UserType.AdminType': new () => UserType_AdminType;
-		'UserType.AdminType.SuperAdminType': new () => UserType_AdminType_SuperAdminType;
-		'Order': new () => Order;
-		'Order.AugmentedOrder': new () => Order_AugmentedOrder;
-		'Order.AugmentedOrder.AugmentedOrderNext': new () => Order_AugmentedOrder_AugmentedOrderNext;
 		'RefUserType': new () => RefUserType;
 		'RefUserType.RefAdminType': new () => RefUserType_RefAdminType;
 		'RefUserType.RefAdminType.RefSuperAdminType': new () => RefUserType_RefAdminType_RefSuperAdminType;
@@ -99,6 +93,12 @@ declare module 'mnemonica' {
 		'RefOrder.RefAugmentedOrder': new () => RefOrder_RefAugmentedOrder;
 		'RefOrder.RefAugmentedOrder.RefAugmentedOrderNext': new () => RefOrder_RefAugmentedOrder_RefAugmentedOrderNext;
 		'SomeNewType': new () => SomeNewType;
+		'UserType': new () => UserType;
+		'UserType.AdminType': new () => UserType_AdminType;
+		'UserType.AdminType.SuperAdminType': new () => UserType_AdminType_SuperAdminType;
+		'Order': new () => Order;
+		'Order.AugmentedOrder': new () => Order_AugmentedOrder;
+		'Order.AugmentedOrder.AugmentedOrderNext': new () => Order_AugmentedOrder_AugmentedOrderNext;
 		'ProductType': new () => ProductType;
 		'ProductType.DigitalProductType': new () => ProductType_DigitalProductType;
 		'ProductType.PhysicalProductType': new () => ProductType_PhysicalProductType;
